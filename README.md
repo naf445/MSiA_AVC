@@ -13,17 +13,17 @@ Give suggestions for meta data about a piece of writing, specifically genre, bas
 * Model Performance: Genre classification accuracy of >= 75% 
 * Business Performance:  User considers genre suggestion to be helpful >= 50% of the time.
 
-## Backlog
+## Backlog 
 
 **Themes:** 
-* Initial Model development
-* User experience
-* Extracting Value
+* Initial Model Development (IME)
+* User Experience (UE)
+* Extracting Value (EV)
 
 **Stories:**   
 
-Backlog | Points | Next 2 Weeks
-------------- |:----:| :-------------:
+Backlog | Points | Next 2 Weeks | Theme
+------------- |:----:| :-------------: | -
 As a developer, I would like a data set containing text titles, their summaries, and their genre labeled so I can train my model.  | 4 | :heavy_check_mark:
 As a developer, I want a model, which is trained on sample data, to take in a book summary and return suggested meta data about that book so that I can use it in my app  | Epic | :heavy_check_mark:
 As a user I want to be able to type or paste text into a textbox so it can be analyzed | 2 | :x:
@@ -44,5 +44,5 @@ As a developer I want to know how long an author had spent thinking on these top
 ## Misc.
 * Formatted on [stackedit.io](https://stackedit.io/app#)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyNTEyNDUwNiwxMDUzODcyOTQyXX0=
+eyJoaXN0b3J5IjpbMTQ4NDg2ODE4MywxMDUzODcyOTQyXX0=
 -->
