@@ -20,12 +20,14 @@ Give suggestions for meta data about a piece of writing, specifically genre, bas
 * Model Improvement (MI)
 * User Experience (UE)
 * Value Extraction (VE)
+* Infrastructure Building (IB)
 
 **Stories:**   
 
 Backlog | Points | Next 2 Weeks? | Theme
 ------- |:------:| :-----------: | :-----:
 As a developer, I would like a data set containing text titles, their summaries, and their genre labeled so I can train my model.  | 4 | :heavy_check_mark: | IMD
+As a future user/developer, I would like an environment set up and a requirements file so I can recreate the environment necessary to run the model/app |1|:x:|IB
 As a developer, I want a model, which is trained on sample data, to take in a book summary and return suggested meta data about that book so that I can use it in my app  | Epic | :heavy_check_mark: | IMD
 As a user I want to be able to type or paste text into a textbox so it can be analyzed | 2 | :x: | UE
 As a user I would like my entered text to be analyzed so that I can receive a genre suggestion | 2 | :heavy_check_mark: | UE
@@ -37,6 +39,11 @@ Icebox | Points | Next 2 Weeks? | Theme
 As a user I would like my entered text to be analyzed so that I can receive a title suggestion   | Epic | :heavy_minus_sign: | UE
 As a user I would like my entered text to be analyzed so that I can receive a cover image suggestion   | Epic | :heavy_minus_sign: | UE
 As a developer I want to know how long an author had spent thinking on these topics for the piece of interest so that I could know what type of users are using my app  | :heavy_minus_sign: | :heavy_minus_sign: | VE
+As a developer, I would like a flask app to be able to integrate all of these tasks, presenting a user interface which communicates with the model and also my database |Epic|:x:|:heavy_minus_sign:
+As a developer, I would like my app to be deployed on an AWS EC2 server so my app can be running continuously |Epic|:x:|IB
+As a developer, I would like my app to interface with a relational database to possibly pull fitted model parameters, store user input for future use, or other features |Epic|:x:|IB
+As a developer, I would like my app to interface with an Amazon S3 database to pull stored data |Epic|:x:|IB
+
 
 
 ## Data
@@ -45,5 +52,6 @@ As a developer I want to know how long an author had spent thinking on these top
 ## Misc.
 * Formatted on [stackedit.io](https://stackedit.io/app#)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwMTg3ODU2NiwxMDUzODcyOTQyXX0=
+eyJoaXN0b3J5IjpbLTE2MzQzODI4NTgsLTQwMTg3ODU2NiwxMD
+UzODcyOTQyXX0=
 -->
