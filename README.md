@@ -16,19 +16,20 @@ Give suggestions for meta data about a piece of writing, specifically genre, bas
 ## Backlog 
 
 **Themes:** 
-* Model Development (MD)
+* Initial Model Development (IMD)
 * User Experience (UE)
 * Extracting Value (EV)
+* More 
 
 **Stories:**   
 
 Backlog | Points | Next 2 Weeks? | Theme
 ------- |:------:| :-----------: | :-----:
-As a developer, I would like a data set containing text titles, their summaries, and their genre labeled so I can train my model.  | 4 | :heavy_check_mark: | MD
-As a developer, I want a model, which is trained on sample data, to take in a book summary and return suggested meta data about that book so that I can use it in my app  | Epic | :heavy_check_mark: | 
-As a user I want to be able to type or paste text into a textbox so it can be analyzed | 2 | :x: | 
-As a user I would like my entered text to be analyzed so that I can receive a genre suggestion | 2 | :heavy_check_mark:
-As a user I would like to be able to indicate whether I am satisfied with the suggestions | 2 | :x: | 
+As a developer, I would like a data set containing text titles, their summaries, and their genre labeled so I can train my model.  | 4 | :heavy_check_mark: | IMD
+As a developer, I want a model, which is trained on sample data, to take in a book summary and return suggested meta data about that book so that I can use it in my app  | Epic | :heavy_check_mark: | IMD
+As a user I want to be able to type or paste text into a textbox so it can be analyzed | 2 | :x: | UE
+As a user I would like my entered text to be analyzed so that I can receive a genre suggestion | 2 | :heavy_check_mark: | UE
+As a user I would like to be able to indicate whether I am satisfied with the suggestions | 2 | :x: | UE
 As a developer I want to be able to see what % of recommendations are 'acceptable' as judged by the user so that I can improve my model and measure my app's performance and usefulness | 2 | :x: | 
 
 Icebox | Points | Next 2 Weeks
@@ -44,5 +45,5 @@ As a developer I want to know how long an author had spent thinking on these top
 ## Misc.
 * Formatted on [stackedit.io](https://stackedit.io/app#)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTgzNjQ0NTEsMTA1Mzg3Mjk0Ml19
+eyJoaXN0b3J5IjpbMTE5OTQ2ODEwLDEwNTM4NzI5NDJdfQ==
 -->
