@@ -33,7 +33,7 @@ As a user I would like my entered text to be analyzed so that I can receive a ge
 As a user I would like to be able to indicate whether I am satisfied with the suggestions | 2 | :x: | UE
 As a developer I want to be able to see what % of recommendations are 'acceptable' as judged by the user so that I can improve my model and measure my app's performance and usefulness | 2 | :x: | MI
 
-Icebox | Points | Next 2 Weeks | Theme
+Icebox | Points | Next 2 Weeks? | Theme
 -------|:------:| :----------: | :---:
 As a user I would like my entered text to be analyzed so that I can receive a title suggestion   | :heavy_minus_sign: | :heavy_minus_sign:
 As a user I would like my entered text to be analyzed so that I can receive a cover image suggestion   | :heavy_minus_sign: | :heavy_minus_sign:
@@ -46,5 +46,5 @@ As a developer I want to know how long an author had spent thinking on these top
 ## Misc.
 * Formatted on [stackedit.io](https://stackedit.io/app#)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg0ODU3NzY2LDEwNTM4NzI5NDJdfQ==
+eyJoaXN0b3J5IjpbLTcyMDE3MDUxOSwxMDUzODcyOTQyXX0=
 -->
