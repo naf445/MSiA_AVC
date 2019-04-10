@@ -24,7 +24,7 @@ Give suggestions for meta data about a piece of writing, specifically genre, bas
 
 Backlog Story | Points | Next 2 Weeks
 ------------- |:----:| :-------------:
-As a developer, I would like a data set containing text titles, their summaries, and their genre labeled so I can train my model.  | 1 | :heavy_check_mark:
+As a developer, I would like a data set containing text titles, their summaries, and their genre labeled so I can train my model.  | 4 | :heavy_check_mark:
 As a developer, I want a model, which is trained on sample data, to take in a book summary and return suggested meta data about that book so that I can use it in my app  | 8 | :heavy_check_mark:
 As a user I want to be able to type or paste text into a textbox so it can be analyzed | 2 | :x:
 As a user I would like my entered text to be analyzed so that I can receive a genre suggestion | 2 | :heavy_check_mark:
