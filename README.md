@@ -19,8 +19,7 @@ Give suggestions for meta data about a piece of writing, specifically genre, bas
 * Initial Model Development (IMD)
 * Model Improvement (MI)
 * User Experience (UE)
-* Extracting Value (EV)
-* New Features (NF)
+* Value Extraction (VE)
 
 **Stories:**   
 
@@ -35,9 +34,9 @@ As a developer I want to be able to see what % of recommendations are 'acceptabl
 
 Icebox | Points | Next 2 Weeks? | Theme
 -------|:------:| :----------: | :---:
-As a user I would like my entered text to be analyzed so that I can receive a title suggestion   | :heavy_minus_sign: | :heavy_minus_sign:
-As a user I would like my entered text to be analyzed so that I can receive a cover image suggestion   | :heavy_minus_sign: | :heavy_minus_sign:
-As a developer I want to know how long an author had spent thinking on these topics for the piece of interest so that I could know what type of users are using my app  | :heavy_minus_sign: | :heavy_minus_sign:
+As a user I would like my entered text to be analyzed so that I can receive a title suggestion   | Epic | :heavy_minus_sign: | UE
+As a user I would like my entered text to be analyzed so that I can receive a cover image suggestion   | Epic | :heavy_minus_sign: | UE
+As a developer I want to know how long an author had spent thinking on these topics for the piece of interest so that I could know what type of users are using my app  | :heavy_minus_sign: | :heavy_minus_sign: | VE
 
 
 ## Data
@@ -46,5 +45,5 @@ As a developer I want to know how long an author had spent thinking on these top
 ## Misc.
 * Formatted on [stackedit.io](https://stackedit.io/app#)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMDE3MDUxOSwxMDUzODcyOTQyXX0=
+eyJoaXN0b3J5IjpbLTQwMTg3ODU2NiwxMDUzODcyOTQyXX0=
 -->
