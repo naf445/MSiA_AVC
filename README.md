@@ -19,8 +19,6 @@ Give suggestions for meta data about a piece of writing, specifically genre, bas
 * User experience
 * Extracting Value
 
-**Epics:**   
-
 **Stories:**   
 
 Backlog | Points | Next 2 Weeks
@@ -45,5 +43,5 @@ As a developer I want to know how long an author had spent thinking on these top
 ## Misc.
 * Formatted on [stackedit.io](https://stackedit.io/app#)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1Mzg3Mjk0Ml19
+eyJoaXN0b3J5IjpbNDQzOTQwODQxLDEwNTM4NzI5NDJdfQ==
 -->
