@@ -17,9 +17,10 @@ Give suggestions for meta data about a piece of writing, specifically genre, bas
 
 **Themes:** 
 * Initial Model Development (IMD)
+* Model Improvement (MI)
 * User Experience (UE)
 * Extracting Value (EV)
-* More 
+* New Features (NF)
 
 **Stories:**   
 
@@ -30,10 +31,10 @@ As a developer, I want a model, which is trained on sample data, to take in a bo
 As a user I want to be able to type or paste text into a textbox so it can be analyzed | 2 | :x: | UE
 As a user I would like my entered text to be analyzed so that I can receive a genre suggestion | 2 | :heavy_check_mark: | UE
 As a user I would like to be able to indicate whether I am satisfied with the suggestions | 2 | :x: | UE
-As a developer I want to be able to see what % of recommendations are 'acceptable' as judged by the user so that I can improve my model and measure my app's performance and usefulness | 2 | :x: | 
+As a developer I want to be able to see what % of recommendations are 'acceptable' as judged by the user so that I can improve my model and measure my app's performance and usefulness | 2 | :x: | MI
 
-Icebox | Points | Next 2 Weeks
-------------- |:----:| :-------------:
+Icebox | Points | Next 2 Weeks | Theme
+-------|:------:| :----------: | :---:
 As a user I would like my entered text to be analyzed so that I can receive a title suggestion   | :heavy_minus_sign: | :heavy_minus_sign:
 As a user I would like my entered text to be analyzed so that I can receive a cover image suggestion   | :heavy_minus_sign: | :heavy_minus_sign:
 As a developer I want to know how long an author had spent thinking on these topics for the piece of interest so that I could know what type of users are using my app  | :heavy_minus_sign: | :heavy_minus_sign:
@@ -45,5 +46,5 @@ As a developer I want to know how long an author had spent thinking on these top
 ## Misc.
 * Formatted on [stackedit.io](https://stackedit.io/app#)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5OTQ2ODEwLDEwNTM4NzI5NDJdfQ==
+eyJoaXN0b3J5IjpbNDg0ODU3NzY2LDEwNTM4NzI5NDJdfQ==
 -->
