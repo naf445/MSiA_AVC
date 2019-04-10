@@ -19,10 +19,11 @@ Give suggestions for meta data about a piece of writing, specifically genre, bas
 * User experience
 * Extracting Value
 
-**Epics:** 
-**Stories:** 
+**Epics:**   
 
-Backlog Story | Points | Next 2 Weeks
+**Stories:**   
+
+Backlog | Points | Next 2 Weeks
 ------------- |:----:| :-------------:
 As a developer, I would like a data set containing text titles, their summaries, and their genre labeled so I can train my model.  | 4 | :heavy_check_mark:
 As a developer, I want a model, which is trained on sample data, to take in a book summary and return suggested meta data about that book so that I can use it in my app  | 8 | :heavy_check_mark:
@@ -31,7 +32,7 @@ As a user I would like my entered text to be analyzed so that I can receive a ge
 As a user I would like to be able to indicate whether I am satisfied with the suggestions | 2 | :x:
 As a developer I want to be able to see what % of recommendations are 'acceptable' as judged by the user so that I can improve my model and measure my app's performance and usefulness | 2 | :x:
 
-Icebox Story | Points | Next 2 Weeks
+Icebox | Points | Next 2 Weeks
 ------------- |:----:| :-------------:
 As a user I would like my entered text to be analyzed so that I can receive a title suggestion   | :heavy_minus_sign: | :heavy_minus_sign:
 As a user I would like my entered text to be analyzed so that I can receive a cover image suggestion   | :heavy_minus_sign: | :heavy_minus_sign:
