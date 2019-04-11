@@ -13,7 +13,7 @@ Give suggestions for meta data about a piece of writing, based on a user's input
 * Model Performance: Genre classification accuracy of >= 75% 
 * Business Performance:  User considers meta detail suggestion to be helpful >= 50% of the time.
 
-## Themes & Stories 
+## Planning
 
 **Themes:** 
 * Initial Model Development (IMD)
