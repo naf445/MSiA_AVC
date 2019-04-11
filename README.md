@@ -27,10 +27,10 @@ Give suggestions for meta data about a piece of writing, specifically genre, bas
 Backlog | Points | Next 2 Weeks? | Theme
 ------- |:------:| :-----------: | :-----:
 As a developer, I would like a data set containing text titles, their summaries, and their genre labeled so I can train my model.  | 4 | :heavy_check_mark: | IMD
-As a future user/developer, I would like an environment set up and a requirements file so I can recreate the environment necessary to run the model/app |1|:x:|IB
-As a developer, I want a model, which is trained on sample data, to take in a book summary and return suggested meta data about that book so that I can use it in my app  | Epic | :heavy_check_mark: | IMD
+As a future user/developer, I would like an environment set up and a requirements file so I can recreate the environment necessary to run the model/app |1|:heavy_check_mark:|IB
+As a developer, I want a model, which is trained on sample data, to take in a book summary and return suggested meta data (genre) about that book so that I can use it in my app  | Epic | :heavy_check_mark: | IMD
 As a user I want to be able to type or paste text into a textbox so it can be analyzed | 2 | :x: | UE
-As a user I would like my entered text to be analyzed so that I can receive a genre suggestion | 2 | :heavy_check_mark: | UE
+As a user I would like my entered text to be analyzed so that I can receive a genre suggestion | 2 | :x: | UE
 As a user I would like to be able to indicate whether I am satisfied with the suggestions | 2 | :x: | UE
 As a developer I want to be able to see what % of recommendations are 'acceptable' as judged by the user so that I can improve my model and measure my app's performance and usefulness | 2 | :x: | MI
 
@@ -52,6 +52,6 @@ As a developer, I would like my app to interface with an Amazon S3 database to p
 ## Misc.
 * Formatted on [stackedit.io](https://stackedit.io/app#)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzQzODI4NTgsLTQwMTg3ODU2NiwxMD
-UzODcyOTQyXX0=
+eyJoaXN0b3J5IjpbLTE0NzE1MzIwNjAsLTE2MzQzODI4NTgsLT
+QwMTg3ODU2NiwxMDUzODcyOTQyXX0=
 -->
