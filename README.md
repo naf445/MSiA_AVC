@@ -4,10 +4,10 @@
 ## Project Charter
 
 **Vision:** 
-A potential reader of a piece of prose - whether an article, a novel, a blog post, or something else - cannot know the contents of a piece of text without actually reading it, and thus they cannot know if they will enjoy its contents until they have already consumed them. The human heuristic to solve this problem is to make a judgment call based on the observable characteristics of a text. In effect, humans must 'judge a book by its cover', as well as by other features we will collectively label 'meta details' (genre, title, reviews, length, etc...). Thus, it is extremely important for someone who makes these decisions about a piece of text to provide potential readers with meta details which most accurately convey the contents of the piece. This project exists to ease some of this burden by using machine learning to give suggestions to the authors, editors, publishers, or other decision makers involved in this proccess.
+A potential reader of a piece of prose - whether an article, a novel, a blog post, or something else - cannot know the contents of that piece without actually reading it. Thus they cannot know if they will enjoy its contents until they have already consumed them. The human heuristic to solve this problem is to make a judgment call based on the observable characteristics of a text. In effect, humans must 'judge a book by its cover', as well as by other features we will collectively label 'meta details' (genre, title, reviews, length, etc...). Thus, it is extremely important for the people who make these decisions about a piece of writing to provide potential readers with meta details which most accurately convey the contents of the piece. This project exists to ease some of this burden by using machine learning to give suggestions to the authors, editors, publishers, or other decision makers involved in this proccess.
 
 **Mission:** 
-The goal of this project is to give suggestions for meta data based on a user's input. In this project, the model will generate suggestions for these meta details based on a user-provided summary of the larger prose piece in question. These suggestions will hopefully be informative and useful for those making these decisions, allowing them to more accurately describe their text.
+The goal of this project is to give suggestions for meta data based on a user's input. In this project, the model will generate these suggestions based on a user-provided summary of the larger prose piece in question. These suggestions will hopefully be informative and useful for those making these decisions, allowing them to more accurately represent their text to readers.
 
 **Success Criteria:** 
 * Model Performance: genre classification accuracy of >= 75% 
@@ -52,7 +52,7 @@ As a developer, I would like my app to interface with an Amazon S3 database to p
 ## Misc.
 * Formatted on [stackedit.io](https://stackedit.io/app#)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MTEwNTY3OCw2MDM3MzYxNzYsLTE0Nz
+eyJoaXN0b3J5IjpbLTMxMTc2NzY0OSw2MDM3MzYxNzYsLTE0Nz
 E1MzIwNjAsLTE2MzQzODI4NTgsLTQwMTg3ODU2NiwxMDUzODcy
 OTQyXX0=
 -->
