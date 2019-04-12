@@ -30,7 +30,7 @@ As a developer, I would like a data set containing text titles, their summaries,
 As a future user/developer, I would like an environment set up and a requirements file so I can recreate the environment necessary to run the model/app | 1 | :heavy_check_mark: | IB
 As a developer, I want a model, which is trained on sample data, to take in a book summary and return suggested meta data (genre) about that book so that I can use it in my app  | Epic | :heavy_check_mark: | IMD
 As a user I want to be able to type or paste text into a textbox so it can be analyzed | 2 | :x: | UE
-As a user I would like my entered text to be analyzed so that I can receive a ee suggestion | 2 | :x: | UE
+As a user I would like my entered text to be analyzed so that I can receive a genre suggestion | 2 | :x: | UE
 As a user I would like to be able to indicate whether I am satisfied with the suggestions | 2 | :x: | UE
 As a developer I want to be able to see what % of recommendations are 'acceptable' as judged by the user so that I can improve my model and measure my app's performance and usefulness | 2 | :x: | MI
 
@@ -52,7 +52,7 @@ As a developer, I would like my app to interface with an Amazon S3 database to p
 ## Misc.
 * Formatted on [stackedit.io](https://stackedit.io/app#)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5MzA0NjQxLDYwMzczNjE3NiwtMTQ3MT
+eyJoaXN0b3J5IjpbNDg0MzA2NTcyLDYwMzczNjE3NiwtMTQ3MT
 UzMjA2MCwtMTYzNDM4Mjg1OCwtNDAxODc4NTY2LDEwNTM4NzI5
 NDJdfQ==
 -->
