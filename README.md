@@ -4,14 +4,14 @@
 ## Project Charter
 
 **Vision:** 
-One difficult task when it comes to writing for an audience is coming up with the meta details & labels, i.e. title, cover image, genre, etc...  This project exists to ease some of that burden by using machine learning to give suggestions for these items to authors, editors, publishers, or whoever is making these decisions.
+A potential reader of a piece of prose - whether an article, a novel, a blog post, or something else - cannot know the contents of a piece of text without actually reading it, and thus they cannot know if they will enjoy its contents until they have already consumed them. The human heuristic to solve this problem is to make a judgment call based on the observable characteristics of a text. In effect, humans must 'judge a book by its cover', as well as by other features we will collectively label 'meta details' (genre, title, reviews, length, etc...). Thus, it is extremely important for someone who makes these decisions about a piece of text to provide potential readers with meta details which most accurately convey the contents of the piece. This project exists to ease some of this burden by using machine learning to give suggestions to the authors, editors, publishers, or other decision makers involved in this proccess.
 
 **Mission:** 
-Give suggestions for meta data about a piece of writing, based on a user's input (a summary of the larger prose piece in question).  
+The goal of this project is to give suggestions for meta data based on a user's input. In this project, the model will generate suggestions for these meta details based on a user-provided summary of the larger prose piece in question. These suggestions will hopefully be informative and useful for those making these decisions, allowing them to more accurately describe their text.
 
 **Success Criteria:** 
-* Model Performance: ee it accuracy of >= 75% 
-* Business Performance:  User considers meta detail ugeion tobe helpful >= 50% of the time.
+* Model Performance: genre classification accuracy of >= 75% 
+* Business Performance:  Users consider meta detail suggestions to be helpful and to accurately convey information about the larger piece >= 50% of the time.
 
 ## Planning
 
@@ -52,6 +52,7 @@ As a developer, I would like my app to interface with an Amazon S3 database to p
 ## Misc.
 * Formatted on [stackedit.io](https://stackedit.io/app#)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjAzNzM2MTc2LC0xNDcxNTMyMDYwLC0xNj
-M0MzgyODU4LC00MDE4Nzg1NjYsMTA1Mzg3Mjk0Ml19
+eyJoaXN0b3J5IjpbMTQ2MTEwNTY3OCw2MDM3MzYxNzYsLTE0Nz
+E1MzIwNjAsLTE2MzQzODI4NTgsLTQwMTg3ODU2NiwxMDUzODcy
+OTQyXX0=
 -->
