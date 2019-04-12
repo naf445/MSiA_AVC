@@ -10,7 +10,7 @@ A potential reader of a piece of prose - whether an article, a novel, a blog pos
 The goal of this project is to give suggestions for meta data based on a user's input. In this project, the model will generate these suggestions based on a user-provided summary of the larger prose piece in question. These suggestions will hopefully be informative and useful for those making these decisions, allowing them to more accurately represent their text to readers.
 
 **Success Criteria:** 
-* Model Performance: genre classification accuracy of >= 75% 
+* Model Performance: Genre classification accuracy of >= 75% 
 * Business Performance:  Users consider meta detail suggestions to be helpful and to accurately convey information about the larger piece >= 50% of the time.
 
 ## Planning
@@ -52,7 +52,7 @@ As a developer, I would like my app to interface with an Amazon S3 database to p
 ## Misc.
 * Formatted on [stackedit.io](https://stackedit.io/app#)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxMTc2NzY0OSw2MDM3MzYxNzYsLTE0Nz
-E1MzIwNjAsLTE2MzQzODI4NTgsLTQwMTg3ODU2NiwxMDUzODcy
-OTQyXX0=
+eyJoaXN0b3J5IjpbLTg5MzA0NjQxLDYwMzczNjE3NiwtMTQ3MT
+UzMjA2MCwtMTYzNDM4Mjg1OCwtNDAxODc4NTY2LDEwNTM4NzI5
+NDJdfQ==
 -->
