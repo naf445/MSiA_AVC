@@ -3,7 +3,7 @@
 ## An MSiA AVC Final Project
 ---
 ## Team
-**Lead Developer** : Nathan Franklin
+**Lead Developer** : Nathan Franklin  
 **Lead QA** : Tony Colucci
 **Faculty Advisors** : Chloe Mawer & Fausto Inestroza
 
@@ -58,7 +58,7 @@ As a developer, I would like my app to interface with an Amazon S3 database to p
 ## Misc.
 * Formatted on [stackedit.io](https://stackedit.io/app#)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4MzcwMDczNSw0ODQzMDY1NzIsNjAzNz
-M2MTc2LC0xNDcxNTMyMDYwLC0xNjM0MzgyODU4LC00MDE4Nzg1
-NjYsMTA1Mzg3Mjk0Ml19
+eyJoaXN0b3J5IjpbLTExMTQyNTQ5NzcsNDg0MzA2NTcyLDYwMz
+czNjE3NiwtMTQ3MTUzMjA2MCwtMTYzNDM4Mjg1OCwtNDAxODc4
+NTY2LDEwNTM4NzI5NDJdfQ==
 -->
