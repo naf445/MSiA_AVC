@@ -4,8 +4,8 @@
 ---
 ## Team
 **Lead Developer** : Nathan Franklin  
-**Lead QA** : Tony Colucci
-**Faculty Advisors** : Chloe Mawer & Fausto Inestroza
+**Lead QA** : Tony Colucci  
+**Faculty Advisors** : Chloe Mawer & Fausto Inestroza  
 
 ## Project Charter
 
