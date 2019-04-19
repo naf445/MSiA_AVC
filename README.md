@@ -1,5 +1,11 @@
 
-# Charter
+# Judging a Book by its Cover
+## An MSiA AVC Final Project
+---
+## Team
+**Lead Developer** : Nathan Franklin
+**Lead QA** : Tony Colucci
+**Faculty Advisors** : Chloe Mawer & Fausto Inestroza
 
 ## Project Charter
 
@@ -52,7 +58,7 @@ As a developer, I would like my app to interface with an Amazon S3 database to p
 ## Misc.
 * Formatted on [stackedit.io](https://stackedit.io/app#)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg0MzA2NTcyLDYwMzczNjE3NiwtMTQ3MT
-UzMjA2MCwtMTYzNDM4Mjg1OCwtNDAxODc4NTY2LDEwNTM4NzI5
-NDJdfQ==
+eyJoaXN0b3J5IjpbMTA4MzcwMDczNSw0ODQzMDY1NzIsNjAzNz
+M2MTc2LC0xNDcxNTMyMDYwLC0xNjM0MzgyODU4LC00MDE4Nzg1
+NjYsMTA1Mzg3Mjk0Ml19
 -->
