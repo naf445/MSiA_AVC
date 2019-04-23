@@ -1,7 +1,7 @@
 ## Notes for Project  
 ---
 ### Articles
-<details><summary>NLP, LDA, and Kmeans for Music Classification (in R)</summary>
+<details><summary>Blog Post: NLP, LDA, and Kmeans for Music Classification (in R)</summary>
 <p>
 
 [Link](https://www.datacamp.com/community/tutorials/ML-NLP-lyric-analysis)
@@ -38,40 +38,84 @@ We could now look at the topics and which documents fall most heavily into these
 K-means isn't going to give a topic score like LDA to each document, it's going to be an all or nothing classification. It is first going to transform each document to a numeric vector and then cluster on 'distance' between them.
 
 ### Takeaways  
-This is in R so it's not super applicable but it does have good details of LDA and how you could use it and how to think about classifying these documents with LDA and possibly Kmeans.
+This is in R so it's not super applicable but it does have good details of LDA and how you could use it and how to think about classifying these documents with LDA and possibly Kmeans. 
 
 </p>
 </details>
 
-<details><summary>Doc2Vec</summary>
+<details><summary>Blog Post: Word2Vec</summary>
+<p>
+
+[Link](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model)
+
+#### The Model
+We will be talking about a specific implementation of Word2Vec, called the skip-gram neural network model. This strategy uses a neural network with one hidden layer, and the weights of these hidden layers end up being the 'word vectors' whcih we are trying to learn. This may sound familiar to an auto-encoder. 
+
+#### The Fake Task
+We have to set our neural network up to perform a fake task, which later we will come back to and find that by telling our NN to do this, it generated our vectors!
+**The Task**: Given a specific word a certain location in a sentence, predict what words will be nearby. This is like a multi-class big classification problem where you want to get probabilities for every other word in your vocabulary to be 'near' this chosen input word. The output probabilities are going to relate to how likely it is find each vocabulary word nearby our input word. For example, if you gave the trained network the input word “Soviet”, the output probabilities are going to be much higher for words like “Union” and “Russia” than for unrelated words like “watermelon” and “kangaroo”.
+
+#### Model Details
+So... we're going to need some way to put these words into the neural network. We first build our 'vocabulary' from all of our documents, where we have all of our columns being each of these words, then every word will be represented as a "one-hot" vector, aka a vector where there is a `1` in the column with this word and a `0` elsewhere.
+
+#### The Hidden Layer
+Remember the hidden layer is all the different ways to combine your input features, and then those get combined together in order for you to get your output probabilities. For this example, we want each word to represented by a 300 vector representation. Thus we will have 300 nodes in our hidden layer, so that for each word we get an associated weight for each of these 300 nodes. If we think of all of this information as a matrix, where each row is a unique word in our vocabulary, and each column is one of these 300 new feature, each of these rows is now the associated vector for these initial words! We have created vectors from our words, aka 'WordVectors'.
+
+#### TakeAway
+If two different words have very similar "contexts", that is they will have similar words which appear around them at high probabilities, then the output from this model for an input of either of these words should be similar. Our network will create the weights to be similar so that these two words have similar word vectors. 
+
+
+</p>
+</details>
+
+<details><summary>Blog Post: Doc2Vec</summary>
 <p>
 
 [Link](https://medium.com/scaleabout/a-gentle-introduction-to-doc2vec-db3e8c0cce5e)
 
+### Overview
+#### Intro
+BOW is one way to represent documents with numbers, but it is pretty crude. LDA is another method. word2vec and doc2vec are alternatives to these, but I will possibly be using them in conjunction with one another? 
+
+#### Word2Vec
+word2vec is a concept which is used to map words on to some n-dimensional feature universe. It's a way to make it so that words which appear in similar contexts have a similar vector representation, not just that every word is arbitrarily related to other words. See the above summary of Word2Vec for more details. Ideally, analogies will hold in this word2vec feature space, like man:king should be the same distance as woman:queen are from each other. 
+
+#### Doc2Vec
+So the goal of Doc2Vec is create a numeric representation in an n-dimensional feature space, of a document regardless of its length. This is pretty similar to word2vec. Remember for word2vec, the input vector was a one-hot encoding of the word; well now we have a similar encoding where the input is at the document level, and it has a `1` where a word that is included is present, an additional marker for what document this is. This creates document vectors instead of word vectors. 
+
+#### How to use
+For training, a set of documents is required. A word vector is generated for each word, and a document vector is generated for each document. In the inference stage, a new document may be presented, and the previously found weights are used to calculate the document vector. 
+
 </p>
 </details>
 
-<details><summary>Title</summary>
-<p>
-
-[Link](https://medium.com/@hakanakyurek)
-
-* hakanaska@gmail.com
-
-</p>
 </details>
 
-</details>
-
-<details><summary>Title2</summary>
+<details><summary>Github Repo, Book Genre From Titles</summary>
 <p>
 
 [Link](https://github.com/akshaybhatia10/Book-Genre-Classification)
 
+### README.md
+#### Overview
+This project classifies book sinto genres based only on titles. There are 32 genres to classify the books in it. There are two notebooks relevant to me: Basic_Bag_of_Words_model.ipynb & Best_TFIDF-Vectorizer_model.ipynb.  
+
 </p>
 </details>
 
-<details><summary>Text Classification in Python</summary>
+<details><summary>Github Repositories, Music Genre Classification</summary>
+<p>
+
+[1st Link](https://github.com/dipayandutta93/Music-Genre-Classification-using-lyrics)  
+[2nd Link](https://github.com/ianscottknight/Musical-Genre-Classification-of-Song-Lyrics)  
+
+### Link 1
+#### Overview
+
+</p>
+</details>
+
+<details><summary>Blog Post: Text Classification in Python</summary>
 <p>
 
 [Link](https://www.analyticsvidhya.com/blog/2018/04/a-comprehensive-guide-to-understand-and-implement-text-classification-in-python/)
@@ -108,7 +152,7 @@ With all these features above, you can build a model with them as the inputs.
 </p>
 </details>
 
-<details><summary>NLP basics w/ Python (not only text class.)</summary>
+<details><summary>Blog Post: NLP basics w/ Python (not only text class.)</summary>
 <p>
 
 [Link](https://www.analyticsvidhya.com/blog/2017/01/ultimate-guide-to-understand-implement-natural-language-processing-codes-in-python/)
@@ -116,31 +160,7 @@ With all these features above, you can build a model with them as the inputs.
 </p>
 </details>
 
-<details><summary>Title6</summary>
-<p>
-
-[Link](https://www.kaggle.com/c/wise-2014/overview)
-
-</p>
-</details>
-
-<details><summary>Title7</summary>
-<p>
-
-[Link](https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html#sklearn.neural_network.MLPClassifier)
-
-</p>
-</details>  
-
-<details><summary>Title8</summary>
-<p>
-
-[Link](http://ethen8181.github.io/machine-learning/clustering_old/topic_model/LDA.html#content)
-
-</p>
-</details>  
-
-<details><summary>Word Embeddings</summary>
+<details><summary>Blog Post: Word Embeddings</summary>
 <p>
 
 [Link](https://www.analyticsvidhya.com/blog/2017/06/word-embeddings-count-word2veec/)
@@ -153,3 +173,88 @@ With all these features above, you can build a model with them as the inputs.
 * `"genre" classification "book" machine learning text "NLP”`  
 * `supervised document classification python`  
 * `neural network sklearn multilabel` 
+
+### Misc Notes
+<details><summary>Sklearn</summary>
+<p>
+
+* **Basic Sklearn syntax**:
+```python
+[1]: from sklearn.linear_model import Lasso
+[2]: from sklearn.model_selection import train_test_split
+
+[3]: X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.4, random_state=42)
+[4]: lassoRegObj = Lasso(alpha=0.4)
+[5]: lassoRegObj.fit(X_train, y_train)
+[6]: lassoRegObj.predict(X_test)
+```
+The first thing I do here is import my model which I want to use and some more stuff which will be useful, the ability to split my data into a training and testing set. Then I actually perform this split in line 3.
+
+Starting in line 4, I actually begin constructing and fitting my model. Sklearn takes full advantage of python classes and object oriented programming. When you want to fit a model, you first instantiate a model object of that type. You can think of this as retreiving an out-of-the-box fresh model object and then customizing it with your parameters. In line 4 we see this occur, as I save to the `lassoRegObj` an instantiation of a lasso regression object with its alpha value tuned to `0.4`. 
+
+This object has a method, `.fit()` which will customize this model object even more, this time molding it to fit the data which we provide, which is provided as the variables X_train and y_train in this example. 
+
+Now that we have molded this model object to fit our training data, we can have it predict some new data which we provide. 
+
+It is important to realize that you don't have to resave the object every time, because the .fit() is a method which changes the internal state of the model object. 
+
+* **Sklearn CV syntax**: 
+```python
+[1]: from sklearn.model_selection import GridSearchCV
+
+[2]: param_grid = {'n_neighbors':np.arange(1,50)}
+[3]: knn = KNeighborsClassifier()
+[4]: knn_cv = GridSearchCV(knn, param_grid, cv=5)
+[5]: knn_cv.fit(X,y)
+[6]: knn_cv.best_params_
+```
+OK here we are implementing CV with a model in sklearn. We set up the grid of parameters we would like to search by creating a dictionary called param_grid, where the key is actually the name of one of the hyperparameters which need tuning. 
+
+Then we instantiate our KNN object called `knn`, which is just an out-of-the-box classifier with no customization. But we don't just want to fit this model, we want to fit this model many times each with different hyperparameters. So we need to instantiate a different model with this functionality. That is why on line 4, we instantiate a GridSearchCV object. This object is given our knn model, the hyperparameter ranges to test, and the # of cv folds as its parameters.
+
+Now, as we have many times in the past, we mold this model to fit our data with the `knn_cv.fit()` method. It will fit our chosen model a bunch of times and give us back the best one.  
+
+* **Sklearn Pipeline syntax**: 
+```python
+[1]: from sklearn.preprocessing import StandardScaler
+
+[2]: X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.4, random_state=42)
+
+[3]: steps = [('scaler', StandardScaler()),
+              ('knn', KNeighborsClassifier())]
+[4]: pipeline = Pipeline(steps)
+
+[5]: knn_scaled = pipeline.fit(X_train, y_train)
+[6]: y_pred = pipeline.predict(X_test)
+```
+So here we see an example of combining a pre-proccessing step which we call a 'transformation' into a Pipeline. The first thing we do is import some things, then we split up our data set. 
+
+We next construct the steps of our pipeline. In this case, the pipeline has 2 steps, a transformation step called scaler which uses a StandardScaler() object, and then a model fitting step called 'knn' which uses an off-the-shelf KNN. 
+
+Now, we actually instantiate a pipeline object, and this object is the thing which we will now mold and fit to our data. We see, we call `pipeline.fit()` similar to how in the past we have called our model objects, or cv_model objects `.fit()`.
+
+* **Sklearn CV w/Pipeline syntax**: 
+```python
+[1]: steps = [('scaler', StandardScaler()),
+         ('knn', KNeighborsClassifier())]
+
+[2]: pipeline = Pipeline(steps)
+
+[3]: CV_search_parameters = {knn__n_neighbors=np.arange(1, 50)}
+
+[4]: X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=12345)
+
+[5]: cv = GridSearchCV(pipeline, param_grid=CV_search_parameters)
+
+[6]: cv.fit(X_train, y_train)
+
+[7]: y_pred = cv.predict(X_test)
+```
+Now we are combining a lot of the things we have seen thus far to use CV and also take advantage of pipelines. We begin by creating the steps of our pipeline. This is similar to having a model, but instead of just being a model, it can be a couple transformation steps prior to the model. That is the point of the pipeline, to package it all up into one thing.
+
+As earlier, in line 3, we see us setting which hyperparameters we want to tune through, but because now our Pipeline object can actually contain multiple objects itself, we must identify which pipeline step and what parameter in that step we want to include in out grid search. 
+
+OK so in line 5 we actually instantiate this GridSearchCV object as we did before and we are going to fit it to our data, and instead of just giving it a model object like KNN, we give it an entire pipeline which is needs to run on all the CV folds. 
+
+</p>
+</details>  
