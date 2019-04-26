@@ -1,6 +1,6 @@
 ## Notes for Project  
 ---
-### Articles
+## Articles
 <details><summary>Blog Post: NLP, LDA, and Kmeans for Music Classification (in R)</summary>
 <p>
 
@@ -64,7 +64,6 @@ Remember the hidden layer is all the different ways to combine your input featur
 #### TakeAway
 If two different words have very similar "contexts", that is they will have similar words which appear around them at high probabilities, then the output from this model for an input of either of these words should be similar. Our network will create the weights to be similar so that these two words have similar word vectors. 
 
-
 </p>
 </details>
 
@@ -87,8 +86,6 @@ So the goal of Doc2Vec is create a numeric representation in an n-dimensional fe
 For training, a set of documents is required. A word vector is generated for each word, and a document vector is generated for each document. In the inference stage, a new document may be presented, and the previously found weights are used to calculate the document vector. 
 
 </p>
-</details>
-
 </details>
 
 <details><summary>Github Repo, Book Genre From Titles</summary>
@@ -148,7 +145,6 @@ A word embedding is a form of representing words in a vector space, like in an a
 ### Building the Model
 With all these features above, you can build a model with them as the inputs. 
 
-
 </p>
 </details>
 
@@ -168,13 +164,89 @@ With all these features above, you can build a model with them as the inputs.
 </p>
 </details>  
 
+<details><summary>LDA w/ sklearn</summary>
+<p>
+
+[Link](https://medium.com/mlreview/topic-modeling-with-scikit-learn-e80d33668730
+)
+
+#### LDA
+```python
+# get our documents into BOW style.
+tf_vectorizer = CountVectorizer(max_df=0.95, min_df=2, max_features=1000, stop_words='english')
+tf = tf_vectorizer.fit_transform(documents)
+tf_feature_names = tf_vectorizer.get_feature_names()
+
+# Run LDA
+from sklearn.decomposition import LatentDirichletAllocation
+lda = LatentDirichletAllocation(n_topics=8, max_iter=5, learning_method='online', learning_offset=50.,random_state=0).fit(tf)
+
+# display
+def display_topics(model, feature_names, no_top_words):
+    for topic_idx, topic in enumerate(model.components_):
+        print "Topic %d:" % (topic_idx)
+        print " ".join([feature_names[i]
+                        for i in topic.argsort()[:-no_top_words - 1:-1]])
+
+display_topics(lda, tf_feature_names, 10)
+
+```
+</p>
+</details>  
+
+<details><summary>Custom sklearn Transformers for pipelines</summary>
+<p>
+
+[Link](https://towardsdatascience.com/custom-transformers-and-ml-data-pipelines-with-python-20ea2a7adb65)
+
+#### Overview
+Remember, Sklearn pipelines are composed of steps, all of which are transforms until the final model fitting. To implement this we take advantage of class inheritance in Python, because we know from Sklearn syntax that we do a lot of class instantiation and stuff in python. The following is a helpful example of normal Sklearn syntax
+```python
+from sklearn.preprocessing import OneHotEncoder 
+
+#Initializing an object of class OneHotEncoder
+one_hot_enc = OneHotEncoder( sparse = True )
+
+#Calling methods on our OneHotEncoder object
+one_hot_enc.fit( some_data ) #returns nothing
+transformed_data = one_hot_enc.transform( som_data ) #returns something
+```
+We see above that we create an instance of the OneHotEncoder transformer with some settings, and then we can call the method `.transform` on from that object instance, and give it some_data as an argument. 
+
+Thus when we create our own, we need it to be a class with methods such as `.fit` and `.transform` etc. to fit in with the other transformers. 
+
+#### Getting Started
+Sklearn gives us two goo base classes with which to inherit from in order to write out own transformers: `TransformerMixin` & `BaseEstimator`. Inheriting from TransformerMixin ensures that all we need to do is write our fit and transform methods and we get fit_transform for free. Inheriting from BaseEstimator ensures we get get_params and set_params for free. Since the fit method doesn’t need to do anything but return the object itself, all we really need to do after inheriting from these classes, is define the transform method for our custom transformer and we get a fully functional custom transformer that can be  integrated with a scikit-learn pipeline!
+
+#### Example
+
+```python
+#Custom Transformer that extracts columns passed as argument to its constructor 
+class FeatureSelector( BaseEstimator, TransformerMixin ):
+    #Class Constructor 
+    def __init__( self, feature_names ):
+        self._feature_names = feature_names 
+    
+    #Return self nothing else to do here    
+    def fit( self, X, y = None ):
+        return self 
+    
+    #Method that describes what we need this transformer to do
+    def transform( self, X, y = None ):
+        return X[ self._feature_names ] 
+```
+As we can see above, we have created a custom transformer called FeatureSelector, which in order to use we will simply instantiate, and it will already have all of the things from BaseEstimator and TransformerMixin so that's nice. Then we have customized the `.transform()` function to return what we want it to return, based on the arguments which are given when it is called. We could even define other helped functions in this class and then call them in the transform function. Also notice that it must `return` what we want it to return, which is most of the time some minorly altered version of itself.
+
+
+</p>
+</details>  
   
-### Things to google search  
+## Things to google search  
 * `"genre" classification "book" machine learning text "NLP”`  
 * `supervised document classification python`  
 * `neural network sklearn multilabel` 
 
-### Misc Notes
+## Misc Notes
 <details><summary>Sklearn</summary>
 <p>
 
