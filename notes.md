@@ -252,6 +252,7 @@ As we can see above, we have created a custom transformer called FeatureSelector
 
 * **Basic Sklearn syntax**:
 ```python
+
 [1]: from sklearn.linear_model import Lasso
 [2]: from sklearn.model_selection import train_test_split
 
