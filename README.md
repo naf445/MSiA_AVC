@@ -54,11 +54,3 @@ As a developer, I would like my app to interface with an Amazon S3 database to p
 
 ## Data
 * [CMU Book Summary Dataset](http://www.cs.cmu.edu/~dbamman/booksummaries.html)
-
-## Misc.
-* Formatted on [stackedit.io](https://stackedit.io/app#)
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTQyNTQ5NzcsNDg0MzA2NTcyLDYwMz
-czNjE3NiwtMTQ3MTUzMjA2MCwtMTYzNDM4Mjg1OCwtNDAxODc4
-NTY2LDEwNTM4NzI5NDJdfQ==
--->
