@@ -50,7 +50,34 @@ As a developer, I would like my app to be deployed on an AWS EC2 server so my ap
 As a developer, I would like my app to interface with a relational database to possibly pull fitted model parameters, store user input for future use, or other features | Epic | :x: | IB
 As a developer, I would like my app to interface with an Amazon S3 database to pull stored data | Epic | :x: | IB
 
+## Setup
+
+### 1.) Acquiring and Storing Data
+In the root folder is a bash script `getData.sh` which takes one argument `<s3://bucket-name>`. This script will retrieve the data folder from this [website](http://www.cs.cmu.edu/~dbamman/booksummaries.html) and place it in `data/booksummaries`. The script will then take this new directory and copy its contents to an S3 bucket provided by the user. For this to work you must have AWS CLI installed & configured, and an existing S3 bucket connected to your account.
+```bash
+$ getData.sh <s3://bucket-name>
+```
+
+### 2.) Setting Up MySQL DB in RDS
+In order to set up the necessary MySQL instance in RDS, there are 2 files to run. The first is `mysqlconfig.sh` which takes 3 arguments <MYSQL_USER>, <MYSQL_PASSWORD>, & <MYSQL_HOST>.
+```bash
+$ mysqlconfig.sh <MYSQL_USER> <MYSQL_PASSWORD> <MYSQL_HOST>
+```
+This file will simply set these values as environmental variables.
+After this, you will run the `sqlalchemy_mysql_setup.py` file in order to create your MySQL database table schema. This file requires no additional arguments as long as `mysqlconfig.sh` has been run successfully.
+
+```bash
+$ python sqlalchemy_mysql_setup.py
+```
 
 
-## Data
-* [CMU Book Summary Dataset](http://www.cs.cmu.edu/~dbamman/booksummaries.html)
+## Other
+* **Data Source:** [CMU Book Summary Dataset](http://www.cs.cmu.edu/~dbamman/booksummaries.html)
+
+
+
+
+
+
+
+
