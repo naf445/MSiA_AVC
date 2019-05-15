@@ -73,6 +73,18 @@ After this, you will run the `sqlalchemy_mysql_setup.py` file in order to create
 $ python sqlalchemy_mysql_setup.py RDS
 ```
 
+In order to check that the database was created correctly, go to a machine with MySQL command line tools installed. Connect to your RDS instance using the following:
+``` bash
+$ mysql -u <RDS-username> -p -h <RDS-endpoint>
+```
+After providing the password used to create your RDS instance, you can use the following commands to ensure your MySQL instantiation worked. 
+```
+mysql> show databases;
+mysql> use msia423;
+mysql> show tables;
+```
+These commands should show the database `msia423` and the subsequent tables which were created and that you can now query.
+
 #### To Instantiate Locally Using SQLite
 
 In order to set up the MySQL instance locally there is only 1 file to run.
@@ -81,12 +93,6 @@ You will run the `sqlalchemy_mysql_setup.py` file. This command requires you to 
 ```bash
 $ python sqlalchemy_mysql_setup.py sqlite
 ```
-
-In order to check that the database was created correctly, go to a machine with MySQL command line tools installed. Connect to your RDS instance using 
-``` bash
-$ mysql -u <RDS-username> -p -h <RDS-endpoint>
-```
-Next you can use `mysql> show databases;` and the table `msia423` should be present. Then you can type `mysql> use msia423;` (if it appears) and then `mysql> show tables;`.
 
 
 ## Other
