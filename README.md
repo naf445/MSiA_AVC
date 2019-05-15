@@ -60,17 +60,33 @@ In the root folder is a bash script `getData.sh` which takes one argument `<s3:/
 $ getData.sh <s3://bucket-name>
 ```
 
-### 2.) Setting Up MySQL DB in RDS
-In order to set up the necessary MySQL instance in RDS, there are 2 files to run. The first is `mysqlconfig.sh` which takes 3 arguments <MYSQL_USER>, <MYSQL_PASSWORD>, & <MYSQL_HOST>.
+### 2.) Setting Up a MySQL DB Instance (RDS or Local SQLite)
+#### To Instantiate in RDS
+In order to set up the MySQL instance in RDS, there are 2 files to run. The first is `mysqlconfig.sh` which takes 3 arguments <MYSQL_USER>, <MYSQL_PASSWORD>, & <MYSQL_HOST>. <MYSQL_HOST> is specified in your AWS RDS console, under the heading "Endpoint" in the "Connectivity & security" tab. 
 ```bash
-$ mysqlconfig.sh <MYSQL_USER> <MYSQL_PASSWORD> <MYSQL_HOST>
+$ source mysqlconfig.sh <MYSQL_USER> <MYSQL_PASSWORD> <MYSQL_HOST>
 ```
-This file will simply set these values as environmental variables.
-After this, you will run the `sqlalchemy_mysql_setup.py` file in order to create your MySQL database table schema. This file requires no additional arguments as long as `mysqlconfig.sh` has been run successfully.
+This file will simply set these values as temporary environmental variables.
+After this, you will run the `sqlalchemy_mysql_setup.py` file in order to create your MySQL database table schema and send this to RDS. (At this point, remember to configure your RDS security group to have a rule allowing inbound traffic from whatever IP address you will be using to communicate with the RDS.) This command requires you to specify `RDS` as a command line argument and will use the values set by `mysqlconfig.sh`. You can check that these values were recorded successfully by running `echo $MYSQL_USER` and making sure your information appears in your terminal.
 
 ```bash
-$ python sqlalchemy_mysql_setup.py
+$ python sqlalchemy_mysql_setup.py RDS
 ```
+
+#### To Instantiate Locally Using SQLite
+
+In order to set up the MySQL instance locally there is only 1 file to run.
+You will run the `sqlalchemy_mysql_setup.py` file. This command requires you to specify `sqlite` as a command line argument. The default behavior is to create a databse called `msia423.db` in the data folder of this repository. It is currently not possible to change the location of the `msia423.db` creation.
+
+```bash
+$ python sqlalchemy_mysql_setup.py sqlite
+```
+
+In order to check that the database was created correctly, go to a machine with MySQL command line tools installed. Connect to your RDS instance using 
+``` bash
+$ mysql -u <RDS-username> -p -h <RDS-endpoint>
+```
+Next you can use `mysql> show databases;` and the table `msia423` should be present. Then you can type `mysql> use msia423;` (if it appears) and then `mysql> show tables;`.
 
 
 ## Other
