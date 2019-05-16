@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>reviewDeck</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://revealjs.com/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="https://revealjs.com/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://revealjs.com/css/print/pdf.css' : 'https://revealjs.com/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="https://revealjs.com/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">reviewDeck</h1>
+</section>
+
+<section id="outline" class="slide level2">
+<h2>Outline</h2>
+<ul>
+<li><strong>Highlights</strong></li>
+<li><strong>Progress Review</strong></li>
+<li><strong>Demo/Analysis</strong></li>
+<li><strong>Lessons Learned</strong></li>
+<li><strong>Recommendations For Next Sprint</strong></li>
+</ul>
+</section>
+<section><section id="highlights" class="titleslide slide level1"><h1>Highlights</h1></section><section id="highlight-1" class="slide level2">
+<h2>Highlight 1</h2>
+<ul>
+<li>Created a notes.md Document with Notes on Various Topics for Reference <span style="font-size:20pt;">
+<ul>
+<li>Latent Dirichlet Allocation with sklearn</li>
+<li>Word2Vec</li>
+<li>Doc2Vec</li>
+<li>Other Github Repos on Similar Topics</li>
+<li>Text Classification in Python</li>
+<li>Topic Modeling in Python with LDA</li>
+<li>Sklearn Pipelines and Custom Transformers</li>
+<li>Basic Sklearn Syntax for Pipelines &amp; CV </span></li>
+</ul></li>
+</ul>
+</section><section id="highlight-2" class="slide level2">
+<h2>Highlight 2</h2>
+<ul>
+<li>Basic EDA <span style="font-size:20pt;">
+<ul>
+<li>12841 books and their summaries after dropping the NA's</li>
+<li>227 unique genre tags to roll up to a smaller amount of categories</li>
+<li><table>
+<thead>
+<tr class="header">
+<th>Genre</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>fiction</td>
+<td>4747</td>
+</tr>
+<tr class="even">
+<td>speculative_fiction</td>
+<td>4314</td>
+</tr>
+<tr class="odd">
+<td>science_fiction</td>
+<td>2870</td>
+</tr>
+<tr class="even">
+<td>novel</td>
+<td>2463</td>
+</tr>
+<tr class="odd">
+<td>fantasy</td>
+<td>2413</td>
+</tr>
+</tbody>
+</table>
+</span></li>
+</ul></li>
+</ul>
+</section><section id="highlight-3" class="slide level2">
+<h2>Highlight 3</h2>
+<ul>
+<li>Made Progress on Model Development <span style="font-size:20pt;">
+<ul>
+<li>Analysis done on rolling up genre combinations into fewer categories
+<ul>
+<li><table>
+<thead>
+<tr class="header">
+<th>Genre Combination</th>
+<th>Appearances</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>science_fiction, fiction, speculative_fiction</td>
+<td>1000</td>
+</tr>
+<tr class="even">
+<td>fiction, speculative_fiction, fantasy</td>
+<td>947</td>
+</tr>
+<tr class="odd">
+<td>(mystery, suspense, fiction</td>
+<td>617</td>
+</tr>
+<tr class="even">
+<td>fiction, childrens_literature, speculative_fiction</td>
+<td>558</td>
+</tr>
+<tr class="odd">
+<td>(science_fiction, speculative_fiction, fantasy</td>
+<td>557</td>
+</tr>
+</tbody>
+</table>
+</span></li>
+</ul></li>
+</ul></li>
+</ul>
+</section><section id="highlight-4" class="slide level2">
+<h2>Highlight 4</h2>
+<ul>
+<li>Created Python Package to Aid in Data Exploration and Modeling <span style="font-size:20pt;">
+<ul>
+<li>Created load_and_clean() function to enable quick loading</li>
+<li>Created custom sklearn transformers to allow multiple methods of data cleaning
+<ul>
+<li>Optional name filterer</li>
+<li>Word stemmer
+<ul>
+<li>Porter &amp; Lancaster Methods Optional</li>
+</ul></li>
+<li>Word lemmatizer </span></li>
+</ul></li>
+</ul></li>
+</ul>
+</section></section>
+<section><section id="progress-review" class="titleslide slide level1"><h1>Progress Review</h1></section><section id="stories-completed" class="slide level2">
+<h2>Stories Completed</h2>
+<ul>
+<li>Stories Completed <span style="font-size:20pt;">
+<ol type="1">
+<li>Got data set containing text titles, their summaries, and their genre labeled so I can train my model ✅</li>
+<li>Set up an environment and a requirements file so I can recreate the environment necessary to run the model/app ✅</li>
+<li>Set up an AWS EC2 server instance ✅</li>
+<li>Set up an AWS RDS instance and local SQLite instance ✅</li>
+<li>Moved data to S3 database ✅<br />
+</span></li>
+</ol></li>
+</ul>
+</section></section>
+<section><section id="demoanalysis" class="titleslide slide level1"><h1>Demo/Analysis</h1></section><section id="initial-lda-run-without-name-filtering" class="slide level2">
+<h2>Initial LDA Run Without Name Filtering</h2>
+<p><img src="Resources/initialLDA.png" height=400/></p>
+</section></section>
+<section><section id="lessons-learned" class="titleslide slide level1"><h1>Lessons Learned</h1></section><section id="modeling-side" class="slide level2">
+<h2>Modeling Side</h2>
+<ul>
+<li>Mostly just been learning a lot about nlp with python, topic modeling, and how to use sklearn to make this proccess smooth.</li>
+</ul>
+</section><section id="infrastructure-aws" class="slide level2">
+<h2>Infrastructure / AWS</h2>
+<ul>
+<li>Learned a lot about S3, RDS, EC2, AWS in general, and writing bash scripts!</li>
+</ul>
+</section></section>
+<section><section id="next-sprint-story-recommendations" class="titleslide slide level1"><h1>Next Sprint Story Recommendations</h1></section><section id="stories-to-be-done-next" class="slide level2">
+<h2>Stories to be Done Next</h2>
+<ul>
+<li>Finish rolling up genres into a few categories</li>
+<li>Finish model development and prediction proccess</li>
+<li>Finalize RDS/SQLite schema</li>
+<li>Work on UI front including Flask app and think about how all the various pieces will interface together</li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="https://revealjs.com/lib/js/head.min.js"></script>
+  <script src="https://revealjs.com/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'https://revealjs.com/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://revealjs.com/plugin/zoom-js/zoom.js', async: true },
+              { src: 'https://revealjs.com/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

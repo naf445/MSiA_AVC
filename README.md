@@ -50,7 +50,58 @@ As a developer, I would like my app to be deployed on an AWS EC2 server so my ap
 As a developer, I would like my app to interface with a relational database to possibly pull fitted model parameters, store user input for future use, or other features | Epic | :x: | IB
 As a developer, I would like my app to interface with an Amazon S3 database to pull stored data | Epic | :x: | IB
 
+## Setup
+
+### 1.) Acquiring and Storing Data
+In the root folder is a bash script `getData.sh` which takes one argument `<s3://bucket-name>`. This script will retrieve the data folder from this [website](http://www.cs.cmu.edu/~dbamman/booksummaries.html) and place it in `data/booksummaries`. The script will then take this new directory and copy its contents to an S3 bucket provided by the user.  
+**Note:** You must have AWS CLI [installed](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html) & [configured](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html), and an existing S3 bucket connected to your account.
+
+```bash
+$ getData.sh <s3://bucket-name>
+```
+
+### 2.) Setting Up a MySQL DB Instance (RDS or Local SQLite)
+#### To Instantiate in RDS
+In order to set up the MySQL instance in RDS, there are 2 files to run. The first is `mysqlconfig.sh` which takes 3 arguments <MYSQL_USER>, <MYSQL_PASSWORD>, & <MYSQL_HOST>. <MYSQL_HOST> is specified in your AWS RDS console, under the heading "Endpoint" in the "Connectivity & security" tab. 
+```bash
+$ source mysqlconfig.sh <MYSQL_USER> <MYSQL_PASSWORD> <MYSQL_HOST>
+```
+This file will simply set these values as temporary environmental variables.
+After this, you will run the `sqlalchemy_mysql_setup.py` file in order to create your MySQL database table schema and send this to RDS. (At this point, remember to configure your RDS security group to have a rule allowing inbound traffic from whatever IP address you will be using to communicate with the RDS.) This command requires you to specify `RDS` as a command line argument and will use the values set by `mysqlconfig.sh`. You can check that these values were recorded successfully by running `echo $MYSQL_USER` and making sure your information appears in your terminal.
+
+```bash
+$ python sqlalchemy_mysql_setup.py RDS
+```
+
+In order to check that the database was created correctly, go to a machine with MySQL command line tools installed. Connect to your RDS instance using the following:
+``` bash
+$ mysql -u <RDS-username> -p -h <RDS-endpoint>
+```
+After providing the password used to create your RDS instance, you can use the following commands to ensure your MySQL instantiation worked. 
+```
+mysql> show databases;
+mysql> use msia423;
+mysql> show tables;
+```
+These commands should show the database `msia423` and the subsequent tables which were created and that you can now query.
+
+#### To Instantiate Locally Using SQLite
+
+In order to set up the MySQL instance locally there is only 1 file to run.
+You will run the `sqlalchemy_mysql_setup.py` file. This command requires you to specify `sqlite` as a command line argument. The default behavior is to create a databse called `msia423.db` in the data folder of this repository. It is currently not possible to change the location of the `msia423.db` creation.
+
+```bash
+$ python sqlalchemy_mysql_setup.py sqlite
+```
 
 
-## Data
-* [CMU Book Summary Dataset](http://www.cs.cmu.edu/~dbamman/booksummaries.html)
+## Other
+* **Data Source:** [CMU Book Summary Dataset](http://www.cs.cmu.edu/~dbamman/booksummaries.html)
+
+
+
+
+
+
+
+

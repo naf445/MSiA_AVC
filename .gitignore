@@ -1,3 +1,6 @@
 data/
 **/.stackedit-trash
 **/.ipynb_checkpoints
+*.csv
+booksummaries/
+*.db
