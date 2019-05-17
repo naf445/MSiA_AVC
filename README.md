@@ -1,4 +1,3 @@
-
 # Judging a Book by its Cover
 ## An MSiA AVC Final Project
 ---
