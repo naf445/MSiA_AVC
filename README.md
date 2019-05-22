@@ -56,7 +56,7 @@ In the root folder is a bash script `getData.sh` which takes one argument `<s3:/
 **Note:** You must have AWS CLI [installed](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html) & [configured](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html), and an existing S3 bucket connected to your account.
 
 ```bash
-$ getData.sh <s3://bucket-name>
+$ bash getData.sh <s3://bucket-name>
 ```
 
 ### 2.) Setting Up a MySQL DB Instance (RDS or Local SQLite)
