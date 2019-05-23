@@ -1,4 +1,3 @@
-
 # Judging a Book by its Cover
 ## An MSiA AVC Final Project
 ---
@@ -19,48 +18,74 @@ The goal of this project is to give suggestions for meta data based on a user's 
 * Model Performance: Genre classification accuracy of >= 75% 
 * Business Performance:  Users consider meta detail suggestions to be helpful and to accurately convey information about the larger piece >= 50% of the time.
 
-## Planning
+## Repo Structure
 
-**Themes:** 
-* Initial Model Development (IMD)
-* Model Improvement (MI)
-* User Experience (UE)
-* Value Extraction (VE)
-* Infrastructure Building (IB)
-
-**Stories:**   
-
-Backlog | Points | Next 2 Weeks? | Theme
-------- |:------:| :-----------: | :-----:
-As a developer, I would like a data set containing text titles, their summaries, and their genre labeled so I can train my model.  | 4 | :heavy_check_mark: | IMD
-As a future user/developer, I would like an environment set up and a requirements file so I can recreate the environment necessary to run the model/app | 1 | :heavy_check_mark: | IB
-As a developer, I want a model, which is trained on sample data, to take in a book summary and return suggested meta data (genre) about that book so that I can use it in my app  | Epic | :heavy_check_mark: | IMD
-As a user I want to be able to type or paste text into a textbox so it can be analyzed | 2 | :x: | UE
-As a user I would like my entered text to be analyzed so that I can receive a genre suggestion | 2 | :x: | UE
-As a user I would like to be able to indicate whether I am satisfied with the suggestions | 2 | :x: | UE
-As a developer I want to be able to see what % of recommendations are 'acceptable' as judged by the user so that I can improve my model and measure my app's performance and usefulness | 2 | :x: | MI
-
-Icebox | Points | Next 2 Weeks? | Theme
--------|:------:| :----------: | :---:
-As a user I would like my entered text to be analyzed so that I can receive a title suggestion   | Epic | :heavy_minus_sign: | UE
-As a user I would like my entered text to be analyzed so that I can receive a cover image suggestion   | Epic | :heavy_minus_sign: | UE
-As a developer I want to know how long an author had spent thinking on these topics for the piece of interest so that I could know what type of users are using my app  | :heavy_minus_sign: | :heavy_minus_sign: | VE
-As a developer, I would like a flask app to be able to integrate all of these tasks, presenting a user interface which communicates with the model and also my database | Epic | :x: | :heavy_minus_sign:
-As a developer, I would like my app to be deployed on an AWS EC2 server so my app can be running continuously | Epic | :x: | IB
-As a developer, I would like my app to interface with a relational database to possibly pull fitted model parameters, store user input for future use, or other features | Epic | :x: | IB
-As a developer, I would like my app to interface with an Amazon S3 database to pull stored data | Epic | :x: | IB
+```
+├── README.md                         <- Welcome. You are here.
+│
+├── app/
+│   ├── static/                       <- CSS, JS files that remain static 
+│   ├── templates/                    <- HTML (or other code) that is templated and changes based on a set of inputs
+│   ├── models.py                     <- Creates the data model for the database connected to the Flask app 
+│   ├── __init__.py                   <- Initializes the Flask app and database connection
+│
+├── config/                           <- Directory for configuration files for logging, model parameters, etc...
+│   ├── logging/                      <- Configuration files for python loggers
+│   ├── config.yml                    <- Configuration file for app: model training, scoring, database info, etc...
+|   ├── config.py                         <- Configuration file for Flask app
+|
+├── data/                             <- Folder that contains data used or generated. Only the external/ and sample/ subdirectories are tracked by git. 
+│   ├── booksummaries/                <- Storage repository for project's main data, not synced with git
+│   ├── names/                        <- Storage repository for some name data, not synced with git
+│   ├── external/                     <- External data sources, will be synced with git
+│   ├── sample/                       <- Sample data used for code development and testing, will be synced with git
+│
+├── docs/                             <- A default Sphinx project; see sphinx-doc.org for details.
+│
+├── figures/                          <- Generated graphics and figures to be used in repo.
+│
+├── models/                           <- Trained model objects (TMOs), model predictions, and/or model summaries
+│   ├── archive/                      <- No longer current models. This directory is included in the .gitignore and is not tracked by git
+│
+├── notebooks/
+│   ├── develop/                      <- Current notebooks being used in development.
+│   ├── archive/                      <- Develop notebooks no longer being used.
+│   ├── demonstration/                <- Template notebooks for analysis with useful imports and helper functions. 
+│
+├── src/                              <- Source data for the project 
+│   ├── archive/                      <- No longer current scripts.
+│   ├── helpers/                      <- Helper scripts used in main src files 
+│   ├── get_data.py                   <- Script for getting data from source and storing locally or in AWS S3 bucket
+│   ├── get_data.sh                   <- Script for getting data from source and storing locally or in AWS S3 bucket
+│   ├── clean_data.py                 <- 
+│   ├── generate_features.py          <-  
+│   ├── train_model.py                <-  
+│   ├── score_model.py                <- 
+│   ├── sqlalchemy_mysql_setup.py     <- Instantiating MySQL database 
+│
+├── test/                             <- Files necessary for running model tests (see documentation below) 
+|
+├── run.py                            <- Simplifies the execution of one or more of the src scripts 
+├── makefile.sh                            <- Simplifies the execution of one or more of the src scripts
+├── app.py                            <- Flask wrapper for running the model 
+├── requirements.txt                  <- Python package dependencies 
+```
+This project structure was partially influenced by the [Cookiecutter Data Science project](https://drivendata.github.io/cookiecutter-data-science/).
 
 ## Setup
 
-### 1.) Acquiring and Storing Data
+### 1.) Setting Up the Environment
+To increase the probability of this project working on your machine, please start by creating and activating a conda environment using the `environment.yml` file, or doing the same with a virtual environment using the `requirements.txt` file found in the root directory.  
+
+### 2.) Acquiring and Storing Data
 In the root folder is a bash script `getData.sh` which takes one argument `<s3://bucket-name>`. This script will retrieve the data folder from this [website](http://www.cs.cmu.edu/~dbamman/booksummaries.html) and place it in `data/booksummaries`. The script will then take this new directory and copy its contents to an S3 bucket provided by the user.  
 **Note:** You must have AWS CLI [installed](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html) & [configured](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html), and an existing S3 bucket connected to your account.
 
 ```bash
-$ getData.sh <s3://bucket-name>
+$ bash getData.sh <s3://bucket-name>
 ```
 
-### 2.) Setting Up a MySQL DB Instance (RDS or Local SQLite)
+### 3.) Setting Up a MySQL DB Instance (RDS or Local SQLite)
 #### To Instantiate in RDS
 In order to set up the MySQL instance in RDS, there are 2 files to run. The first is `mysqlconfig.sh` which takes 3 arguments <MYSQL_USER>, <MYSQL_PASSWORD>, & <MYSQL_HOST>. <MYSQL_HOST> is specified in your AWS RDS console, under the heading "Endpoint" in the "Connectivity & security" tab. 
 ```bash
@@ -80,7 +105,7 @@ $ mysql -u <RDS-username> -p -h <RDS-endpoint>
 After providing the password used to create your RDS instance, you can use the following commands to ensure your MySQL instantiation worked. 
 ```
 mysql> show databases;
-mysql> use msia423;
+mysql> use avc423;
 mysql> show tables;
 ```
 These commands should show the database `msia423` and the subsequent tables which were created and that you can now query.
