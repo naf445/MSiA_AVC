@@ -105,7 +105,7 @@ $ mysql -u <RDS-username> -p -h <RDS-endpoint>
 After providing the password used to create your RDS instance, you can use the following commands to ensure your MySQL instantiation worked. 
 ```
 mysql> show databases;
-mysql> use msia423;
+mysql> use avc423;
 mysql> show tables;
 ```
 These commands should show the database `msia423` and the subsequent tables which were created and that you can now query.

@@ -61,7 +61,7 @@ if __name__=='__main__':
 		password = os.environ.get("MYSQL_PASSWORD")
 		host = os.environ.get("MYSQL_HOST")
 		port = os.environ.get("MYSQL_PORT")
-		DATABASE_NAME = 'msia423'
+		DATABASE_NAME = 'avc423'
 		engine_string = "{}://{}:{}@{}:{}/{}".\
 		format(conn_type, user, password, host, port, DATABASE_NAME)
 		engine = sql.create_engine(engine_string)
