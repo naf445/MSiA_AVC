@@ -15,7 +15,16 @@ from nltk.stem import PorterStemmer
 from nltk.stem import LancasterStemmer
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import wordnet
+import os
 
+import logging
+import logging.config
+
+directory_abs_path = str(os.path.dirname(os.path.abspath(__file__)))
+
+logging.config.fileConfig(directory_abs_path+"/../../../config/logging.conf")
+logger = logging.getLogger(__name__)
+logger.info("Testing... Delete this message in the custom_transformers file")
 
 #Custom Transformer that tokenizes
 class Tokenizer( BaseEstimator, TransformerMixin ):
@@ -42,7 +51,7 @@ class Filter_sentence( BaseEstimator, TransformerMixin ):
         filtered_sentence = [] 
         stop_words = set(stopwords.words('english')) 
         punctuation= ["?",":","!",".",",",";","-","`","'", "'", "(", ")", "'s", "'", "`", '''"''']
-        names = pd.read_csv('../../data/names/names.csv', header=None)
+        names = pd.read_csv(directory_abs_path+'/../../../data/names/names.csv', header=None)
         names = names.values.tolist()
         names = [i[0].lower() for i in names]
 
