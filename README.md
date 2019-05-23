@@ -74,7 +74,10 @@ This project structure was partially influenced by the [Cookiecutter Data Scienc
 
 ## Setup
 
-### 1.) Acquiring and Storing Data
+### 1.) Setting Up the Environment
+To increase the probability of this project working on your machine, please start by creating and activating a conda environment using the `environment.yml` file, or doing the same with a virtual environment using the `requirements.txt` file found in the root directory.  
+
+### 2.) Acquiring and Storing Data
 In the root folder is a bash script `getData.sh` which takes one argument `<s3://bucket-name>`. This script will retrieve the data folder from this [website](http://www.cs.cmu.edu/~dbamman/booksummaries.html) and place it in `data/booksummaries`. The script will then take this new directory and copy its contents to an S3 bucket provided by the user.  
 **Note:** You must have AWS CLI [installed](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html) & [configured](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html), and an existing S3 bucket connected to your account.
 
@@ -82,7 +85,7 @@ In the root folder is a bash script `getData.sh` which takes one argument `<s3:/
 $ bash getData.sh <s3://bucket-name>
 ```
 
-### 2.) Setting Up a MySQL DB Instance (RDS or Local SQLite)
+### 3.) Setting Up a MySQL DB Instance (RDS or Local SQLite)
 #### To Instantiate in RDS
 In order to set up the MySQL instance in RDS, there are 2 files to run. The first is `mysqlconfig.sh` which takes 3 arguments <MYSQL_USER>, <MYSQL_PASSWORD>, & <MYSQL_HOST>. <MYSQL_HOST> is specified in your AWS RDS console, under the heading "Endpoint" in the "Connectivity & security" tab. 
 ```bash
