@@ -240,6 +240,9 @@ As we can see above, we have created a custom transformer called FeatureSelector
 
 </p>
 </details>  
+
+do this one also! https://stackabuse.com/python-for-nlp-topic-modeling/
+and this one! https://towardsdatascience.com/unsupervised-nlp-topic-models-as-a-supervised-learning-input-cf8ee9e5cf28 
   
 ## Things to google search  
 * `"genre" classification "book" machine learning text "NLP”`  
