@@ -32,7 +32,7 @@ The goal of this project is to give suggestions for meta data based on a user's 
 ├── config/                           <- Directory for configuration files for logging, model parameters, etc...
 │   ├── logging/                      <- Configuration files for python loggers
 │   ├── config.yml                    <- Configuration file for app: model training, scoring, database info, etc...
-|   ├── config.py                         <- Configuration file for Flask app
+|   ├── config.py                     <- Configuration file for Flask app
 |
 ├── data/                             <- Folder that contains data used or generated. Only the external/ and sample/ subdirectories are tracked by git. 
 │   ├── booksummaries/                <- Storage repository for project's main data, not synced with git

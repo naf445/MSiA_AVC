@@ -22,9 +22,8 @@ import logging.config
 
 directory_abs_path = str(os.path.dirname(os.path.abspath(__file__)))
 
-logging.config.fileConfig(directory_abs_path+"/../../../config/logging.conf")
+logging.config.fileConfig(directory_abs_path+"/../../../config/logging_local.conf")
 logger = logging.getLogger(__name__)
-logger.info("Testing... Delete this message in the custom_transformers file")
 
 #Custom Transformer that tokenizes
 class Tokenizer( BaseEstimator, TransformerMixin ):
@@ -35,6 +34,7 @@ class Tokenizer( BaseEstimator, TransformerMixin ):
     
     #Method that describes what we need this transformer to do
     def transform(self, DF, y = None):
+        logger.info("Calling the Tokenizer transformer")
         DF_2 = DF.copy(deep=True)
         DF_2['plotSum'] = DF_2['plotSum'].apply(lambda row: word_tokenize(row))
         return DF_2
@@ -73,6 +73,7 @@ class Filter_sentence( BaseEstimator, TransformerMixin ):
     
     #Method that describes what we need this transformer to do
     def transform( self, DF, y = None ):
+        logger.info("Calling the filter sentence transformer")
         DF_2 = DF.copy(deep=True)
         DF_2['plotSum'] = DF_2['plotSum'].apply(lambda row: self.filter_sentence(row))
         return DF_2
@@ -115,6 +116,7 @@ class StemmingLemming(BaseEstimator, TransformerMixin):
     
     #Method that describes what we need this transformer to do
     def transform(self, DF, y = None):
+        logger.info("Calling the StemmingLemming transformer")
         DF_2 = DF.copy(deep=True)
         DF_2['plotSum'] = DF_2['plotSum'].apply(lambda row: self.stemLem_sentence(row))
         return DF_2
@@ -129,6 +131,7 @@ class Joiner( BaseEstimator, TransformerMixin ):
     
     #Method that describes what we need this transformer to do
     def transform(self, DF, y = None):
+        logger.info("Calling the Joiner transformer")
         DF_2 = DF.copy(deep=True)
         DF_2['plotSum'] = DF_2['plotSum'].apply(lambda row: ' '.join(row))
         return DF_2

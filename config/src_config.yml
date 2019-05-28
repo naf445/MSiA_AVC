@@ -1,0 +1,16 @@
+data:
+    logger_config: "/../../../config/logging_local.conf"
+
+get_data: 
+    infile: None
+    outfile: None
+
+clean_book_summaries:
+    logger_config: "/../config/logging_local.conf"
+    infile: "/../data/booksummaries/booksummaries.txt"
+    outdirectory: "/../data/booksummaries"
+
+
+
+
+        
