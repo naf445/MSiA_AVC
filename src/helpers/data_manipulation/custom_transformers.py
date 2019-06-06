@@ -3,6 +3,8 @@ from sklearn.base import BaseEstimator, TransformerMixin
 
 # for class Tokenizer
 from nltk.tokenize import word_tokenize
+from nltk import pos_tag, word_tokenize
+import nltk.chunk
 
 # for class Filter_sentence
 import pandas as pd
@@ -64,7 +66,6 @@ class Filter_sentence( BaseEstimator, TransformerMixin ):
                             filtered_sentence.append(w.replace('-','').strip())
                     else:
                         filtered_sentence.append(w.replace('-','').strip())
-
         return filtered_sentence
         
     #Return self nothing else to do here    

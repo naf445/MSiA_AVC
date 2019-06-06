@@ -240,6 +240,310 @@ As we can see above, we have created a custom transformer called FeatureSelector
 
 </p>
 </details>  
+
+do this one also! https://stackabuse.com/python-for-nlp-topic-modeling/
+and this one! https://towardsdatascience.com/unsupervised-nlp-topic-models-as-a-supervised-learning-input-cf8ee9e5cf28 
+
+<details><summary>Deploying a ML Model w/Flask</summary>
+<p>
+
+[Link to Blog](https://blog.cambridgespark.com/deploying-a-machine-learning-model-to-the-web-725688b851c7)
+
+[Link to Code](https://github.com/alexanderrobertson/cambridgespark-webapp)
+
+#### 1.) Creating Your Model
+After instantiating a model object with parameters set, then `.fit`ting it to our data, we have a trained model object. We can save this trained model object using pickle:
+```python
+import pickle
+with open('bike_model_xgboost.pkl', 'wb') as file:
+pickle.dump(classifier, file)
+```
+
+#### 2.) Creating My Web App to Deploy This Model
+There are 2 main components to this Flask App:
+* The Python code that loads our model --> gets user input from web form --> makes predictions --> serves results
+* The HTML templates that render with Flask
+
+A simple visual skeleton for this is
+```
+webapp/
+    ├── model/
+    │   └── bike_model_xgboost.pkl
+    ├── templates/
+    │   └── main.html
+    └── app.py
+```
+
+**app.py**
+* `app.py` is the core of the web app; it is what will run on our EC2 server, send out web pages, and process input from users. 
+* In flask, URLs get routed to different functions.
+* Going to a url will trigger the function associated with that route. Likely one of the functions triggered will be a `flask.render` which will serve an `.html` webpage you create.
+* Let's disect the below example
+```python
+import flask
+app = flask.Flask(__name__, template_folder='templates')
+@app.route('/')
+def main():
+    return(flask.render_template('main.html'))
+if __name__ == '__main__':
+    app.run()
+```
+When this script is run, `app.run()` will be the first thing executed. This will call the run method on the app variable, which is a flask object we created in the beginning of the file. Now our app is running, and when someone navigates to the route `'/'` they will get the rendered `main.html` file.
+
+**main.html**
+An .html file we can set up. Something simple like below will work:
+```html
+<!doctype html>
+<html>
+<head>
+<title>Web app name</title>
+</head>
+<h1>Hello world.</h1>
+</html>
+```
+
+**running this app.py**
+I think we don't actually have to call `python app.py` we can just call `flask run` from command line and it will find that file and run it. This will launch out app locally. Running the function associated with the `/` route which will serving up our .html file to a local port for us to view in browser. 
+
+**Modifying to Take User Input, Run Model, and Spit Back Prediction**
+It is a few simple steps to achieve this goal.
+* Edit app.py file to load the model
+* Expand `main()` (which was our function called when the `/` route was navigated to) to prompt for user input, retrieve user input, make predictions and return predictions.
+* Edit main.html to have a form that gets the input we need, allows users to submit input and renders predictions.
+
+**Edit app.py to Load Model**
+We can load in this pickled model into our app.py file. Doing this at the top of the app means it will only get loaded once, not every time the `/` route is called. A little firther down we will see this new app.py in full.
+
+**Expand main() in app.py**
+Our app will run in 2 modes, one of which displays the input form to the user, one of which retreives that input. The equivalent and necessary HTTP methods to use are `GET` & `POST`. 
+
+As soon as a user navigates to the `/` route, flask receives a `GET` request, and the main function is called rendering our `main.html`. We will set things up so that if the user fills out the input form and clicks `submit`, flask will receive a `POST` request, and we will have our app extract the input, run it through whatever data cleaning is necessary, get a prediction from our model object, and render `main.html` with the results in place!
+
+Flask extracts the data received from the `POST` request with `flask.request.form`, which we will see in action later. We will have to set up our `main.html` to allow an input form and data to be saved, which we wil grab with the aforementioned flask.request.form. 
+
+Once we've grabbed our variables from parsing our user input out of the main.html, we can get the data into input form, and run it through our model pipeline. We then can get the model results.
+
+Finally, we can re-render our main.html with the input from the user, and our model results/predictions. 
+
+```python
+import flask
+import pickle
+# Use pickle to load in the pre-trained model.
+with open(f'model/bike_model_xgboost.pkl', 'rb') as f:
+    model = pickle.load(f)
+app = flask.Flask(__name__, template_folder='templates')
+
+@app.route('/', methods=['GET', 'POST'])
+def main():
+    if flask.request.method == 'GET':
+        return(flask.render_template('main.html'))
+    if flask.request.method == 'POST':
+        temperature = flask.request.form['temperature']
+        humidity = flask.request.form['humidity']
+        windspeed = flask.request.form['windspeed']
+        input_variables = pd.DataFrame([[temperature, humidity, windspeed]],
+                                       columns=['temperature', 'humidity', 'windspeed'],
+                                       dtype=float)
+        prediction = model.predict(input_variables)[0]
+        return flask.render_template('main.html',
+                                     original_input={'Temperature':temperature,
+                                                     'Humidity':humidity,
+                                                     'Windspeed':windspeed},
+                                     result=prediction,
+                                     )
+
+if __name__ == '__main__':
+    app.run()
+```
+Let's look a little closer at this. Of course when this is run, obviously app.run() will run, and it will `run` our app object, a flask instance. Our model has been loaded in under the variable name `model`. We have 2 possible methods, GET & POST, and depending on which method is given to the app, different functionality is enacted. 
+
+If `GET` is received by the flask app, it simply renders our main.html. 
+If `POST` is received, it first get's the variable names from the user input. Then it creates a DF with those variables, and after some cleaning gets a prediction from them with our model object. Then we return a `flask.render` which will serve that prediction up to the user. We will see specific below on how the .html was modified to allow this functionality.
+
+**Before We do That, a Brief Aside on HTTP & HTTP Request Methods**
+HTTP (hypertext transfer protocol) is a way for servers and clients to communicate. It is a request-response protocall to mediate communication. Normally some computer with an application running a website is the host server, and some other person's computer with a web browser is the client. The browser client submits an http request to the host server site, and the server returns a response to that client. The response hopefully contains the requested content.
+
+A client browser can send different types of requests to this host server, and based on the type of request the host server can decide what to send back. 
+
+`GET` Request: 
+When a client sends a GET request, they are asking the host server for the host to send back some data. The query string (name/value pairs) is sent in the URL of a GET request.
+
+`POST` Request:
+When a client sends a POST call, they are sending some data to the server, for the host server to use however it pleases, likely to create or update some resource. The data sent to the server with POST is stored in the request body of the HTTP request.
+
+**Back to the Main Event: Editing the main.html template**
+We need to expand the template to include a user input form, as well as a way of determining if results need to be rendered, and if they do, then some code to render them appropriately. 
+
+Within our main.html we will include a form section, something like:
+```html
+<form action="{{ url_for('main') }}" method="POST">
+```
+The action attribute tells flask which route, and therefore function, should be called when this form is submitted by the user in a valid way. The POST method tells the function that it should expect to be receiving input and that we are expecting input and that we will need a way to grab and process this input. We will likely include a `required` attribute because this input is required from the user.
+
+We will also include a `div` container to display our results. Of course this container should only be displayed if we have results to display, so it will need to be in some way conditional. Within this container we will include some fields that may look off, they have `{}` curly braces, and these are not normal html, but flask knows how to work with them. Within these we can put placeholder variables which we will be able to pass arguments to from out app.py functions when we make the render call to this specific template! Things are starting to come together...
+
+Anyways, we will also add some CSS for appearance. And below we will show the new and improve html file and run through it.
+
+```html
+<!doctype html>
+<html>
+<style>
+form {
+    margin: auto;
+    width: 35%;
+}
+.result {
+    margin: auto;
+    width: 35%;
+    border: 1px solid #ccc;
+}
+</style>
+<head>
+    <title>Bike Usage Model</title>
+</head>
+<form action="{{ url_for('main') }}" method="POST">
+    <fieldset>
+        <legend>Input values:</legend>
+        Temperature:
+        <input name="temperature" type="number" required>
+        <br>
+        <br> Humidity:
+        <input name="humidity" type="number" required>
+        <br>
+        <br> Windspeed:
+        <input name="windspeed" type="number" required>
+        <br>
+        <br>
+        <input type="submit">
+    </fieldset>
+</form>
+<br>
+<div class="result" align="center">
+    {% if result %}
+        {% for variable, value in original_input.items() %}
+            <b>{{ variable }}</b> : {{ value }}
+        {% endfor %}
+        <br>
+        <br> Predicted number of bikes in use:
+           <p style="font-size:50px">{{ result }}</p>
+    {% endif %}
+</div>
+</html>
+```
+Actually before we get to the grand finale where we dive into this html, we are going to watch the first 2-3 corey schafer videos on flask apps to really set us up for success and make this worthwhile.
+
+**Video 1: Getting Started**
+[link to video 1](https://www.youtube.com/watch?v=MwZwr5Tvyxo)
+* Install `flask` package
+* Your `.py` file will be the basis of your application. 
+* We create multiple pages using route and route decorators. 
+* To run your app
+    - One Method
+        + Navigate to wherever your `.py` file is. 
+        + There are a couple methods to actually run the app, he recommends first setting an environment variable to this `.py` file so the comp knows where to look.
+        + `export FLASK_APP=app.py`
+        + Then you can just use `flask run` from this directory and it will find that `app.py` and run it.
+        + This will actually instantiate a running web host server which you can browse from your client, aka your browser. See the little section above on `HTTP` for a little more detail.
+        + You can just paste the ip address it gives you in your client (browser) to access this running web server. You could also put in `loalhost:5000` or whatever port number it gives you and that will take you to the same thing.
+    - Alternative Method
+        + At the bottom of your `app.py`, include the below section
+        + From command line, then simply call the script with python
+        `python app.py`
+``` python
+if __name__=='__main__':
+    app.run(debug=True)
+```
+
+* It's a bit of a pain to have to stop the server and restart it to see updated changes, so we can run it in debug mode which allows us to avoid this
+    - `export FLASK_DEBUG=1`
+
+* Creating new routes
+    - In your `app.py`, you can create new routes by doing something similar to below
+``` py
+@app.route("/")
+@app.route("/home")
+def home():
+    return 'home page! you landed here'
+
+@app.route("/about")
+def about():
+    return 'about page! you landed here'
+```
+This above example shows us that we have 2 routes which will land on you on a the same rendered home page served to you by the host server and one /about route which asks the host server to get the about page and serve it up to the client browser.
+
+**Video 2: Templates & Passing Variables To Webpage**
+[link to video 2](https://www.youtube.com/watch?v=QnDWIZuWYW0)
+* It's possible to return html directly in the route function within a multi-line string, but we can see how messy that would get. So we use templates.
+* Within a templates directory we will create templates for our pages. There is a way to just make one template and re-use it and that will come later.
+* Then we will just tell our route function to render this template. An example of this syntax is above so I won't give one here.
+* Now what if we want to pass information into this template, possibly python variables, and then render those variables, let's find out how to do that!
+    - Within the `render_template` function, simply set some variable equal to some local python variable, and we will now have access to that variable by whatever we set the parameter name as. e.g.:
+```python
+@app.route('/home')
+def home():
+    return render_template('main.html', posts=post_variable)
+```
+* Now within the `main.html`, we could actually access this variable `posts` with some special syntax we will learn now.
+    - A code block is represented within our .html by curly braces and percent signs, and we also have to signify when it ends with another
+```html
+<body>
+    {% for post in posts%}
+        <h1>{{ post['title'] }}</h1>
+        <p>Written by:{{ post['author'] }}</p>
+    {% endfor %}
+</body>
+```
+
+OK so that was an example of how to do a foor loop to generate html, we can also do some if/else control flow for out html template.
+
+```html
+<head>
+    {% if title %}
+        <title> User Submitted Title - {{ Post['title'] }} </title>
+    {% else %}
+        <title> Default Title </title>
+    {% endif %}
+</head>
+```
+* OK so now we have seen some neat stuff. One more thing to think about is the fact that we now have 2 templates, one for home page and one for out about page, and each of them have their own `.html` file to render from within their route function. But we want some things to be kept in common and styles to be similar, etc... We can accomplish this by using template inheritance, having one main template, and templates for the individual pages override just certain sections of the original template.
+
+Below is a child template, inheriting from a `layout.html` parent template, and then overriding the place in the parent template specified as the 'content' block.
+```html
+{% extends "layout.html" %}
+
+{% block content %}
+    {% if title %}
+        <title> User Submitted Title - {{ Post['title'] }} </title>
+    {% else %}
+        <title> Default Title </title>
+    {% endif %}
+{% endblock content %} 
+```
+Keep in mind that this only works if our `layout.html` file has the 
+`{% block content %}{% endblock content %}` block somewhere in it.
+
+* Well now with templates and variables and such we have some good stuff cookin', but we prob want to beautify things a bit. One good way to do that is using `bootstrap` for adding styles. 
+    - They have a recommended template to use which loads in bootstrap and stuff.
+    - We can use the flask.bootstrap extension if that seems simpler but otherwise we can just do this 
+
+If we have set this up correctly we should not be able to assign our html elements to classes and have the css and stuff preconfigured by bootstrap. Lookup bootstrap classes for more info. If we do something like this:
+```html
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+```
+then now the stuff we populate this content block with and thus our div will be stylized with this bootstrap style.
+
+Corey has some code snippets for a navigation bar and some global styles, so we can copy those from the description in this video I believe. We can put these code snippets of html into the parent template so the objects are present in all of our pages. 
+
+* One more thing, we will want to create a directory called `static/` which houses our html and css files.  
+* We are also going to want to `from flask import url_for`. Then go start at 28:30 of this video to see where he uses this url_for in the html tepmlate in order to tell it to look for its css in the correct location.  
+
+At this point we have a solid starting basis, get to it and stop reading tutorials to avoid doing some mucky work!
+
+
+</p>
+</details>  
   
 ## Things to google search  
 * `"genre" classification "book" machine learning text "NLP”`  

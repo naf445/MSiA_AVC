@@ -15,7 +15,7 @@ config = config["data"]
 logging.config.fileConfig(directory_abs_path+config["logger_config"])
 logger = logging.getLogger(__name__)
 
-def loadAndClean(path=True):
+def loadAndClean(path):
     """ 
     Loads and cleans the booksummaries.txt data file for more
     exploratory analysis and machine learning training. 
@@ -50,3 +50,4 @@ def loadAndClean(path=True):
     logger.info("returning booksummary data set")
 
     return booksummaries
+    

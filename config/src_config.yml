@@ -5,9 +5,240 @@ get_data:
     infile: None
     outfile: None
 
-clean_book_summaries:
+clean_book_genres:
     logger_config: "/../config/logging_local.conf"
     infile: "/../data/booksummaries/booksummaries.txt"
+    outfile: "/../data/booksummaries/booksummaries_genres_cleaned.csv"
+    rules:
+        bogus: 
+            - albino_bias
+            - cabal
+            - campus_novel
+            - collage
+            - comics
+            - comic_novel
+            - comic_book
+            - epistolary_novel
+            - ergodic_literature
+            - essay
+            - experimental_literature
+            - fictional_crossover
+            - first-person_narrative
+            - foreign_legion
+            - future_history
+            - künstlerroman
+            - literary_criticism
+            - literary_fiction
+            - literary_theory
+            - marketing
+            - modernism
+            - morality_play
+            - new_weird
+            - new_york_times_best_seller_list
+            - parallel_novel
+            - pastiche
+            - picture_book
+            - play
+            - poetry
+            - polemic
+            - postmodernism
+            - prose
+            - prose_poetry
+            - role-playing_game
+            - roman_à_clef
+            - self-help
+            - serial
+            - short_story
+            - social_commentary
+            - social_criticism
+            - transhumanism
+            - treatise
+            - wuxia
+            - zombies_in_popular_culture
+        adventure:
+            - adventure_novel
+            - lost_world
+            - naval_adventure
+            - picaresque_novel
+            - robinsonade
+            - sea_story
+        anthol_biog_autobiog:
+            - anthology
+            - autobiographical_comics
+            - autobiographical_novel
+            - autobiography
+            - biographical_novel
+            - biography
+            - memoir
+            - personal_journal
+        children:
+            - childrens_literature
+            - fable
+            - fairy_tale
+            - fairytale_fantasy
+        crime_fiction:
+            - cozy
+            - detective_fiction
+            - hardboiled
+            - historical_whodunnit
+            - locked_room_mystery
+            - mystery
+            - police_procedural
+            - whodunit
+        comedy:
+            - black_comedy
+            - comedy_of_manners
+            - farce
+            - humour
+            - parody
+            - satire
+            - tragic_comedy
+        existential_philosophy:
+            - existentialism
+            - philosophy
+            - metaphysics
+            - political_philosophy
+        fantasy:
+            - bangsian_fantasy
+            - comic_fantasy
+            - contemporary_fantasy
+            - dark_fantasy
+            - fantastique
+            - fantasy_of_manners
+            - heroic_fantasy
+            - high_fantasy
+            - historical_fantasy
+            - low_fantasy
+            - magic_realism
+            - science_fantasy
+            - sword_and_planet
+            - sword_and_sorcery
+            - urban_fantasy
+        fiction:
+            - novel
+            - novella
+            - psychological_novel
+            - social_novel
+        historical_fiction:
+            - historical_novel
+            - industrial_novel
+        horror:
+            - zombies_in_popular_culture
+            - american_gothic_fiction
+            - gothic_fiction
+            - bit_lit
+            - ghost_story
+            - mashup
+            - vampire_fiction
+            - zombie
+        informational:
+            - business
+            - computer_science
+            - economics
+            - education
+            - encyclopedia
+            - field_guide
+            - history
+            - mathematics
+            - military_history
+            - music
+            - nature
+            - neuroscience
+            - photography
+            - politics
+            - popular_science
+            - psychology
+            - reference
+            - science
+            - sociology
+            - social_sciences
+            - travel
+            - travel_literature
+        lgbt:
+            - gay_novel
+            - gay_theme
+            - lgbt_literature
+            - transgender_and_transsexual_fiction
+        non_fiction_lit:
+            - non-fiction_novel
+            - non-fiction
+        realistic_fiction:
+            - literary_realism
+            - urban_fiction
+        religious:
+            - inspirational
+            - religion
+            - religious_text
+            - spirituality
+        romance: 
+            - chivalric_romance
+            - colonial_united_states_romance
+            - elizabethan_romance
+            - erotica
+            - georgian_romance
+            - historical_romance
+            - medieval_romance
+            - paranormal_romance
+            - regency_romance
+            - romance_novel
+            - romantic_comedy
+        science_fiction:
+            - alien_invasion
+            - biopunk
+            - comic_science_fiction
+            - cyberpunk
+            - edisonade
+            - epic_science_fiction_and_fantasy
+            - feminist_science_fiction
+            - hard_science_fiction
+            - military_science_fiction
+            - planetary_romance
+            - post-holocaust
+            - postcyberpunk
+            - scientific_romance
+            - social_science_fiction
+            - soft_science_fiction
+            - space_opera
+            - space_western
+            - spy_fiction
+            - time_travel
+        speculative_fiction:
+            - utopian_and_dystopian_fiction
+            - utopian_fiction
+            - alternate_history
+            - apocalyptic_and_post-apocalyptic_fiction
+            - catastrophic_literature
+            - dying_earth_subgenre
+            - dystopia
+            - human_extinction
+            - subterranean_fiction
+            - superhero_fiction
+            - supernatural
+        suspense/thriller/spy:
+            - spy_fiction
+            - suspense
+            - techno
+            - thriller
+        war:
+            - invasion_literature
+            - war_novel
+        western:
+            - western_fiction
+        young_adult:
+            - bildungsroman
+            - boys_school_stories
+            - coming_of_age
+            - english_public-school_stories
+            - gamebook
+            - juvenile_fantasy
+            - light_novel
+            - school_story
+            - young_adult_literature
+            - youth
+        
+clean_book_summaries:
+    logger_config: "/../config/logging_local.conf"
+    infile: "/../data/booksummaries/booksummaries_genres_cleaned.txt"
     outdirectory: "/../data/booksummaries"
 
 
