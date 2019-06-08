@@ -8,21 +8,27 @@ import logging.config
 from sklearn.pipeline import Pipeline 
 import os
 import yaml
+import gensim.downloader as api
+import numpy as np
+import pandas as pd
 
 directory_abs_path = str(os.path.dirname(os.path.abspath(__file__)))
 
 # import config yaml file
 with open(directory_abs_path+"/../config/src_config.yml", "r") as yml_file:
     config = yaml.load(yml_file)
-config = config['clean_book_summaries']
+config = config['clean_summaries_gen_vecs']
 
 logging.config.fileConfig(directory_abs_path+config["logger_config"])
 logger = logging.getLogger(__name__)
 
 logger.info("Load in raw data")
-books = data.loadAndClean(directory_abs_path+config['infile'])
-books = books[['bookGenre', 'plotSum', 'bookTitle']]
+books = pd.read_csv(directory_abs_path+config['infile'])
 logger.info("Loaded in raw data")
+
+logger.info("Load in word2vec_model")
+word2vec_model = api.load("glove-wiki-gigaword-50")
+logger.info("Loaded in word2vec_model")
 
 if __name__=='__main__':
     
@@ -35,6 +41,7 @@ if __name__=='__main__':
     logger.info("Creating sklearn pipeline")
     steps = [('tokenizer', ct.Tokenizer()),
                 ('filterer', ct.Filter_sentence(filter_names=args.filter_names)),
+                ('mean_words2vec_er',ct.MeanEmbeddingVectorizer(word2vec_model)),
                 ('pruner', ct.StemmingLemming(prune_type=args.stem_lem_type)),
                 ('joiner_transformer', ct.Joiner())]
     pipeline = Pipeline(steps)

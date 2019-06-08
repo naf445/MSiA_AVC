@@ -78,7 +78,35 @@ class Filter_sentence( BaseEstimator, TransformerMixin ):
         DF_2 = DF.copy(deep=True)
         DF_2['plotSum'] = DF_2['plotSum'].apply(lambda row: self.filter_sentence(row))
         return DF_2
+ 
+# Custom Transformer that MeanEmbeddingVectorizes
+class MeanEmbeddingVectorizer( BaseEstimator, TransformerMixin ):
+         
+    #Class Constructor 
+    def __init__( self, word2vecModel ):
+        self.word2vec = word2vecModel
+        
+    #Return self nothing else to do here    
+    def fit( self, X, y = None ):
+        return self 
     
+    #Method that describes what we need this transformer to do
+    def transform(self, DF, y = None):
+        
+        def meanWord2Vec(tokenized_sentence, word2vecModel):
+            sentence2vec = [] 
+            for word in tokenized_sentence:
+                try:
+                    sentence2vec.append(word2vecModel.get_vector(word))
+                except:
+                    sentence2vec.append(np.zeros(50))
+            sentence2vec = np.array(sentence2vec)
+            return np.mean(sentence2vec, axis=0)
+
+        DF_2 = DF.copy(deep=True)
+        DF_2['plotSum2vec'] = DF_2['plotSum'].apply(lambda row: meanWord2Vec(row, self.word2vec))
+        
+        return DF_2
     
     
 #Custom Transformer that stems or lemmatizes

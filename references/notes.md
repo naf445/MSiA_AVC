@@ -1,6 +1,35 @@
-## Notes for Project  
+# Notes for Project  
 ---
-## Articles
+## Machine Learning Articles
+
+<details><summary>Blog Post: Text Classification w/ word2vec</summary>
+<p>
+
+[Link To Writeup](http://nadbordrozd.github.io/blog/2016/05/20/text-classification-with-word2vec/ )  
+
+[Link to Example .ipynb](https://github.com/nadbordrozd/blog_stuff/blob/master/classification_w2v/benchmarking_python3.ipynb)
+
+[Link to Pre-Trained word2vec options](https://github.com/RaRe-Technologies/gensim-data)
+
+</p>
+</details>
+
+<details><summary>Blog Post: Python for NLP Topic Modeling</summary>
+<p>
+
+[Link](https://stackabuse.com/python-for-nlp-topic-modeling/)  
+
+</p>
+</details>
+
+<details><summary>Blog Post: Topic Modeling Ouput as Supervised Learning Input</summary>
+<p>
+
+[Link](https://towardsdatascience.com/unsupervised-nlp-topic-models-as-a-supervised-learning-input-cf8ee9e5cf28)  
+
+</p>
+</details>
+
 <details><summary>Blog Post: NLP, LDA, and Kmeans for Music Classification (in R)</summary>
 <p>
 
@@ -88,30 +117,6 @@ For training, a set of documents is required. A word vector is generated for eac
 </p>
 </details>
 
-<details><summary>Github Repo, Book Genre From Titles</summary>
-<p>
-
-[Link](https://github.com/akshaybhatia10/Book-Genre-Classification)
-
-### README.md
-#### Overview
-This project classifies book sinto genres based only on titles. There are 32 genres to classify the books in it. There are two notebooks relevant to me: Basic_Bag_of_Words_model.ipynb & Best_TFIDF-Vectorizer_model.ipynb.  
-
-</p>
-</details>
-
-<details><summary>Github Repositories, Music Genre Classification</summary>
-<p>
-
-[1st Link](https://github.com/dipayandutta93/Music-Genre-Classification-using-lyrics)  
-[2nd Link](https://github.com/ianscottknight/Musical-Genre-Classification-of-Song-Lyrics)  
-
-### Link 1
-#### Overview
-
-</p>
-</details>
-
 <details><summary>Blog Post: Text Classification in Python</summary>
 <p>
 
@@ -194,6 +199,35 @@ display_topics(lda, tf_feature_names, 10)
 </p>
 </details>  
 
+
+## Example Repositories
+
+<details><summary>Github Repo, Book Genre From Titles</summary>
+<p>
+
+[Link](https://github.com/akshaybhatia10/Book-Genre-Classification)
+
+### README.md
+#### Overview
+This project classifies book sinto genres based only on titles. There are 32 genres to classify the books in it. There are two notebooks relevant to me: Basic_Bag_of_Words_model.ipynb & Best_TFIDF-Vectorizer_model.ipynb.  
+
+</p>
+</details>
+
+<details><summary>Github Repositories, Music Genre Classification</summary>
+<p>
+
+[1st Link](https://github.com/dipayandutta93/Music-Genre-Classification-using-lyrics)  
+[2nd Link](https://github.com/ianscottknight/Musical-Genre-Classification-of-Song-Lyrics)  
+
+### Link 1
+#### Overview
+
+</p>
+</details>
+
+## Sklearn
+
 <details><summary>Custom sklearn Transformers for pipelines</summary>
 <p>
 
@@ -241,8 +275,92 @@ As we can see above, we have created a custom transformer called FeatureSelector
 </p>
 </details>  
 
-do this one also! https://stackabuse.com/python-for-nlp-topic-modeling/
-and this one! https://towardsdatascience.com/unsupervised-nlp-topic-models-as-a-supervised-learning-input-cf8ee9e5cf28 
+<details><summary>Sklearn</summary>
+<p>
+
+* **Basic Sklearn syntax**:
+```python
+
+[1]: from sklearn.linear_model import Lasso
+[2]: from sklearn.model_selection import train_test_split
+
+[3]: X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.4, random_state=42)
+[4]: lassoRegObj = Lasso(alpha=0.4)
+[5]: lassoRegObj.fit(X_train, y_train)
+[6]: lassoRegObj.predict(X_test)
+```
+The first thing I do here is import my model which I want to use and some more stuff which will be useful, the ability to split my data into a training and testing set. Then I actually perform this split in line 3.
+
+Starting in line 4, I actually begin constructing and fitting my model. Sklearn takes full advantage of python classes and object oriented programming. When you want to fit a model, you first instantiate a model object of that type. You can think of this as retreiving an out-of-the-box fresh model object and then customizing it with your parameters. In line 4 we see this occur, as I save to the `lassoRegObj` an instantiation of a lasso regression object with its alpha value tuned to `0.4`. 
+
+This object has a method, `.fit()` which will customize this model object even more, this time molding it to fit the data which we provide, which is provided as the variables X_train and y_train in this example. 
+
+Now that we have molded this model object to fit our training data, we can have it predict some new data which we provide. 
+
+It is important to realize that you don't have to resave the object every time, because the .fit() is a method which changes the internal state of the model object. 
+
+* **Sklearn CV syntax**: 
+```python
+[1]: from sklearn.model_selection import GridSearchCV
+
+[2]: param_grid = {'n_neighbors':np.arange(1,50)}
+[3]: knn = KNeighborsClassifier()
+[4]: knn_cv = GridSearchCV(knn, param_grid, cv=5)
+[5]: knn_cv.fit(X,y)
+[6]: knn_cv.best_params_
+```
+OK here we are implementing CV with a model in sklearn. We set up the grid of parameters we would like to search by creating a dictionary called param_grid, where the key is actually the name of one of the hyperparameters which need tuning. 
+
+Then we instantiate our KNN object called `knn`, which is just an out-of-the-box classifier with no customization. But we don't just want to fit this model, we want to fit this model many times each with different hyperparameters. So we need to instantiate a different model with this functionality. That is why on line 4, we instantiate a GridSearchCV object. This object is given our knn model, the hyperparameter ranges to test, and the # of cv folds as its parameters.
+
+Now, as we have many times in the past, we mold this model to fit our data with the `knn_cv.fit()` method. It will fit our chosen model a bunch of times and give us back the best one.  
+
+* **Sklearn Pipeline syntax**: 
+```python
+[1]: from sklearn.preprocessing import StandardScaler
+
+[2]: X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.4, random_state=42)
+
+[3]: steps = [('scaler', StandardScaler()),
+              ('knn', KNeighborsClassifier())]
+[4]: pipeline = Pipeline(steps)
+
+[5]: knn_scaled = pipeline.fit(X_train, y_train)
+[6]: y_pred = pipeline.predict(X_test)
+```
+So here we see an example of combining a pre-proccessing step which we call a 'transformation' into a Pipeline. The first thing we do is import some things, then we split up our data set. 
+
+We next construct the steps of our pipeline. In this case, the pipeline has 2 steps, a transformation step called scaler which uses a StandardScaler() object, and then a model fitting step called 'knn' which uses an off-the-shelf KNN. 
+
+Now, we actually instantiate a pipeline object, and this object is the thing which we will now mold and fit to our data. We see, we call `pipeline.fit()` similar to how in the past we have called our model objects, or cv_model objects `.fit()`.
+
+* **Sklearn CV w/Pipeline syntax**: 
+```python
+[1]: steps = [('scaler', StandardScaler()),
+         ('knn', KNeighborsClassifier())]
+
+[2]: pipeline = Pipeline(steps)
+
+[3]: CV_search_parameters = {knn__n_neighbors=np.arange(1, 50)}
+
+[4]: X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=12345)
+
+[5]: cv = GridSearchCV(pipeline, param_grid=CV_search_parameters)
+
+[6]: cv.fit(X_train, y_train)
+
+[7]: y_pred = cv.predict(X_test)
+```
+Now we are combining a lot of the things we have seen thus far to use CV and also take advantage of pipelines. We begin by creating the steps of our pipeline. This is similar to having a model, but instead of just being a model, it can be a couple transformation steps prior to the model. That is the point of the pipeline, to package it all up into one thing.
+
+As earlier, in line 3, we see us setting which hyperparameters we want to tune through, but because now our Pipeline object can actually contain multiple objects itself, we must identify which pipeline step and what parameter in that step we want to include in out grid search. 
+
+OK so in line 5 we actually instantiate this GridSearchCV object as we did before and we are going to fit it to our data, and instead of just giving it a model object like KNN, we give it an entire pipeline which is needs to run on all the CV folds. 
+
+</p>
+</details>  
+
+## Flask
 
 <details><summary>Deploying a ML Model w/Flask</summary>
 <p>
@@ -550,88 +668,3 @@ At this point we have a solid starting basis, get to it and stop reading tutoria
 * `supervised document classification python`  
 * `neural network sklearn multilabel` 
 
-## Misc Notes
-<details><summary>Sklearn</summary>
-<p>
-
-* **Basic Sklearn syntax**:
-```python
-
-[1]: from sklearn.linear_model import Lasso
-[2]: from sklearn.model_selection import train_test_split
-
-[3]: X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.4, random_state=42)
-[4]: lassoRegObj = Lasso(alpha=0.4)
-[5]: lassoRegObj.fit(X_train, y_train)
-[6]: lassoRegObj.predict(X_test)
-```
-The first thing I do here is import my model which I want to use and some more stuff which will be useful, the ability to split my data into a training and testing set. Then I actually perform this split in line 3.
-
-Starting in line 4, I actually begin constructing and fitting my model. Sklearn takes full advantage of python classes and object oriented programming. When you want to fit a model, you first instantiate a model object of that type. You can think of this as retreiving an out-of-the-box fresh model object and then customizing it with your parameters. In line 4 we see this occur, as I save to the `lassoRegObj` an instantiation of a lasso regression object with its alpha value tuned to `0.4`. 
-
-This object has a method, `.fit()` which will customize this model object even more, this time molding it to fit the data which we provide, which is provided as the variables X_train and y_train in this example. 
-
-Now that we have molded this model object to fit our training data, we can have it predict some new data which we provide. 
-
-It is important to realize that you don't have to resave the object every time, because the .fit() is a method which changes the internal state of the model object. 
-
-* **Sklearn CV syntax**: 
-```python
-[1]: from sklearn.model_selection import GridSearchCV
-
-[2]: param_grid = {'n_neighbors':np.arange(1,50)}
-[3]: knn = KNeighborsClassifier()
-[4]: knn_cv = GridSearchCV(knn, param_grid, cv=5)
-[5]: knn_cv.fit(X,y)
-[6]: knn_cv.best_params_
-```
-OK here we are implementing CV with a model in sklearn. We set up the grid of parameters we would like to search by creating a dictionary called param_grid, where the key is actually the name of one of the hyperparameters which need tuning. 
-
-Then we instantiate our KNN object called `knn`, which is just an out-of-the-box classifier with no customization. But we don't just want to fit this model, we want to fit this model many times each with different hyperparameters. So we need to instantiate a different model with this functionality. That is why on line 4, we instantiate a GridSearchCV object. This object is given our knn model, the hyperparameter ranges to test, and the # of cv folds as its parameters.
-
-Now, as we have many times in the past, we mold this model to fit our data with the `knn_cv.fit()` method. It will fit our chosen model a bunch of times and give us back the best one.  
-
-* **Sklearn Pipeline syntax**: 
-```python
-[1]: from sklearn.preprocessing import StandardScaler
-
-[2]: X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.4, random_state=42)
-
-[3]: steps = [('scaler', StandardScaler()),
-              ('knn', KNeighborsClassifier())]
-[4]: pipeline = Pipeline(steps)
-
-[5]: knn_scaled = pipeline.fit(X_train, y_train)
-[6]: y_pred = pipeline.predict(X_test)
-```
-So here we see an example of combining a pre-proccessing step which we call a 'transformation' into a Pipeline. The first thing we do is import some things, then we split up our data set. 
-
-We next construct the steps of our pipeline. In this case, the pipeline has 2 steps, a transformation step called scaler which uses a StandardScaler() object, and then a model fitting step called 'knn' which uses an off-the-shelf KNN. 
-
-Now, we actually instantiate a pipeline object, and this object is the thing which we will now mold and fit to our data. We see, we call `pipeline.fit()` similar to how in the past we have called our model objects, or cv_model objects `.fit()`.
-
-* **Sklearn CV w/Pipeline syntax**: 
-```python
-[1]: steps = [('scaler', StandardScaler()),
-         ('knn', KNeighborsClassifier())]
-
-[2]: pipeline = Pipeline(steps)
-
-[3]: CV_search_parameters = {knn__n_neighbors=np.arange(1, 50)}
-
-[4]: X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=12345)
-
-[5]: cv = GridSearchCV(pipeline, param_grid=CV_search_parameters)
-
-[6]: cv.fit(X_train, y_train)
-
-[7]: y_pred = cv.predict(X_test)
-```
-Now we are combining a lot of the things we have seen thus far to use CV and also take advantage of pipelines. We begin by creating the steps of our pipeline. This is similar to having a model, but instead of just being a model, it can be a couple transformation steps prior to the model. That is the point of the pipeline, to package it all up into one thing.
-
-As earlier, in line 3, we see us setting which hyperparameters we want to tune through, but because now our Pipeline object can actually contain multiple objects itself, we must identify which pipeline step and what parameter in that step we want to include in out grid search. 
-
-OK so in line 5 we actually instantiate this GridSearchCV object as we did before and we are going to fit it to our data, and instead of just giving it a model object like KNN, we give it an entire pipeline which is needs to run on all the CV folds. 
-
-</p>
-</details>  

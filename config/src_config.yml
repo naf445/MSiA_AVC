@@ -235,13 +235,11 @@ clean_book_genres:
             - school_story
             - young_adult_literature
             - youth
-        
-clean_book_summaries:
+ 
+clean_summaries_gen_vecs:
     logger_config: "/../config/logging_local.conf"
-    infile: "/../data/booksummaries/booksummaries_genres_cleaned.txt"
+    infile: "/../data/booksummaries/booksummaries_genres_cleaned.csv"
     outdirectory: "/../data/booksummaries"
 
 
 
-
-        

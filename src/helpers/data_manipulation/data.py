@@ -49,5 +49,5 @@ def loadAndClean(path):
     
     logger.info("returning booksummary data set")
 
-    return booksummaries
+    return booksummaries[['bookGenre', 'plotSum']]
     
