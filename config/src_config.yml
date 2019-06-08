@@ -241,5 +241,8 @@ clean_summaries_gen_vecs:
     infile: "/../data/booksummaries/booksummaries_genres_cleaned.csv"
     outdirectory: "/../data/booksummaries"
 
-
+gen_LDA_model:
+    logger_config: "/../config/logging_local.conf"
+    infile: "/../data/booksummaries/books_Porter_True.csv"
+    outfile: "/../models/LDA_model.pkl"
 

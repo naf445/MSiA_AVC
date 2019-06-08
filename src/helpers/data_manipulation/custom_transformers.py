@@ -18,6 +18,7 @@ from nltk.stem import LancasterStemmer
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import wordnet
 import os
+import re
 
 import logging
 import logging.config
@@ -59,6 +60,7 @@ class Filter_sentence( BaseEstimator, TransformerMixin ):
 
         for w in tokenized_sentence: 
             w = w.lower()
+            w = re.sub(r'\d+', '', w)
             if w not in stop_words:
                 if w not in punctuation: 
                     if self.filter_names:
