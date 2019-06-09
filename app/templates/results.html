@@ -1,0 +1,15 @@
+<!doctype html>
+{% extends "layout.html" %}
+<html>
+
+{% block head %}
+	<title>Results Page</title>
+{% endblock head %}
+
+{% block body %}
+	<p>Original Author: {{ original_input.author }}</p>
+    <p>Original Plot Summary: {{ original_input.plot_summary }}</p>
+    <p>Model Results: {{ model_results }}</p>
+{% endblock body %}
+
+</html>

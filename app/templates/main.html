@@ -1,10 +1,28 @@
 <!doctype html>
+{% extends "layout.html" %}
 <html>
 
-<head>
-	<title>Web app name</title>
-</head>
+{% block head %}
+	<title>AVC Final Project</title>
+{% endblock head %}
 
-<h1>Hello world.</h1>
+{% block body %}
+	<h1>Welcome to my home page</h1>
+	
+	<form action="{{ url_for('results') }}" method="POST">
+	    <fieldset>
+	        <legend>Input values:</legend>
+	        Author:
+	        <input name="author" type="text" required>
+	        <br>
+	        <br> Plot Summary:
+	        <textarea name="plot_summary" rows="20" cols="50">Enter Text Here.</textarea>
+	        <br>
+	        <br>
+	        <input type="submit">
+	    </fieldset>
+	</form>
+
+{% endblock body %}
 
 </html>
