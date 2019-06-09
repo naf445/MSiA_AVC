@@ -1,5 +1,12 @@
+helpers:
+    scoring:
+        score_user_input: 
+            logger_config: "/../../../config/logging_local.conf"
+            infile_genres: "/../../../models/genre_names.csv"
+
 data:
     logger_config: "/../../../config/logging_local.conf"
+    
 
 get_data: 
     infile: None
@@ -274,6 +281,13 @@ train_model:
     infile_data: "/../data/booksummaries/booksummaries_ready2train.csv"
     outfile_model: "/../models/RFC_deployment_model.pkl"
     outfile_genres: "/../models/genre_names.csv"
+ 
+score_model:
+    logger_config: "/../config/logging_local.conf"
+    infile_lda: "/../models/LDA_model.pkl"
+    infile_tf_vect: "/../models/tf_vect.pkl"
+    infile_model: "/../models/RFC_deployment_model.pkl"
+
 
 
 
