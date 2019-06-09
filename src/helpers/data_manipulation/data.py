@@ -12,7 +12,7 @@ with open(directory_abs_path+"/../../../config/src_config.yml", "r") as yml_file
     config = yaml.load(yml_file)
 config = config["data"]
 
-logging.config.fileConfig(directory_abs_path+config["logger_config"])
+logging.config.fileConfig(directory_abs_path+config["logger_config"], disable_existing_loggers=False)
 logger = logging.getLogger(__name__)
 
 def loadAndClean(path):

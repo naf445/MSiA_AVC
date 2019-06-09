@@ -25,7 +25,7 @@ import logging.config
 
 directory_abs_path = str(os.path.dirname(os.path.abspath(__file__)))
 
-logging.config.fileConfig(directory_abs_path+"/../../../config/logging_local.conf")
+logging.config.fileConfig(directory_abs_path+"/../../../config/logging_local.conf", disable_existing_loggers=False)
 logger = logging.getLogger(__name__)
 
 #Custom Transformer that tokenizes
@@ -103,7 +103,7 @@ class MeanEmbeddingVectorizer( BaseEstimator, TransformerMixin ):
                 except:
                     sentence2vec.append(np.zeros(50))
             sentence2vec = np.array(sentence2vec)
-            return np.mean(sentence2vec, axis=0)
+            return list(np.mean(sentence2vec, axis=0))
 
         DF_2 = DF.copy(deep=True)
         DF_2['plotSum2vec'] = DF_2['plotSum'].apply(lambda row: meanWord2Vec(row, self.word2vec))
@@ -165,4 +165,31 @@ class Joiner( BaseEstimator, TransformerMixin ):
         logger.info("Calling the Joiner transformer")
         DF_2 = DF.copy(deep=True)
         DF_2['plotSum'] = DF_2['plotSum'].apply(lambda row: ' '.join(row))
+        return DF_2
+    
+# Custom Transformer that gets LDA scores
+class LDA_Vectorizer( BaseEstimator, TransformerMixin ):
+         
+    #Class Constructor 
+    def __init__( self, lda_model, tf_vectorizer ):
+        self.lda = lda_model
+        self.tf_vectorizer = tf_vectorizer
+        
+    #Return self nothing else to do here    
+    def fit( self, X, y = None ):
+        return self 
+    
+    #Method that describes what we need this transformer to do
+    def transform(self, DF, y = None):
+        logger.info("Calling the LDA transformer")
+        
+        def getLDAScores(document, lda_model, tf_vect):
+            document=[document]
+            vectorized_doc = tf_vect.transform(document)
+            return lda_model.transform(vectorized_doc).tolist()
+
+        DF_2 = DF.copy(deep=True)
+        DF_2['plotSumLDA'] = DF_2['plotSum'].apply(\
+                    lambda row: getLDAScores(row, self.lda, self.tf_vectorizer) )
+        
         return DF_2

@@ -12,12 +12,15 @@ clean_book_genres:
     rules:
         bogus: 
             - albino_bias
+            - 'anti-nuclear'
+            - 'anti-war'
             - cabal
             - campus_novel
             - collage
             - comics
             - comic_novel
             - comic_book
+            - drama
             - epistolary_novel
             - ergodic_literature
             - essay
@@ -41,6 +44,7 @@ clean_book_genres:
             - play
             - poetry
             - polemic
+            - popular_culture
             - postmodernism
             - prose
             - prose_poetry
@@ -54,7 +58,6 @@ clean_book_genres:
             - transhumanism
             - treatise
             - wuxia
-            - zombies_in_popular_culture
         adventure:
             - adventure_novel
             - lost_world
@@ -71,6 +74,8 @@ clean_book_genres:
             - biography
             - memoir
             - personal_journal
+        chick_lit:
+            - indian_chick_lit
         children:
             - childrens_literature
             - fable
@@ -93,6 +98,7 @@ clean_book_genres:
             - parody
             - satire
             - tragic_comedy
+            - tragicomedy
         existential_philosophy:
             - existentialism
             - philosophy
@@ -119,6 +125,7 @@ clean_book_genres:
             - novella
             - psychological_novel
             - social_novel
+            - absurdist_fiction
         historical_fiction:
             - historical_novel
             - industrial_novel
@@ -132,8 +139,10 @@ clean_book_genres:
             - vampire_fiction
             - zombie
         informational:
+            - anthropology
             - business
             - computer_science
+            - cookbook
             - economics
             - education
             - encyclopedia
@@ -157,11 +166,13 @@ clean_book_genres:
         lgbt:
             - gay_novel
             - gay_theme
+            - gay_themed
             - lgbt_literature
             - transgender_and_transsexual_fiction
         non_fiction_lit:
             - non-fiction_novel
             - non-fiction
+            - creative_nonfiction
         realistic_fiction:
             - literary_realism
             - urban_fiction
@@ -179,6 +190,7 @@ clean_book_genres:
             - historical_romance
             - medieval_romance
             - paranormal_romance
+            - pornography
             - regency_romance
             - romance_novel
             - romantic_comedy
@@ -200,6 +212,7 @@ clean_book_genres:
             - soft_science_fiction
             - space_opera
             - space_western
+            - steampunk
             - spy_fiction
             - time_travel
         speculative_fiction:
@@ -215,10 +228,12 @@ clean_book_genres:
             - superhero_fiction
             - supernatural
         suspense/thriller/spy:
+            - conspiracy_fiction
             - spy_fiction
             - suspense
             - techno
             - thriller
+            - conspiracy
         war:
             - invasion_literature
             - war_novel
@@ -244,5 +259,21 @@ clean_summaries_gen_vecs:
 gen_LDA_model:
     logger_config: "/../config/logging_local.conf"
     infile: "/../data/booksummaries/books_Porter_True.csv"
-    outfile: "/../models/LDA_model.pkl"
+    outfile_lda: "/../models/LDA_model.pkl"
+    outfile_tf_vect: "/../models/tf_vect.pkl"
+
+gen_LDA_vecs:
+    logger_config: "/../config/logging_local.conf"
+    infile_data: "/../data/booksummaries/books_Porter_True.csv"
+    infile_lda: "/../models/LDA_model.pkl"
+    infile_tf_vect: "/../models/tf_vect.pkl"
+    outfile: "/../data/booksummaries/booksummaries_ready2train.csv"
+    
+train_model:
+    logger_config: "/../config/logging_local.conf"
+    infile_data: "/../data/booksummaries/booksummaries_ready2train.csv"
+    outfile_model: "/../models/RFC_deployment_model.pkl"
+    outfile_genres: "/../models/genre_names.csv"
+
+
 

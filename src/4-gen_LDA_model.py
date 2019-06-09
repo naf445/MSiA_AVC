@@ -16,7 +16,7 @@ with open(directory_abs_path+"/../config/src_config.yml", "r") as yml_file:
     config = yaml.load(yml_file)
 config = config['gen_LDA_model']
 
-logging.config.fileConfig(directory_abs_path+config["logger_config"])
+logging.config.fileConfig(directory_abs_path+config["logger_config"], disable_existing_loggers=False)
 logger = logging.getLogger(__name__)
 
 logger.info("Load in data")
@@ -40,6 +40,12 @@ lda.fit(tf)
 
 logger.info("save LDA model")
 # save the model
-with open(directory_abs_path+config['outfile'], 'wb') as file:  
+with open(directory_abs_path+config['outfile_lda'], 'wb') as file:  
     pickle.dump(lda, file)
-               
+logger.info("saved LDA model")
+    
+logger.info("save tf_vectorizer")
+# save the model
+with open(directory_abs_path+config['outfile_tf_vect'], 'wb') as file:  
+    pickle.dump(tf_vectorizer, file)
+logger.info("saved tf_vectorizer")
