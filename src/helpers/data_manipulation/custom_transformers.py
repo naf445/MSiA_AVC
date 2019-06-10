@@ -18,13 +18,14 @@ from nltk.stem import LancasterStemmer
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import wordnet
 import os
+import re
 
 import logging
 import logging.config
 
 directory_abs_path = str(os.path.dirname(os.path.abspath(__file__)))
 
-logging.config.fileConfig(directory_abs_path+"/../../../config/logging_local.conf")
+logging.config.fileConfig(directory_abs_path+"/../../../config/logging_local.conf", disable_existing_loggers=False)
 logger = logging.getLogger(__name__)
 
 #Custom Transformer that tokenizes
@@ -59,6 +60,7 @@ class Filter_sentence( BaseEstimator, TransformerMixin ):
 
         for w in tokenized_sentence: 
             w = w.lower()
+            w = re.sub(r'\d+', '', w)
             if w not in stop_words:
                 if w not in punctuation: 
                     if self.filter_names:
@@ -78,7 +80,35 @@ class Filter_sentence( BaseEstimator, TransformerMixin ):
         DF_2 = DF.copy(deep=True)
         DF_2['plotSum'] = DF_2['plotSum'].apply(lambda row: self.filter_sentence(row))
         return DF_2
+ 
+# Custom Transformer that MeanEmbeddingVectorizes
+class MeanEmbeddingVectorizer( BaseEstimator, TransformerMixin ):
+         
+    #Class Constructor 
+    def __init__( self, word2vecModel ):
+        self.word2vec = word2vecModel
+        
+    #Return self nothing else to do here    
+    def fit( self, X, y = None ):
+        return self 
     
+    #Method that describes what we need this transformer to do
+    def transform(self, DF, y = None):
+        
+        def meanWord2Vec(tokenized_sentence, word2vecModel):
+            sentence2vec = [] 
+            for word in tokenized_sentence:
+                try:
+                    sentence2vec.append(word2vecModel.get_vector(word))
+                except:
+                    sentence2vec.append(np.zeros(50))
+            sentence2vec = np.array(sentence2vec)
+            return list(np.mean(sentence2vec, axis=0))
+
+        DF_2 = DF.copy(deep=True)
+        DF_2['plotSum2vec'] = DF_2['plotSum'].apply(lambda row: meanWord2Vec(row, self.word2vec))
+        
+        return DF_2
     
     
 #Custom Transformer that stems or lemmatizes
@@ -135,4 +165,31 @@ class Joiner( BaseEstimator, TransformerMixin ):
         logger.info("Calling the Joiner transformer")
         DF_2 = DF.copy(deep=True)
         DF_2['plotSum'] = DF_2['plotSum'].apply(lambda row: ' '.join(row))
+        return DF_2
+    
+# Custom Transformer that gets LDA scores
+class LDA_Vectorizer( BaseEstimator, TransformerMixin ):
+         
+    #Class Constructor 
+    def __init__( self, lda_model, tf_vectorizer ):
+        self.lda = lda_model
+        self.tf_vectorizer = tf_vectorizer
+        
+    #Return self nothing else to do here    
+    def fit( self, X, y = None ):
+        return self 
+    
+    #Method that describes what we need this transformer to do
+    def transform(self, DF, y = None):
+        logger.info("Calling the LDA transformer")
+        
+        def getLDAScores(document, lda_model, tf_vect):
+            document=[document]
+            vectorized_doc = tf_vect.transform(document)
+            return lda_model.transform(vectorized_doc).tolist()
+
+        DF_2 = DF.copy(deep=True)
+        DF_2['plotSumLDA'] = DF_2['plotSum'].apply(\
+                    lambda row: getLDAScores(row, self.lda, self.tf_vectorizer) )
+        
         return DF_2

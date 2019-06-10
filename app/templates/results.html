@@ -1,0 +1,16 @@
+<!doctype html>
+{% extends "layout.html" %}
+<html>
+
+{% block head %}
+	<title>Results Page</title>
+{% endblock head %}
+
+{% block body %}
+	<p>Original Author: {{ original_input.author }}</p>
+    <p>Original Plot Summary: {{ original_input.plot_summary }}</p>
+    <img src="{{ url }}" alt="model image" width="500" height="720">
+
+{% endblock body %}
+
+</html>

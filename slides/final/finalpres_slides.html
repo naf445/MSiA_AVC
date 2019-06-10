@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>finalPres</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://revealjs.com/css/reveal.css">
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="https://revealjs.com/css/theme/beige.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://revealjs.com/css/print/pdf.css' : 'https://revealjs.com/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="https://revealjs.com/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">finalPres</h1>
+</section>
+
+<section id="section" class="slide level2 section" data-background-image="../resources/bigorangeClean.jpg" data-background-size="450px">
+<h2></h2>
+</section>
+<section id="app-motivation-use-case" class="slide level2">
+<h2>App Motivation &amp; Use Case</h2>
+<section data-background-image="../resources/book3.jpg" data-background-size="1000px">
+</section>
+<div style="text-align: left; float: left;">
+<ul>
+<li>Often when writing a book, I get so lost in writing it, I don’t know what genre it fits in to</li>
+<li>Publishers may go through the same problem</li>
+<li>Can help readers judge a book before reading</li>
+</ul>
+<div style="text-align: center; float: center;">
+<p><img src="../resources/manAtDesk.gif" height=240/></p>
+</div>
+</div>
+</section>
+<section id="app-demonstration" class="slide level2">
+<h2>App Demonstration</h2>
+1.) Dune
+<p style="font-family:Papyrus; font-size:8pt;">
+In the far future, humanity has eschewed advanced computers due to a religious prohibition, in favor of adapting their minds to be capable of extremely complex tasks. Much of this is enabled by the spice melange, which is found only on Arrakis, a desert planet with giant sandworms as its most notable native lifeform. Melange improves general health, extends life and can bestow limited prescience, and its rarity makes it a form of currency in the interstellar empire. Melange allows the Spacing Guild’s Navigators to safely route faster-than-light travel between planets, and helps the Reverend Mothers of the matriarchal Bene Gesserit to access their Other Memory, the ego and experiences of their female ancestors.
+</p>
+2.) Nathan’s Journey
+<p style="font-family:Papyrus; font-size:8pt;">
+This thrilling story follows the escapades of the sly and silky smooth spy Agent Nate Frankonia. Nate has been trained his entire life in stealth operations, and the lucky for him (but unluckily for the World), he has never been needed more than now. Follow Nate on this intense and suspenseful journey as he infiltrates a Russian government post in order to steal the secret nuclear launch codes necessary to prevent the next world war. With the training of his Analytics Value Chain class he is able to hack into the security systems, dismantling the imminent threat of a nuclear first strike, all while getting back in true Nate Frankonia suave style for family dinner. Will this be the episode where someone uncovers his true identity, or will Nate be able to continue masquerading as a data scientist living a normal life? Read this entertaining tale of espionage to find out!
+</p>
+<p><a href="http://18.217.44.84:3000">Web App</a></p>
+</section>
+<section id="data" class="slide level2">
+<h2>Data</h2>
+<section data-background-image="../resources/book3.jpg" data-background-size="1000px">
+</section>
+<p><span style="font-size:12pt"> <strong>Raw Data:</strong><br />
+12500 books scraped from Wikipedia with their summaries and genres. </span><br />
+<span style="font-size:12pt"> <strong>Transformed Data</strong> <span style="text-align: left; float: left;"> <img src="../resources/x_data_example.png" height=100/> <img src="../resources/y_data_example.png" height=100/> </span> </span></p>
+</section>
+<section id="model-success-metrics" class="slide level2">
+<h2>Model &amp; Success Metrics</h2>
+<section data-background-image="../resources/book3.jpg" data-background-size="1000px">
+</section>
+<p><span style="font-size:18pt"> <strong>Model:</strong><br />
+Random Forest Classifier with <strong>multilabel</strong> output<br />
+(essentially fits an RFC for <em>every</em> individual genre)<br />
+</span><br />
+<span style="font-size:18pt"> <strong>Success Metrics</strong><br />
+<strong>Model</strong>: F1 Score for all ~30 models<br />
+<strong>Business Value</strong>: If the user found it useful<br />
+</span></p>
+</section>
+<section id="interesting-findings" class="slide level2">
+<h2>Interesting Findings</h2>
+<section data-background-image="../resources/book3.jpg" data-background-size="1000px">
+</section>
+<p><span style="text-align: right; float: right;"> <span style="font-size:18pt"> <strong>New topics which we didn’t cover too much of:</strong><br />
+* NLP<br />
+* word2vec<br />
+* LDA<br />
+Genre is fuzzy, not entirely possible to confine a piece of writing to one genre, or sometimes any existing genres<br />
+<strong>Genres I had Never Encountered</strong><br />
+* albino_bias<br />
+* chick-lit<br />
+* hardboiled (type of myster)<br />
+</span> </span></p>
+</section>
+<section id="thanks" class="slide level2">
+<h2>THANKS!</h2>
+</section>
+    </div>
+  </div>
+
+  <script src="https://revealjs.com/lib/js/head.min.js"></script>
+  <script src="https://revealjs.com/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'https://revealjs.com/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://revealjs.com/plugin/zoom-js/zoom.js', async: true },
+          { src: 'https://revealjs.com/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
