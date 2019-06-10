@@ -6,8 +6,10 @@ dependencies:
   - asn1crypto=0.24.0=py37_0
   - backcall=0.1.0=py37_0
   - blas=1.0=mkl
+  - boto=2.49.0=py37_0
   - boto3=1.9.134=py_0
-  - ca-certificates=2019.1.23=0
+  - bz2file=0.98=py37_1
+  - ca-certificates=2019.5.15=0
   - certifi=2019.3.9=py37_0
   - cffi=1.12.3=py37hb5b8e2f_0
   - chardet=3.0.4=py37_1
@@ -15,6 +17,8 @@ dependencies:
   - cryptography=2.6.1=py37ha12b0ac_0
   - decorator=4.4.0=py37_1
   - flask=1.0.2=py37_1
+  - freetype=2.9.1=hb4e5f40_0
+  - gensim=3.4.0=py37h1de35cc_0
   - idna=2.8=py37_0
   - intel-openmp=2019.3=199
   - ipykernel=5.1.0=py37h39e3cac_0
@@ -31,6 +35,7 @@ dependencies:
   - libedit=3.1.20181209=hb402a30_0
   - libffi=3.2.1=h475c297_4
   - libgfortran=3.0.1=h93005f0_2
+  - libpng=1.6.37=ha441bb4_0
   - libsodium=1.0.16=h3efe00b_0
   - markupsafe=1.1.1=py37h1de35cc_0
   - mkl=2019.3=199
@@ -40,9 +45,10 @@ dependencies:
   - nltk=3.4.1=py37_0
   - numpy=1.16.2=py37hacdab7b_0
   - numpy-base=1.16.2=py37h6575580_0
-  - openssl=1.1.1b=h1de35cc_1
+  - openssl=1.1.1c=h1de35cc_1
   - pandas=0.24.2=py37h0a44026_0
   - parso=0.4.0=py_0
+  - patsy=0.5.1=py37_0
   - pexpect=4.7.0=py37_0
   - pickleshare=0.7.5=py37_0
   - pip=19.0.3=py37_0
@@ -52,6 +58,7 @@ dependencies:
   - pygments=2.3.1=py37_0
   - pymysql=0.9.3=py37_0
   - pyopenssl=19.0.0=py37_0
+  - pyparsing=2.4.0=py_0
   - pysocks=1.6.8=py37_0
   - python=3.7.3=h359304d_0
   - python-dateutil=2.8.0=py37_0
@@ -59,10 +66,13 @@ dependencies:
   - pyzmq=18.0.0=py37h0a44026_0
   - readline=7.0=h1de35cc_5
   - requests=2.21.0=py37_0
+  - seaborn=0.9.0=py37_0
   - setuptools=41.0.0=py37_0
   - six=1.12.0=py37_0
+  - smart_open=1.8.4=py_0
   - sqlalchemy=1.3.3=py37h1de35cc_0
   - sqlite=3.27.2=ha441bb4_0
+  - statsmodels=0.9.0=py37h1d22016_0
   - tk=8.6.8=ha441bb4_0
   - tornado=6.0.2=py37h1de35cc_0
   - traitlets=4.3.2=py37_0
@@ -84,7 +94,6 @@ dependencies:
     - mlxtend==0.15.0.0
     - pyasn1==0.4.5
     - pyfpgrowth==1.0
-    - pyparsing==2.4.0
     - pyyaml==3.13
     - rsa==3.4.2
     - s3transfer==0.2.0
