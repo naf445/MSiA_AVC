@@ -1,4 +1,8 @@
-logger_config: "/../config/logging_local.conf"
-infile_lda: "/../models/LDA_model.pkl"
-infile_tf_vect: "/../models/tf_vect.pkl"
-infile_model: "/../models/RFC_deployment_model.pkl"
+app:
+  logger_config: "/../config/logging_local.conf"
+  infile_lda: "/../models/LDA_model.pkl"
+  infile_tf_vect: "/../models/tf_vect.pkl"
+  infile_model: "/../models/RFC_deployment_model.pkl"
+
+plot_results:
+  logger_config: "/../config/logging_local.conf"
