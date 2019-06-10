@@ -3,12 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title></title>
+  <title>finalPres</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="https://revealjs.com/css/reveal.css">
-  <style type="text/css">code{white-space: pre;}</style>
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
   <link rel="stylesheet" href="https://revealjs.com/css/theme/beige.css" id="theme">
   <!-- Printing and PDF exports -->
   <script>
@@ -26,39 +31,78 @@
   <div class="reveal">
     <div class="slides">
 
+<section id="title-slide">
+  <h1 class="title">finalPres</h1>
+</section>
 
 <section id="section" class="slide level2 section" data-background-image="../resources/bigorangeClean.jpg" data-background-size="450px">
 <h2></h2>
 </section>
-<section id="test-1" class="slide level2">
-<h2>test 1</h2>
+<section id="app-motivation-use-case" class="slide level2">
+<h2>App Motivation &amp; Use Case</h2>
 <section data-background-image="../resources/book3.jpg" data-background-size="1000px">
 </section>
 <div style="text-align: left; float: left;">
-<div>
-<p><img src="../resources/bigorangeClean.jpg" height=200/></p>
-</div>
-<div>
-<p>Hi my name is paul</p>
-</div>
-</div>
-</section>
-<section id="test-2" class="slide level2">
-<h2>test 2</h2>
-<div style="text-align: left; float: left;">
 <ul>
-<li>bullet point 1<br />
-</li>
-<li>bullet point 2<br />
-</li>
-<li>bullet point 3</li>
+<li>Often when writing a book, I get so lost in writing it, I don’t know what genre it fits in to</li>
+<li>Publishers may go through the same problem</li>
+<li>Can help readers judge a book before reading</li>
 </ul>
+<div style="text-align: center; float: center;">
+<p><img src="../resources/manAtDesk.gif" height=240/></p>
+</div>
 </div>
 </section>
-<section id="test-3" class="slide level2">
-<h2>test 3</h2>
-<p><span style="color:red; font-family:Papyrus; font-size:25pt; text-decoration: underline;">this should show up in red in size 25 font papyrus and align center</span></p>
-<p><span style="color:green; font-family:Times; font-size:18pt;">this should show up in green in size 18 font Times</span></p>
+<section id="app-demonstration" class="slide level2">
+<h2>App Demonstration</h2>
+1.) Dune
+<p style="font-family:Papyrus; font-size:8pt;">
+In the far future, humanity has eschewed advanced computers due to a religious prohibition, in favor of adapting their minds to be capable of extremely complex tasks. Much of this is enabled by the spice melange, which is found only on Arrakis, a desert planet with giant sandworms as its most notable native lifeform. Melange improves general health, extends life and can bestow limited prescience, and its rarity makes it a form of currency in the interstellar empire. Melange allows the Spacing Guild’s Navigators to safely route faster-than-light travel between planets, and helps the Reverend Mothers of the matriarchal Bene Gesserit to access their Other Memory, the ego and experiences of their female ancestors.
+</p>
+2.) 50 Shades of Grey
+<p style="font-family:Papyrus; font-size:8pt;">
+Ana goes on a date with Christian, on which he takes her in his helicopter, Charlie Tango, to his apartment. Once there, Christian insists that she sign a non-disclosure agreement forbidding her from discussing anything they do together, which Ana agrees to sign. He also mentions other paperwork, but first takes her to his playroom full of BDSM toys and gear. There, Christian informs her that the second contract will be one of dominance and submission, and there will be no romantic relationship, only a sexual one. The contract even forbids Ana from touching Christian or making eye contact with him. At this point, Christian realises that Ana is a virgin and takes her virginity without making her sign the contract. The following morning, Ana and Christian again have sex. His mother arrives moments after their sexual encounter and is surprised by the meeting, having previously thought Christian was homosexual, because he was never seen with a woman. Christian later takes Ana out to eat, and he reveals that he lost his virginity at age 15 to one of his mother’s friends, Elena Lincoln, and that his previous dominant/submissive relationships failed due to incompatibility. Christian also reveals that in his first dominant/submissive relationship he was the submissive. Christian and Ana plan to meet again, and he takes Ana home, where she discovers several job offers and admits to Kate that she and Christian had sex.
+</p>
+<p><a href="http://18.217.44.84:3000">Web App</a></p>
+</section>
+<section id="data" class="slide level2">
+<h2>Data</h2>
+<section data-background-image="../resources/book3.jpg" data-background-size="1000px">
+</section>
+<p><span style="font-size:12pt"> <strong>Raw Data:</strong><br />
+12500 books scraped from Wikipedia with their summaries and genres. </span><br />
+<span style="font-size:12pt"> <strong>Transformed Data</strong> <span style="text-align: left; float: left;"> <img src="../resources/x_data_example.png" height=100/> <img src="../resources/y_data_example.png" height=100/> </span> </span></p>
+</section>
+<section id="model-success-metrics" class="slide level2">
+<h2>Model &amp; Success Metrics</h2>
+<section data-background-image="../resources/book3.jpg" data-background-size="1000px">
+</section>
+<p><span style="font-size:18pt"> <strong>Model:</strong><br />
+Random Forest Classifier with <strong>multilabel</strong> output<br />
+(essentially fits an RFC for <em>every</em> individual genre)<br />
+</span><br />
+<span style="font-size:18pt"> <strong>Success Metrics</strong><br />
+<strong>Model</strong>: F1 Score for all ~30 models<br />
+<strong>Business Value</strong>: If the user found it useful<br />
+</span></p>
+</section>
+<section id="interesting-findings" class="slide level2">
+<h2>Interesting Findings</h2>
+<section data-background-image="../resources/book3.jpg" data-background-size="1000px">
+</section>
+<p><span style="text-align: right; float: right;"> <span style="font-size:18pt"> <strong>New topics which we didn’t cover too much of:</strong><br />
+* NLP<br />
+* word2vec<br />
+* LDA<br />
+Genre is fuzzy, not entirely possible to confine a piece of writing to one genre, or sometimes any existing genres<br />
+<strong>Genres I had Never Encountered</strong><br />
+* albino_bias<br />
+* chick-lit<br />
+* hardboiled (type of myster)<br />
+</span> </span></p>
+</section>
+<section id="thanks" class="slide level2">
+<h2>THANKS!</h2>
 </section>
     </div>
   </div>
@@ -71,12 +115,14 @@
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
 
         // Optional reveal.js plugins
         dependencies: [
           { src: 'https://revealjs.com/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'https://revealjs.com/plugin/zoom-js/zoom.js', async: true },
-              { src: 'https://revealjs.com/plugin/notes/notes.js', async: true }
+          { src: 'https://revealjs.com/plugin/notes/notes.js', async: true }
         ]
       });
     </script>
