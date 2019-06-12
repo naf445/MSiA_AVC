@@ -1,3 +1,11 @@
+src:
+    s3:
+        use: True
+        bucket_name: nw-nathanfranklin-423-s3
+        booksummaries.txt: 'booksummaries/booksummaries.txt'
+        booksummaries: 'booksummaries/'
+
+
 helpers:
     scoring:
         score_user_input: 
@@ -9,8 +17,13 @@ data:
     
 
 get_data: 
-    infile: None
-    outfile: None
+    logger_config: "/../config/logging_local.conf"
+    download_url: 'http://www.cs.cmu.edu/~dbamman/data/booksummaries.tar.gz'
+    tar_file: "/../data/booksummaries.tar.gz"
+    extraction_point: "/../data"
+    outfile: '/../data/booksummaries/booksummaries.txt'
+    outdirectory: "/../data/booksummaries"
+
 
 clean_book_genres:
     logger_config: "/../config/logging_local.conf"
