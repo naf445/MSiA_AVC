@@ -5,6 +5,8 @@ from sklearn.base import BaseEstimator, TransformerMixin
 from nltk.tokenize import word_tokenize
 from nltk import pos_tag, word_tokenize
 import nltk.chunk
+nltk.download('punkt')
+nltk.download('stopwords')
 
 # for class Filter_sentence
 import pandas as pd
@@ -27,6 +29,7 @@ directory_abs_path = str(os.path.dirname(os.path.abspath(__file__)))
 
 logging.config.fileConfig(directory_abs_path+"/../../../config/logging_local.conf", disable_existing_loggers=False)
 logger = logging.getLogger(__name__)
+
 
 #Custom Transformer that tokenizes
 class Tokenizer( BaseEstimator, TransformerMixin ):

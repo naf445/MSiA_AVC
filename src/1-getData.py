@@ -37,14 +37,11 @@ os.remove(directory_abs_path + config['tar_file'])
 
 if src_config['s3']['use']:
 	logger.info("s3 option initiated")
-	#s3 = boto3.resource("s3")
 	s3 = boto3.client('s3')
 	logger.info("connect to S3 & upload file to bucket")
 	s3.upload_file(Bucket=src_config['s3']['bucket_name'],
 	               Filename=directory_abs_path + config['outfile'], 
 	               Key=src_config['s3']['booksummaries.txt'])
-	logger.info("remove local data")
-	shutil.rmtree(directory_abs_path + config['outdirectory'])
 
 
 

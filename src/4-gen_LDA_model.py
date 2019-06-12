@@ -1,4 +1,5 @@
 import sys; sys.path.append('helpers')
+import sys; sys.path.append('src/helpers')
 import pandas as pd
 import logging
 import logging.config
@@ -7,9 +8,15 @@ import yaml
 import pickle
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.decomposition import LatentDirichletAllocation
+import boto3
 
 
 directory_abs_path = str(os.path.dirname(os.path.abspath(__file__)))
+
+# import config yaml file
+with open(directory_abs_path+"/../config/src_config.yml", "r") as yml_file:
+    src_config = yaml.load(yml_file)
+src_config = src_config['src']
 
 # import config yaml file
 with open(directory_abs_path+"/../config/src_config.yml", "r") as yml_file:
@@ -49,3 +56,21 @@ logger.info("save tf_vectorizer")
 with open(directory_abs_path+config['outfile_tf_vect'], 'wb') as file:  
     pickle.dump(tf_vectorizer, file)
 logger.info("saved tf_vectorizer")
+
+if src_config['s3']['use']:
+	logger.info("s3 option initiated")
+	s3 = boto3.client('s3')
+        
+	logger.info("connect to S3 & upload tf_vect to bucket")
+	s3.upload_file(Bucket=src_config['s3']['bucket_name'],
+    	Filename=directory_abs_path+config['outfile_tf_vect'], 
+    	Key=src_config['s3']['booksummaries']+'tf_vect.pkl')
+		
+	logger.info("connect to S3 & upload LDA to bucket")
+	s3.upload_file(Bucket=src_config['s3']['bucket_name'],
+    	Filename=directory_abs_path+config['outfile_lda'], 
+    	Key=src_config['s3']['booksummaries']+'LDA_model.pkl')
+
+
+
+

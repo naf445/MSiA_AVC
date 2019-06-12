@@ -1,4 +1,5 @@
 import sys; sys.path.append('helpers')
+import sys; sys.path.append('src/helpers')
 from data_manipulation import custom_transformers as ct
 import pandas as pd
 import logging
@@ -8,8 +9,14 @@ import yaml
 import numpy as np
 import pandas as pd
 import pickle
+import boto3
 
 directory_abs_path = str(os.path.dirname(os.path.abspath(__file__)))
+
+# import config yaml file
+with open(directory_abs_path+"/../config/src_config.yml", "r") as yml_file:
+    src_config = yaml.load(yml_file)
+src_config = src_config['src']
 
 # import config yaml file
 with open(directory_abs_path+"/../config/src_config.yml", "r") as yml_file:
@@ -41,3 +48,16 @@ books_with_LDA_vecs = LDAvecGenerator.transform(books)
 logger.info("save data with LDA features")
 books_with_LDA_vecs.to_csv(directory_abs_path+config['outfile'], index=False)
 logger.info("saved data with LDA features")
+
+if src_config['s3']['use']:
+	logger.info("s3 option initiated")
+	s3 = boto3.client('s3')
+    
+	logger.info("connect to S3 & upload data with LDA features to s3")
+	s3.upload_file(Bucket=src_config['s3']['bucket_name'],
+    	Filename=directory_abs_path+config['outfile'], 
+    	Key=src_config['s3']['booksummaries']+'booksummaries_ready2train.csv')
+
+
+
+

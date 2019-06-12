@@ -1,9 +1,10 @@
 src:
     s3:
-        use: True
+        use: False
         bucket_name: nw-nathanfranklin-423-s3
         booksummaries.txt: 'booksummaries/booksummaries.txt'
         booksummaries: 'booksummaries/'
+        clean_book_genres: 'booksummaries/booksummaries_genres_cleaned.csv'
 
 
 helpers:

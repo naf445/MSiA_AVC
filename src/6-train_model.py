@@ -1,4 +1,5 @@
 import sys; sys.path.append('helpers')
+import sys; sys.path.append('src/helpers')
 import pandas as pd
 import logging
 import logging.config
@@ -14,8 +15,14 @@ from sklearn.model_selection import train_test_split
 from sklearn.multiclass import OneVsRestClassifier
 from sklearn.metrics import accuracy_score, f1_score, recall_score
 import csv
+import boto3
 
 directory_abs_path = str(os.path.dirname(os.path.abspath(__file__)))
+
+# import config yaml file
+with open(directory_abs_path+"/../config/src_config.yml", "r") as yml_file:
+    src_config = yaml.load(yml_file)
+src_config = src_config['src']
 
 # import config yaml file
 with open(directory_abs_path+"/../config/src_config.yml", "r") as yml_file:
@@ -80,3 +87,12 @@ with open(directory_abs_path+config['outfile_genres'], 'w') as csvFile:
     writer = csv.writer(csvFile)
     writer.writerow(category_names)
 logger.info("saved Y column names")
+
+if src_config['s3']['use']:
+	logger.info("s3 option initiated")
+	s3 = boto3.client('s3')
+    
+	logger.info("connect to S3 & upload data with LDA features to s3")
+	s3.upload_file(Bucket=src_config['s3']['bucket_name'],
+    	Filename=directory_abs_path+config['outfile_model'], 
+    	Key=src_config['s3']['booksummaries']+'RFC_deployment_model.pkl')

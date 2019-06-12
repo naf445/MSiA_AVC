@@ -1,4 +1,5 @@
 import sys; sys.path.append('helpers')
+import sys; sys.path.append('src/helpers')
 from data_manipulation import data
 from data_manipulation import custom_transformers as ct
 import pandas as pd
@@ -11,8 +12,14 @@ import yaml
 import gensim.downloader as api
 import numpy as np
 import pandas as pd
+import boto3
 
 directory_abs_path = str(os.path.dirname(os.path.abspath(__file__)))
+
+# import config yaml file
+with open(directory_abs_path+"/../config/src_config.yml", "r") as yml_file:
+    src_config = yaml.load(yml_file)
+src_config = src_config['src']
 
 # import config yaml file
 with open(directory_abs_path+"/../config/src_config.yml", "r") as yml_file:
@@ -52,13 +59,15 @@ if __name__=='__main__':
     logger.info("Successfully applied pipeline to book data")
 
     logger.info("Saving cleaned books to data folder")
-    cleaned_books.to_csv(directory_abs_path+config['outdirectory']+'/books_{}_{}.csv'\
-                        .format(args.stem_lem_type, args.filter_names), index=False)
+    outfile = directory_abs_path+config['outdirectory']+'/books_{}_{}.csv'\
+                        .format(args.stem_lem_type, args.filter_names)
+    cleaned_books.to_csv(outfile, index=False)
     logger.info("Saved cleaned books to data folder")
 
-
-
-
-
-
-    
+    if src_config['s3']['use']:
+        logger.info("s3 option initiated")
+        s3 = boto3.client('s3')
+        logger.info("connect to S3 & upload file to bucket")
+        s3.upload_file(Bucket=src_config['s3']['bucket_name'],
+                       Filename=outfile, 
+                       Key=src_config['s3']['booksummaries']+'books_summaries_cleaned.csv')
