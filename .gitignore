@@ -1,7 +1,11 @@
 data/
+!data/names/
 **/.stackedit-trash
 **/.ipynb_checkpoints
 *.csv
+!data/names/
+!data/names/names.csv
+!data/names/*
 booksummaries/
 *.db
 *.pkl
