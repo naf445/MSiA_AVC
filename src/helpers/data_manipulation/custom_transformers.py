@@ -29,6 +29,16 @@ logger = logging.getLogger(__name__)
 
 #Custom Transformer that tokenizes
 class Tokenizer( BaseEstimator, TransformerMixin ):
+    '''One of many transformers used to clean the plot summaries or generate features.
+
+        This transformer simply tokenizes all of the plot summaries.
+
+        Args:
+            DF (pd.DataFrame): The booksummaries dataframe
+
+        Returns: 
+            pd.DataFrame: DF with tokenized plot summaries
+    '''
          
     #Return self nothing else to do here    
     def fit( self, X, y = None ):
@@ -44,6 +54,18 @@ class Tokenizer( BaseEstimator, TransformerMixin ):
     
 #Custom Transformer that filters a sentence
 class Filter_sentence( BaseEstimator, TransformerMixin ):
+    '''One of many transformers used to clean the plot summaries or generate features.
+
+        This transformer filters all of the plot summaries to not include
+        extraneous information like names, punctuation, etc...
+
+        Args:
+            DF (pd.DataFrame): The booksummaries dataframe
+            filter_names (bool): Whether or not to filter out names from plot summaries
+
+        Returns: 
+            pd.DataFrame: DF with cleaned plot summaries
+    '''
         
     #Class Constructor 
     def __init__( self, filter_names=True ):
@@ -57,6 +79,7 @@ class Filter_sentence( BaseEstimator, TransformerMixin ):
         names = names.values.tolist()
         names = [i[0].lower() for i in names]
 
+        # filter out stop words, punctuation, common names, etc...
         for w in tokenized_sentence: 
             w = w.lower()
             w = re.sub(r'\d+', '', w)
@@ -82,6 +105,17 @@ class Filter_sentence( BaseEstimator, TransformerMixin ):
  
 # Custom Transformer that MeanEmbeddingVectorizes
 class MeanEmbeddingVectorizer( BaseEstimator, TransformerMixin ):
+    '''One of many transformers used to clean the plot summaries or generate features.
+
+        This transformer creates a word2vec vector which is the average of all
+        the word2vec values for all of the words in the plot summary.
+
+        Args:
+            DF (pd.DataFrame): The booksummaries dataframe
+
+        Returns: 
+            pd.DataFrame: DF with word2vec features generated for each summary
+    '''
          
     #Class Constructor 
     def __init__( self, word2vecModel ):
@@ -112,6 +146,18 @@ class MeanEmbeddingVectorizer( BaseEstimator, TransformerMixin ):
     
 #Custom Transformer that stems or lemmatizes
 class StemmingLemming(BaseEstimator, TransformerMixin):
+    '''One of many transformers used to clean the plot summaries or generate features.
+
+        This transformer cleans the summaries by either stemming or lemmatization, depending
+        on user input choice.
+
+        Args:
+            DF (pd.DataFrame): The booksummaries dataframe
+            prune_type (string): Options are 'Porter', 'Lancaster', & 'Lemmatization'
+
+        Returns: 
+            pd.DataFrame: DF with plot summaries stemmed or lemmatized
+    '''
         
     #Class Constructor 
     def __init__(self, prune_type="Porter"):
@@ -154,6 +200,7 @@ class StemmingLemming(BaseEstimator, TransformerMixin):
     
 #Custom Transformer that joins
 class Joiner( BaseEstimator, TransformerMixin ):
+     '''Simple transformer which joins tokenized plot summaries and returns data frame'''
          
     #Return self nothing else to do here    
     def fit( self, X, y = None ):
@@ -168,6 +215,18 @@ class Joiner( BaseEstimator, TransformerMixin ):
     
 # Custom Transformer that gets LDA scores
 class LDA_Vectorizer( BaseEstimator, TransformerMixin ):
+    '''One of many transformers used to clean the plot summaries or generate features.
+
+        This transformer creates LDA features to be used by our RFC model from the summaries.
+
+        Args:
+            DF (pd.DataFrame): The booksummaries dataframe
+            lda_model (sklearn lda object): Model used to generate LDA features
+            tf_vect (sklearn count vectorizer object): Model used to get data in form for LDA
+
+        Returns: 
+            pd.DataFrame: DF with LDA features generated
+    '''
          
     #Class Constructor 
     def __init__( self, lda_model, tf_vectorizer ):

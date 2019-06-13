@@ -34,8 +34,8 @@ class user_interaction(Base):
 
 
 def create_db(user='', password='', host='', port='', USE_RDS=False, RDS_db_name=''):
-	''' Creates a database connection, either using RDS if
-		specified in mysql_config.yml or local sqlite db otherwise/
+	''' Creates a database connection and schema instance, either using RDS if
+		specified in mysql_config.yml or local sqlite db otherwise
 
 		Args:
         	user (string): RDS username
@@ -45,6 +45,10 @@ def create_db(user='', password='', host='', port='', USE_RDS=False, RDS_db_name
         	USE_RDS (bool): Whether to use RDS or local. If False, use
         		local sqlite .db file.
         	RDS_db_name (): Name of RDS database you have already created 
+
+        Returns:
+        	string: the engine string created. For use later when adding
+        		new additional rows and entries to this database
 	'''
 	
 	# first check if user wants to use RDS
@@ -95,16 +99,32 @@ def create_db(user='', password='', host='', port='', USE_RDS=False, RDS_db_name
 		return engine_string
 
 def add_interaction(engine_string, date, plot_summary, model_results, user_satisfaction="n/a"):
-	''' 
+	''' After database instance has been instantiated, this function will add new entries.
+
+		During every user interaction, we want to store that user's plot summaries
+		and the results which the model provided. This function does that.
+
+		Args:
+        	engine_string (string): Takes engine string to make connection and add rows/rows to database
+        	date (datetime): The time which the row is being entered into the database
+        	plot_summary (string): The user's plot summary
+        	model_results (string): Results from our model scoring function
+        	user_satisfaction (integer): Not currently collected. Will get user's feedback 
+        		on usefulness of model results.
+
+		Returns:
+			None
 	'''
 	
 	logger.info('adding interaction to db')
 	logger.info('creating session')
+	# create database session with given engine string
 	engine = sql.create_engine(engine_string)
 	Session = sessionmaker(bind=engine)
 	session = Session()
 
 	logger.info('creating interaction row object')
+	# create a user_interaction object and commit it to database
 	user_interaction_1 = user_interaction(date=date, plot_summary=plot_summary, model_results=model_results, user_satisfaction=user_satisfaction)
 
 	logger.info('adding row to session')
