@@ -1,6 +1,6 @@
 USE_RDS: False
 logger_config: "/../config/logging_local.conf"
-MYSQL_USER: naf445
-MYSQL_HOST: mysql-nw-nathanfranklin.c0ij6nief6xo.us-east-2.rds.amazonaws.com
+MYSQL_USER: 
+MYSQL_HOST: 
 MYSQL_PORT: 3306
-DB_NAME: msia423
+DB_NAME: 
