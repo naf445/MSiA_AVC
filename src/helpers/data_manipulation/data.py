@@ -31,10 +31,11 @@ def loadAndClean(path):
     logger.info("Called loadAndClean function")
 
     # cleaned column names
-    column_names = ['wikiArticleID','freebaseID','bookTitle','author','pubDate','bookGenre', 'plotSum']
+    column_names = config['column_names']
     
     logger.info("Read in booksummary data")
 
+    # read in data
     booksummaries = pd.read_csv(path, sep='\t', header=None, names=column_names)
     
     logger.info("Drop any NA's present in dataset under book genre or plot summary")
@@ -44,11 +45,11 @@ def loadAndClean(path):
     booksummaries['bookGenre'] = booksummaries.apply(lambda row:\
                                     list(ast.literal_eval(row.bookGenre).values()), axis=1)
     
-    
+    # clean genre names
     booksummaries['bookGenre'] = booksummaries['bookGenre'].apply(lambda row:\
                                     [v.strip().lower().replace("'",'').replace(' ','_') for v in row])
     
-    logger.info("returning booksummary data set")
+    logger.info("returning cleaned booksummary data set")
 
     return booksummaries[['bookGenre', 'plotSum']]
     

@@ -31,6 +31,23 @@ books = data.loadAndClean(directory_abs_path+config['infile'])
 logger.info("Loaded in raw data")
 
 def ruleSwapper(tokenized_genres, rules_dict):
+    '''Function which takes a set of rules defined in the rules_dictionary,
+     and goes through the tokenized genres to apply those rules.
+
+     This is necessary because the tokenized genres have lots of genres,
+     so this function helps consolidate the genres into a few categories, based
+     on the rules provided by the rules_dict.
+
+    Args:
+        tokenized_genres (list of lists of strings): a list of lists where each sub list is a list of genres
+        rules_dict (dictionary): Dictionary of the sort
+                                    {'genre1':[subgenre1A, subgenre1B, subgenre1C],
+                                    'genre2':[subgenre2A, subgenre2B, subgenre2C]}
+
+    Returns:
+        list of list of strings: a cleaned list of genres, where using the example above, every
+            subgenre1A appearance is changed --> genre1
+    '''
     for key in rules_dict:
         newGenre = key
         for value in rules_dict[key]:
@@ -44,6 +61,7 @@ logger.info("applying rule swapping rules to data set")
 books['bookGenre'] = books['bookGenre'].apply(lambda row: ruleSwapper(row, config['rules']))
 
 def removeDuplicates(tokenized_genres):
+    ''' Removes any duplicate genres within a single row/book entry after genre cleaning/consolidation '''
     return list(dict.fromkeys(tokenized_genres))
 
 logger.info("removing duplicates")
@@ -62,10 +80,12 @@ logger.info("removing any bogus genres")
 # remove any 'bogus' genres left
 books['bookGenre'] = books['bookGenre'].apply(lambda row: [word for word in row if word!='bogus'])
 
+# save data
 logger.info("Saving cleaned books with clean genres to data folder on local")
 books.to_csv(directory_abs_path+config['outfile'], index=False)
 logger.info("Saved cleaned books with clean genres to data folder on local")
 
+# if specified, save data to S3
 if src_config['s3']['use']:
 	logger.info("s3 option initiated")
 	s3 = boto3.client('s3')

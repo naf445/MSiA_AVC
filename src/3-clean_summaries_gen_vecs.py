@@ -31,10 +31,12 @@ config = config['clean_summaries_gen_vecs']
 logging.config.fileConfig(directory_abs_path+config["logger_config"], disable_existing_loggers=False)
 logger = logging.getLogger(__name__)
 
+# load in data
 logger.info("Load in raw data")
 books = pd.read_csv(directory_abs_path+config['infile'])
 logger.info("Loaded in raw data")
 
+# load in word 2 vec model
 logger.info("Load in word2vec_model")
 word2vec_model = api.load("glove-wiki-gigaword-50")
 logger.info("Loaded in word2vec_model")
@@ -47,6 +49,7 @@ if __name__=='__main__':
     args = parser.parse_args()    
     logger.info("Parsed Arguments")
     
+    # create sklearn pipeline
     logger.info("Creating sklearn pipeline")
     steps = [('tokenizer', ct.Tokenizer()),
                 ('filterer', ct.Filter_sentence(filter_names=args.filter_names)),
@@ -56,16 +59,19 @@ if __name__=='__main__':
     pipeline = Pipeline(steps)
     logger.info("Created sklearn pipeline")
     
+    # apply previously created sklearn pipeline
     logger.info("Applying sklearn pipeline to book data")
     cleaned_books = pipeline.transform(books)
     logger.info("Successfully applied pipeline to book data")
 
+    # save data after pipeline has been applied
     logger.info("Saving cleaned books to data folder")
     outfile = directory_abs_path+config['outdirectory']+'/books_{}_{}.csv'\
                         .format(args.stem_lem_type, args.filter_names)
     cleaned_books.to_csv(outfile, index=False)
     logger.info("Saved cleaned books to data folder")
 
+    # if specified, save data to S3
     if src_config['s3']['use']:
         logger.info("s3 option initiated")
         s3 = boto3.client('s3')

@@ -34,8 +34,23 @@ class user_interaction(Base):
 
 
 def create_db(user='', password='', host='', port='', USE_RDS=False, RDS_db_name=''):
+	''' Creates a database connection, either using RDS if
+		specified in mysql_config.yml or local sqlite db otherwise/
+
+		Args:
+        	user (string): RDS username
+        	password (int): RDS password
+        	host (int): RDS endpoint
+        	port (int): RDS port
+        	USE_RDS (bool): Whether to use RDS or local. If False, use
+        		local sqlite .db file.
+        	RDS_db_name (): Name of RDS database you have already created 
+	'''
+	
+	# first check if user wants to use RDS
 	logger.info('creating a database')
 	if USE_RDS:
+		# user has chosen RDS route
 		logger.info('using RDS to store database')
 		conn_type = "mysql+pymysql"
 		user = user
@@ -43,6 +58,7 @@ def create_db(user='', password='', host='', port='', USE_RDS=False, RDS_db_name
 		host = host
 		port = port
 		database_name = RDS_db_name
+		# formulate user string with all of the user input
 		engine_string = "{}://{}:{}@{}:{}/{}".format(conn_type, user, password, host, port, database_name)
 		logger.info('creating engine with engine string')
 		engine = sql.create_engine(engine_string)
@@ -59,6 +75,7 @@ def create_db(user='', password='', host='', port='', USE_RDS=False, RDS_db_name
 		return engine_string
 
 	else:
+		# user has chosen to use local sqlite database
 		logger.info('storing database locally')
 		# set up sqlite connection
 		database_name = 'genre_app'
@@ -78,6 +95,8 @@ def create_db(user='', password='', host='', port='', USE_RDS=False, RDS_db_name
 		return engine_string
 
 def add_interaction(engine_string, date, plot_summary, model_results, user_satisfaction="n/a"):
+	''' 
+	'''
 	
 	logger.info('adding interaction to db')
 	logger.info('creating session')

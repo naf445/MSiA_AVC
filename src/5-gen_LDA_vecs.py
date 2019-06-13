@@ -32,17 +32,19 @@ logger.info("Load in data")
 books = pd.read_csv(directory_abs_path+config['infile_data'])
 logger.info("Loaded in data")
 
-# Load from file
+# Load LDA from file
 logger.info("Load in lda_model")
 with open(directory_abs_path+config['infile_lda'], 'rb') as file:  
     lda_model = pickle.load(file)
 logger.info("Loaded in lda_model")
 
+# Load tf_vectorizer from file
 logger.info("Load in tf_vect")
 with open(directory_abs_path+config['infile_tf_vect'], 'rb') as file:  
     tf_vect = pickle.load(file)
 logger.info("Loaded in tf_vect")
 
+# Call and transform our data with the LDA model to get features
 logger.info("call LDA vectorizer and transform")
 LDAvecGenerator = ct.LDA_Vectorizer(lda_model, tf_vect)
 books_with_LDA_vecs = LDAvecGenerator.transform(books)

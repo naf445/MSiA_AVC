@@ -12,8 +12,6 @@ import yaml
 
 
 
-
-
 directory_abs_path = str(os.path.dirname(os.path.abspath(__file__)))
 
 # import config yaml file
@@ -29,23 +27,26 @@ config = config['gen_LDA_model']
 logging.config.fileConfig(directory_abs_path+config["logger_config"], disable_existing_loggers=False)
 logger = logging.getLogger(__name__)
 
+# load in data
 logger.info("Load in data")
 books = pd.read_csv(directory_abs_path+config['infile'])
 logger.info("Loaded in raw data")
 
+# get only the plot summary column to train out LDA model on
 corpus = books['plotSum']
                
 # get our corpus docs into BOW style.
 logger.info("get data in BOW style")
-tf_vectorizer = CountVectorizer(max_df=0.90, max_features=7000)
+# apply count vectorizer
+tf_vectorizer = CountVectorizer(max_df=config['tf_vect']['max_df'], max_features=config['tf_vect']['max_features'])
 tf = tf_vectorizer.fit_transform(corpus)
 tf_feature_names = tf_vectorizer.get_feature_names()
 
                
 # Run LDA
 logger.info("run LDA")
-lda = LatentDirichletAllocation(n_topics=20, max_iter=5, learning_method='online', \
-                                learning_offset=50.,random_state=123)
+lda = LatentDirichletAllocation(n_topics=config['lda_model']['n_topics'], max_iter=config['lda_model']['max_iter'], learning_method=config['lda_model']['learning_method'], \
+                                learning_offset=config['lda_model']['learning_offset'],random_state=config['lda_model']['random_state'])
 lda.fit(tf)
 
 logger.info("save LDA model")

@@ -36,19 +36,23 @@ logger.info("Load in data")
 books = pd.read_csv(directory_abs_path+config['infile_data'])
 logger.info("Loaded in data")
 
+# get just book genres as a list
 genres = books['bookGenre'].to_list()
 genres_list = [ast.literal_eval(x) for x in genres]
 
+# get a dataframe in MultiLabelBinarizer form for multi-label training
 logger.info("Get Y's")
 mlb = MLB()
 mlb_Genres = mlb.fit_transform(y=genres_list)
 Y = pd.DataFrame(mlb_Genres, columns=mlb.classes_)
 
+# turn our word2vec sentence array/matrices into separate features
 logger.info("Get word2vec features")
 plotSumVecs = books['plotSum2vec']
 plotSumVecs_list = [ast.literal_eval(x) for x in plotSumVecs]
 plotSumVecs_DF = pd.DataFrame(data=plotSumVecs_list)
 
+# turn our LDA array/matrices into separate features
 logger.info("Get LDA features")
 plotSumLDA_vecs = books['plotSumLDA']
 plotSumLDA_list = [ast.literal_eval(x) for x in plotSumLDA_vecs]
@@ -65,12 +69,15 @@ for columnIndex in range(len(plotSumLDA_DF.columns)):
     newColsLDA.append('LDA_'+str(columnIndex+1))
 plotSumLDA_DF.columns = newColsLDA
 
+# concatenate dataframes for one big feature matrix
 logger.info("Concat word2vec and LDA features ")
 X = pd.concat([plotSumLDA_DF,plotSumVecs_DF], axis=1)
 
+# create model object
 logger.info("Concat word2vec and LDA features ")
-rfc = OneVsRestClassifier(RandomForestClassifier(bootstrap=True, random_state=541, n_estimators=100, max_features='sqrt'))
+rfc = OneVsRestClassifier(RandomForestClassifier(bootstrap=config['rfc']['bootstrap'], random_state=config['rfc']['random_state'], n_estimators=config['rfc']['n_estimators'], max_features=config['rfc']['max_features']))
 
+# fit model object to our data set and MLB style response variable
 logger.info("Fit rfc model")
 rfc.fit(X, Y)
 
@@ -81,6 +88,7 @@ with open(directory_abs_path+config['outfile_model'], 'wb') as file:
     pickle.dump(rfc, file)
 logger.info("saved RFC model")
 
+# save category names for later interpretation
 logger.info("save Y column names")
 category_names = list(Y.columns)
 with open(directory_abs_path+config['outfile_genres'], 'w') as csvFile:

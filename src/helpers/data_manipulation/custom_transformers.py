@@ -46,13 +46,13 @@ class Tokenizer( BaseEstimator, TransformerMixin ):
 class Filter_sentence( BaseEstimator, TransformerMixin ):
         
     #Class Constructor 
-    def __init__( self, filter_names=False ):
+    def __init__( self, filter_names=True ):
         self.filter_names = filter_names        
         
     def filter_sentence(self, tokenized_sentence):
         filtered_sentence = [] 
         stop_words = set(stopwords.words('english')) 
-        punctuation= ["?",":","!",".",",",";","-","`","'", "'", "(", ")", "'s", "'", "`", '''"''']
+        punctuation = ["?",":","!",".",",",";","-","`","'", "'", "(", ")", "'s", "'", "`", '''"''']
         names = pd.read_csv(directory_abs_path+'/../../../data/names/names.csv', header=None)
         names = names.values.tolist()
         names = [i[0].lower() for i in names]

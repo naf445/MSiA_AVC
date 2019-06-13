@@ -127,7 +127,9 @@ If all previous steps have been completed, simply running
 ``` bash
 make all
 ```
-from the root directory in a bash terminal will enact a sequence of events which downloads the data -> cleans/consolidates the genre column -> cleans summaries and generates word2vec features -> trains an LDA model -> applies the LDA model to get more features -> trains a multi-label Random Forest Classifier Model 
+from the root directory in a bash terminal will enact a sequence of events which downloads the data -> cleans/consolidates the genre column -> cleans summaries and generates word2vec features -> trains an LDA model -> applies the LDA model to get more features -> trains a multi-label Random Forest Classifier Model.
+
+This process should take somwhere ~5-10 minutes.
 
 ### 4.) Running the Web App
 From here, navigate to the `app/` directory, and run 
