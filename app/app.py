@@ -102,7 +102,7 @@ logger.info("Perform __name__ == __main__ check")
 if __name__ == '__main__':
 	
     logger.info("Run App")
-    app.run(debug=False, host='0.0.0.0')
+    app.run(debug=False, host='0.0.0.0', port=3000)
 
 
 
