@@ -1,0 +1,2000 @@
+1	Noah	20	+19	Noah
+2	Liam	96	+94	Variant of William
+3	Mason	47	+44	Mason
+4	Jacob	1	-3	Jacob
+5	William	10	+5	William
+6	Ethan	8	+2	Ethan
+7	James	17	+10	Variant of Jacob
+8	Alexander	13	+5	Alexander
+9	Michael	2	-7	Michael
+10	Benjamin	25	+15	Benjamin
+11	Elijah	34	+23	Elijah
+12	Daniel	5	-7	Daniel
+13	Aiden	54	+41	Variant of Aodh
+14	Logan	28	+14	Logan
+15	Matthew	4	-11	Variant of Matthias
+16	Lucas	61	+45	Variant of Luke
+17	Jackson	42	+25	Jackson
+18	David	12	-6	David
+19	Oliver	185	+166	Oliver
+20	Jayden	51	+31	Variant of Jadon
+21	Joseph	9	-12	Joseph
+22	Gabriel	30	+8	Gabriel
+23	Samuel	24	+1	Samuel
+24	Carter	83	+59	Carter
+25	Anthony	11	-14	Anthony
+26	John	18	-8	John
+27	Dylan	23	-4	Dylan
+28	Luke	48	+20	Luke
+29	Henry	102	+73	Henry
+30	Andrew	7	-23	Andrew
+31	Isaac	46	+15	Isaac
+32	Christopher	6	-26	Variant of Christoph
+33	Joshua	3	-30	Joshua
+34	Wyatt	84	+50	Variant of Wighard
+35	Sebastian	80	+45	Sebastian
+36	Owen	71	+35	Owen
+37	Caleb	35	-2	Caleb
+38	Nathan	26	-12	Nathan
+39	Ryan	15	-24	Ryan
+40	Jack	40	0	Variant of John
+41	Hunter	41	0	Hunter
+42	Levi	136	+94	Levi
+43	Christian	22	-21	Christian
+44	Jaxon	n/a	new	Variant of Jackson
+45	Julian	74	+29	Julian
+46	Landon	73	+27	Landon
+47	Grayson	n/a	new	Grayson
+48	Jonathan	19	-29	Jonathan
+49	Isaiah	44	-5	Isaiah
+50	Charles	58	+8	Variant of Karl
+51	Thomas	37	-14	Thomas
+52	Aaron	52	0	Aaron
+53	Eli	145	+92	Eli
+54	Connor	53	-1	Connor
+55	Jeremiah	78	+23	Jeremiah
+56	Cameron	39	-17	Cameron
+57	Josiah	124	+67	Variant of Josias
+58	Adrian	64	+6	Adrian
+59	Colton	120	+61	Colton
+60	Jordan	38	-22	Jordan
+61	Brayden	85	+24	Variant of Braden
+62	Nicholas	14	-48	Nicholas
+63	Robert	36	-27	Robert
+64	Angel	43	-21	Variant of Angelus
+65	Hudson	n/a	new	Hudson
+66	Lincoln	n/a	new	Lincoln
+67	Evan	45	-22	Variant of John
+68	Dominic	92	+24	Dominic
+69	Austin	32	-37	Variant of August
+70	Gavin	50	-20	Gavin
+71	Nolan	155	+84	Nolan
+72	Parker	114	+42	Parker
+73	Adam	60	-13	Adam
+74	Chase	75	+1	Chase
+75	Jace	n/a	new	Variant of Jason
+76	Ian	70	-6	Variant of John
+77	Cooper	126	+49	Cooper
+78	Easton	n/a	new	Easton
+79	Kevin	33	-46	Kevin
+80	Jose	31	-49	Variant of Joseph
+81	Tyler	16	-65	Tyler
+82	Brandon	21	-61	Brandon
+83	Asher	n/a	new	Asher
+84	Jaxson	n/a	new	Variant of Jackson
+85	Mateo	n/a	new	Variant of Matthias
+86	Jason	49	-37	Jason
+87	Ayden	156	+69	Variant of Aodh
+88	Zachary	27	-61	Zachary
+89	Carson	98	+9	Carson
+90	Xavier	81	-9	Xavier
+91	Leo	n/a	new	Leo
+92	Ezra	n/a	new	Ezra
+93	Bentley	n/a	new	Bentley
+94	Sawyer	n/a	new	Sawyer
+95	Kayden	n/a	new	Variant of Caden
+96	Blake	86	-10	Blake
+97	Nathaniel	65	-32	Variant of Nathanael
+98	Ryder	n/a	new	Ryder
+99	Theodore	n/a	new	Theodore
+100	Elias	193	+93	Variant of Elijah
+101	Tristan	100	-1	Tristan
+102	Roman	n/a	new	Roman
+103	Leonardo	194	+91	Variant of Leonhard
+104	Camden	n/a	new	Camden
+105	Brody	153	+48	Brody
+106	Luis	59	-47	Variant of Ludwig
+107	Miles	n/a	new	Miles
+108	Micah	152	+44	Micah
+109	Vincent	116	+7	Variant of Vinzenz
+110	Justin	29	-81	Variant of Justus
+111	Greyson	n/a	new	Variant of Grayson
+112	Declan	n/a	new	Declan
+113	Maxwell	134	+21	Maxwell
+114	Juan	57	-57	Variant of John
+115	Cole	76	-39	Cole
+116	Damian	160	+44	Damian
+117	Carlos	68	-49	Variant of Karl
+118	Max	148	+30	Variant of Maximilian
+119	Harrison	n/a	new	Harrison
+120	Weston	n/a	new	Weston
+121	Brantley	n/a	new	Brantley
+122	Braxton	n/a	new	Braxton
+123	Axel	n/a	new	Axel
+124	Diego	77	-47	Variant of Jacob
+125	Abel	n/a	new	Abel
+126	Wesley	184	+58	Wesley
+127	Santiago	n/a	new	Santiago
+128	Jesus	72	-56	Variant of Joshua
+129	Silas	n/a	new	Variant of Silvan
+130	Giovanni	169	+39	Variant of John
+131	Bryce	105	-26	Bryce
+132	Jayce	n/a	new	Variant of Jason
+133	Bryson	199	+66	Bryson
+134	Alex	67	-67	Variant of Alexander
+135	Everett	n/a	new	Everett
+135	George	143	+8	Variant of Georg
+137	Eric	63	-74	Eric
+137	Ivan	132	-5	Variant of John
+139	Emmett	n/a	new	Variant of Emmet
+140	Kaiden	n/a	new	Variant of Caden
+141	Ashton	127	-14	Ashton
+142	Kingston	n/a	new	Kingston
+143	Jonah	172	+29	Jonah
+144	Jameson	n/a	new	Jameson
+145	Kai	n/a	new	Kai
+146	Maddox	n/a	new	Maddox
+147	Timothy	82	-65	Variant of Timotheus
+148	Ezekiel	n/a	new	Ezekiel
+149	Ryker	n/a	new	Ryker
+150	Emmanuel	175	+25	Variant of Manuel
+151	Hayden	87	-64	Hayden
+152	Antonio	94	-58	Variant of Anthony
+153	Bennett	n/a	new	Variant of Benedict
+154	Steven	79	-75	Steven
+155	Richard	90	-65	Richard
+156	Jude	n/a	new	Variant of Judah
+157	Luca	n/a	new	Variant of Luke
+158	Edward	131	-27	Edward
+159	Joel	122	-37	Joel
+160	Victor	103	-57	Victor
+161	Miguel	95	-66	Variant of Michael
+162	Malachi	188	+26	Malachi
+163	King	n/a	new	King
+164	Patrick	97	-67	Patrick
+165	Kaleb	117	-48	Variant of Caleb
+166	Bryan	69	-97	Variant of Brian
+167	Alan	135	-32	Alan
+168	Marcus	115	-53	Variant of Mark
+169	Preston	133	-36	Preston
+170	Abraham	192	+22	Abraham
+171	Calvin	n/a	new	Calvin
+172	Colin	108	-64	Variant of Nicholas
+173	Bradley	173	0	Bradley
+174	Jeremy	110	-64	Variant of Jeremiah
+175	Kyle	56	-119	Kyle
+176	Graham	n/a	new	Graham
+177	Grant	138	-39	Grant
+178	Jesse	99	-79	Jesse
+179	Kaden	118	-61	Variant of Caden
+180	Alejandro	101	-79	Variant of Alexander
+181	Oscar	123	-58	Variant of Oskar
+182	Jase	n/a	new	Variant of Jason
+183	Karter	n/a	new	Variant of Carter
+184	Maverick	n/a	new	Maverick
+185	Aidan	55	-130	Variant of Aodh
+186	Tucker	n/a	new	Tucker
+187	Avery	n/a	new	Avery
+188	Amir	n/a	new	Amir
+188	Brian	62	-126	Brian
+190	Iker	n/a	new	Iker
+191	Matteo	n/a	new	Variant of Matthias
+192	Caden	112	-80	Caden
+193	Zayden	n/a	new	Zayden
+194	Riley	107	-87	Riley
+195	August	n/a	new	August
+196	Mark	111	-85	Mark
+197	Maximus	n/a	new	Variant of Maxim
+198	Brady	119	-79	Brady
+199	Kenneth	121	-78	Variant of Ken
+200	Paul	130	-70	Paul
+201	Jaden	93	-108	Variant of Jadon
+202	Nicolas	139	-63	Variant of Nicholas
+203	Beau	n/a	new	Beau
+204	Dean	n/a	new	Dean
+205	Jake	106	-99	Variant of Jacob
+206	Peter	159	-47	Peter
+207	Xander	n/a	new	Variant of Alexander
+208	Elliot	n/a	new	Elliot
+209	Finn	n/a	new	Finn
+210	Derek	151	-59	Variant of Dietrich
+211	Sean	66	-145	Variant of John
+212	Cayden	n/a	new	Variant of Caden
+213	Elliott	n/a	new	Variant of Elliot
+214	Jax	n/a	new	Variant of John
+215	Jasper	n/a	new	Jasper
+216	Lorenzo	n/a	new	Variant of Laurence
+217	Omar	140	-77	Variant of Umar
+218	Beckett	n/a	new	Variant of Becket
+219	Rowan	n/a	new	Rowan
+220	Gael	n/a	new	Gael
+221	Corbin	n/a	new	Variant of Corvin
+222	Waylon	n/a	new	Variant of Wieland
+223	Myles	n/a	new	Variant of Miles
+224	Tanner	128	-96	Tanner
+225	Jorge	125	-100	Variant of Georg
+226	Javier	168	-58	Variant of Xavier
+227	Zion	n/a	new	Zion
+228	Andres	167	-61	Variant of Andrew
+229	Charlie	n/a	new	Variant of Karl
+229	Paxton	n/a	new	Paxton
+231	Emiliano	n/a	new	Variant of Emil
+232	Brooks	n/a	new	Brooks
+232	Zane	n/a	new	Variant of John
+234	Simon	n/a	new	Simon
+235	Judah	n/a	new	Judah
+236	Griffin	n/a	new	Griffin
+237	Cody	89	-148	Cody
+238	Gunner	n/a	new	Variant of Günther
+239	Dawson	n/a	new	Dawson
+240	Israel	n/a	new	Israel
+241	Rylan	n/a	new	Rylan
+242	Gage	147	-95	Gage
+243	Messiah	n/a	new	Messiah
+244	River	n/a	new	River
+245	Kameron	n/a	new	Variant of Cameron
+246	Stephen	137	-109	Variant of Steven
+247	Francisco	154	-93	Variant of Francis
+248	Clayton	n/a	new	Clayton
+249	Zander	n/a	new	Variant of Alexander
+250	Chance	n/a	new	Chance
+251	Eduardo	129	-122	Variant of Edward
+252	Spencer	146	-106	Spencer
+253	Lukas	n/a	new	Variant of Luke
+254	Damien	n/a	new	Variant of Damian
+255	Dallas	n/a	new	Dallas
+256	Conner	166	-90	Variant of Connor
+257	Travis	163	-94	Travis
+258	Knox	n/a	new	Knox
+259	Raymond	190	-69	Raymond
+260	Peyton	165	-95	Variant of Payton
+261	Devin	88	-173	Devin
+262	Felix	n/a	new	Felix
+262	Jayceon	n/a	new	Variant of Jason
+264	Collin	144	-120	Variant of Nicholas
+265	Amari	n/a	new	Amari
+266	Erick	183	-83	Variant of Eric
+267	Cash	n/a	new	Cash
+268	Jaiden	n/a	new	Variant of Jadon
+269	Fernando	164	-105	Variant of Ferdinand
+270	Cristian	149	-121	Variant of Christian
+271	Josue	n/a	new	Variant of Joshua
+272	Keegan	n/a	new	Keegan
+273	Garrett	113	-160	Variant of Gerard
+274	Rhett	n/a	new	Rhett
+275	Ricardo	150	-125	Variant of Richard
+276	Martin	200	-76	Martin
+277	Reid	n/a	new	Variant of Reed
+278	Seth	91	-187	Seth
+279	Andre	n/a	new	Variant of Andrew
+280	Cesar	173	-107	Variant of Cäsar
+281	Titus	n/a	new	Titus
+282	Donovan	196	-86	Donovan
+283	Manuel	176	-107	Manuel
+284	Mario	179	-105	Variant of Marius
+285	Caiden	n/a	new	Variant of Caden
+286	Adriel	n/a	new	Adriel
+286	Kyler	n/a	new	Kyler
+288	Milo	n/a	new	Variant of Miloslav
+289	Archer	n/a	new	Archer
+290	Jeffrey	161	-129	Variant of Geoffrey
+291	Holden	n/a	new	Holden
+292	Arthur	n/a	new	Arthur
+293	Karson	n/a	new	Variant of Carson
+294	Rafael	n/a	new	Variant of Raphael
+295	Shane	158	-137	Variant of John
+296	Lane	n/a	new	Lane
+297	Louis	n/a	new	Variant of Ludwig
+298	Angelo	n/a	new	Variant of Angelus
+299	Remington	n/a	new	Remington
+300	Troy	n/a	new	Troy
+301	Emerson	n/a	new	Emerson
+302	Maximiliano	n/a	new	Variant of Maximilian
+303	Hector	187	-116	Variant of Hektor
+304	Emilio	n/a	new	Variant of Emil
+305	Anderson	n/a	new	Anderson
+306	Trevor	104	-202	Trevor
+307	Phoenix	n/a	new	Phoenix
+308	Walter	n/a	new	Walter
+309	Johnathan	181	-128	Johnathan
+310	Johnny	n/a	new	Variant of John
+311	Edwin	180	-131	Edwin
+311	Julius	n/a	new	Julius
+313	Barrett	n/a	new	Variant of Barret
+314	Leon	n/a	new	Variant of Leo
+315	Tyson	n/a	new	Tyson
+316	Tobias	n/a	new	Tobias
+317	Edgar	177	-140	Edgar
+318	Dominick	n/a	new	Variant of Dominic
+319	Marshall	n/a	new	Marshall
+320	Marco	198	-122	Variant of Mark
+321	Joaquin	n/a	new	Variant of Joachim
+322	Dante	n/a	new	Dante
+323	Andy	n/a	new	Variant of Andrew
+324	Cruz	n/a	new	Cruz
+325	Ali	n/a	new	Ali
+326	Finley	n/a	new	Variant of Fionnlagh
+327	Dalton	157	-170	Dalton
+328	Gideon	n/a	new	Gideon
+328	Reed	n/a	new	Reed
+330	Enzo	n/a	new	Enzo
+330	Sergio	195	-135	Variant of Serge
+332	Jett	n/a	new	Jett
+333	Thiago	n/a	new	Variant of Jacob
+334	Kyrie	n/a	new	Kyrie
+335	Ronan	n/a	new	Ronan
+336	Cohen	n/a	new	Cohen
+337	Colt	n/a	new	Variant of Colton
+337	Erik	178	-159	Variant of Eric
+339	Trenton	186	-153	Trenton
+340	Jared	109	-231	Jared
+341	Walker	n/a	new	Walker
+342	Landen	n/a	new	Landen
+343	Alexis	142	-201	Alexis
+343	Nash	n/a	new	Nash
+345	Jaylen	n/a	new	Variant of Jalen
+346	Gregory	191	-155	Gregory
+347	Emanuel	n/a	new	Variant of Manuel
+348	Killian	n/a	new	Variant of Cillian
+349	Allen	n/a	new	Variant of Alan
+350	Atticus	n/a	new	Atticus
+351	Desmond	n/a	new	Desmond
+351	Shawn	170	-181	Variant of John
+353	Grady	n/a	new	Grady
+354	Quinn	n/a	new	Quinn
+355	Frank	n/a	new	Frank
+356	Fabian	n/a	new	Fabian
+357	Dakota	141	-216	Dakota
+358	Roberto	n/a	new	Variant of Robert
+359	Beckham	n/a	new	Beckham
+360	Major	n/a	new	Major
+361	Skyler	n/a	new	Variant of Skylar
+362	Nehemiah	n/a	new	Nehemiah
+363	Drew	n/a	new	Variant of Andrew
+364	Cade	n/a	new	Cade
+365	Muhammad	n/a	new	Muhammad
+366	Kendrick	n/a	new	Kendrick
+367	Pedro	n/a	new	Variant of Peter
+368	Orion	n/a	new	Orion
+369	Aden	n/a	new	Variant of Aodh
+370	Kamden	n/a	new	Variant of Camden
+371	Ruben	n/a	new	Ruben
+371	Zaiden	n/a	new	Variant of Zayden
+373	Clark	n/a	new	Clark
+373	Noel	n/a	new	Noel
+375	Porter	n/a	new	Porter
+376	Solomon	n/a	new	Solomon
+377	Romeo	n/a	new	Romeo
+377	Rory	n/a	new	Rory
+379	Malik	n/a	new	Malik
+380	Daxton	n/a	new	Daxton
+381	Leland	n/a	new	Leland
+382	Kash	n/a	new	Variant of Cash
+383	Abram	n/a	new	Abram
+384	Derrick	n/a	new	Variant of Dietrich
+385	Kade	n/a	new	Variant of Cade
+386	Gunnar	n/a	new	Variant of Günther
+387	Prince	n/a	new	Prince
+388	Brendan	162	-226	Brendan
+389	Leonel	n/a	new	Variant of Leo
+390	Kason	n/a	new	Variant of Kayson
+391	Braylon	n/a	new	Braylon
+392	Legend	n/a	new	Legend
+393	Pablo	n/a	new	Variant of Paul
+394	Jay	n/a	new	Jay
+395	Adan	n/a	new	Variant of Adam
+395	Jensen	n/a	new	Variant of Jenson
+397	Esteban	n/a	new	Variant of Steven
+398	Kellan	n/a	new	Variant of Caol
+399	Drake	n/a	new	Drake
+400	Warren	n/a	new	Warren
+401	Ismael	n/a	new	Variant of Ishmael
+402	Ari	n/a	new	Ari
+403	Russell	n/a	new	Russell
+404	Bruce	n/a	new	Bruce
+405	Finnegan	n/a	new	Finnegan
+405	Marcos	n/a	new	Variant of Mark
+407	Jayson	n/a	new	Variant of Jason
+407	Theo	n/a	new	Variant of Theodore
+409	Jaxton	n/a	new	Variant of Jackton
+409	Phillip	n/a	new	Variant of Philip
+411	Dexter	n/a	new	Dexter
+412	Braylen	n/a	new	Variant of Braylon
+413	Armando	n/a	new	Variant of Hermann
+414	Braden	171	-243	Braden
+415	Corey	n/a	new	Corey
+416	Kolton	n/a	new	Variant of Colton
+417	Gerardo	n/a	new	Variant of Gerard
+418	Ace	n/a	new	Ace
+419	Ellis	n/a	new	Ellis
+419	Malcolm	n/a	new	Malcolm
+421	Tate	n/a	new	Tate
+422	Zachariah	n/a	new	Variant of Zachary
+423	Chandler	n/a	new	Chandler
+424	Milan	n/a	new	Milan
+425	Keith	n/a	new	Keith
+426	Danny	n/a	new	Variant of Daniel
+427	Damon	n/a	new	Variant of Damian
+428	Enrique	n/a	new	Variant of Henry
+428	Jonas	n/a	new	Variant of Jonah
+430	Kane	n/a	new	Variant of Cathán
+431	Princeton	n/a	new	Princeton
+432	Hugo	n/a	new	Hugo
+433	Ronald	n/a	new	Ronald
+434	Philip	n/a	new	Philip
+435	Ibrahim	n/a	new	Variant of Abraham
+436	Kayson	n/a	new	Kayson
+437	Maximilian	n/a	new	Maximilian
+438	Lawson	n/a	new	Lawson
+439	Harvey	n/a	new	Harvey
+440	Albert	n/a	new	Albert
+440	Donald	n/a	new	Donald
+442	Raul	n/a	new	Variant of Ralf
+443	Franklin	n/a	new	Variant of Frank
+443	Hendrix	n/a	new	Hendrix
+445	Odin	n/a	new	Odin
+446	Brennan	n/a	new	Brennan
+447	Jamison	n/a	new	Variant of Jameson
+448	Dillon	n/a	new	Variant of Dylan
+449	Brock	n/a	new	Brock
+450	Landyn	n/a	new	Variant of Landon
+451	Mohamed	n/a	new	Variant of Muhammad
+452	Brycen	n/a	new	Variant of Bryson
+453	Deacon	n/a	new	Deacon
+454	Colby	197	-257	Colby
+455	Alec	n/a	new	Variant of Alexander
+455	Julio	n/a	new	Variant of Julius
+455	Scott	n/a	new	Scott
+458	Matias	n/a	new	Variant of Matthias
+458	Sullivan	n/a	new	Sullivan
+460	Rodrigo	n/a	new	Variant of Roderick
+461	Cason	n/a	new	Variant of Kayson
+461	Taylor	n/a	new	Taylor
+463	Rocco	n/a	new	Rocco
+464	Nico	n/a	new	Variant of Nicholas
+465	Royal	n/a	new	Royal
+466	Pierce	n/a	new	Variant of Peter
+467	Augustus	n/a	new	Variant of August
+468	Raiden	n/a	new	Raiden
+469	Kasen	n/a	new	Variant of Kayson
+470	Benson	n/a	new	Benson
+470	Moses	n/a	new	Moses
+472	Cyrus	n/a	new	Cyrus
+472	Raylan	n/a	new	Raylan
+474	Davis	n/a	new	Davis
+475	Khalil	n/a	new	Khalil
+475	Moises	n/a	new	Variant of Moses
+477	Conor	n/a	new	Variant of Connor
+477	Nikolai	n/a	new	Variant of Nicholas
+479	Alijah	n/a	new	Variant of Elijah
+480	Mathew	n/a	new	Variant of Matthias
+481	Keaton	n/a	new	Keaton
+482	Francis	n/a	new	Francis
+483	Quentin	n/a	new	Quentin
+484	Ty	n/a	new	Ty
+485	Jaime	n/a	new	Variant of Jacob
+486	Ronin	n/a	new	Variant of Ronan
+487	Kian	n/a	new	Variant of Cian
+488	Lennox	n/a	new	Lennox
+489	Malakai	n/a	new	Variant of Malachi
+490	Atlas	n/a	new	Atlas
+491	Jerry	n/a	new	Variant of Jeremiah
+492	Ryland	n/a	new	Variant of Rylan
+493	Ahmed	n/a	new	Variant of Ahmad
+493	Saul	n/a	new	Saul
+495	Sterling	n/a	new	Sterling
+496	Dennis	n/a	new	Dennis
+497	Lawrence	n/a	new	Variant of Laurence
+498	Zayne	n/a	new	Variant of Zayn
+499	Bodhi	n/a	new	Bodhi
+500	Arjun	n/a	new	Variant of Arjuna
+500	Darius	n/a	new	Darius
+502	Arlo	n/a	new	Arlo
+503	Eden	n/a	new	Eden
+503	Tony	n/a	new	Variant of Anthony
+505	Dustin	n/a	new	Dustin
+506	Kellen	n/a	new	Kellen
+507	Chris	n/a	new	Variant of Christoph
+508	Mohammed	n/a	new	Variant of Muhammad
+508	Nasir	n/a	new	Nasir
+508	Omari	n/a	new	Variant of Umar
+511	Kieran	n/a	new	Kieran
+511	Nixon	n/a	new	Nixon
+511	Rhys	n/a	new	Variant of Reece
+514	Armani	n/a	new	Armani
+514	Arturo	n/a	new	Variant of Arthur
+516	Bowen	n/a	new	Bowen
+516	Frederick	n/a	new	Frederick
+518	Callen	n/a	new	Variant of Callan
+518	Leonidas	n/a	new	Variant of Leonid
+518	Remy	n/a	new	Variant of Remington
+521	Wade	n/a	new	Wade
+522	Luka	n/a	new	Variant of Luke
+523	Jakob	n/a	new	Variant of Jacob
+523	Winston	n/a	new	Winston
+525	Justice	n/a	new	Justice
+526	Alonzo	n/a	new	Variant of Alfons
+526	Curtis	n/a	new	Curtis
+528	Aarav	n/a	new	Aarav
+528	Gustavo	n/a	new	Variant of Gustaf
+530	Royce	n/a	new	Royce
+531	Asa	n/a	new	Asa
+531	Gannon	n/a	new	Gannon
+531	Kyson	n/a	new	Kyson
+534	Hank	n/a	new	Variant of Henry
+535	Izaiah	n/a	new	Variant of Isaiah
+535	Roy	n/a	new	Roy
+537	Raphael	n/a	new	Raphael
+538	Luciano	n/a	new	Variant of Lucius
+539	Hayes	n/a	new	Hayes
+540	Case	n/a	new	Case
+540	Darren	n/a	new	Darren
+540	Mohammad	n/a	new	Variant of Muhammad
+543	Otto	n/a	new	Otto
+544	Layton	n/a	new	Layton
+545	Isaias	n/a	new	Variant of Isaiah
+546	Alberto	n/a	new	Variant of Albert
+546	Jamari	n/a	new	Jamari
+548	Colten	n/a	new	Variant of Colton
+548	Dax	n/a	new	Variant of Daxton
+548	Marvin	n/a	new	Marvin
+551	Casey	n/a	new	Casey
+551	Moshe	n/a	new	Variant of Moses
+553	Johan	n/a	new	Variant of John
+553	Sam	n/a	new	Variant of Samuel
+555	Matthias	n/a	new	Matthias
+556	Larry	n/a	new	Variant of Laurence
+556	Trey	n/a	new	Trey
+558	Devon	182	-376	Devon
+558	Trent	n/a	new	Trent
+560	Mauricio	n/a	new	Variant of Maurice
+561	Mathias	n/a	new	Variant of Matthias
+562	Issac	n/a	new	Variant of Isaac
+563	Dorian	n/a	new	Dorian
+564	Gianni	n/a	new	Variant of John
+565	Ahmad	n/a	new	Ahmad
+566	Nikolas	n/a	new	Variant of Nicholas
+566	Oakley	n/a	new	Oakley
+568	Uriel	n/a	new	Uriel
+569	Lewis	n/a	new	Variant of Ludwig
+570	Randy	n/a	new	Variant of Randolf
+571	Cullen	n/a	new	Cullen
+572	Braydon	n/a	new	Variant of Braden
+572	Ezequiel	n/a	new	Variant of Ezekiel
+574	Reece	n/a	new	Reece
+575	Jimmy	n/a	new	Variant of Jacob
+576	Crosby	n/a	new	Crosby
+577	Soren	n/a	new	Variant of Severin
+578	Uriah	n/a	new	Uriah
+579	Roger	n/a	new	Roger
+580	Nathanael	n/a	new	Nathanael
+581	Emmitt	n/a	new	Variant of Emmet
+581	Gary	n/a	new	Gary
+581	Rayan	n/a	new	Rayan
+584	Ricky	n/a	new	Variant of Richard
+585	Mitchell	n/a	new	Mitchell
+586	Roland	n/a	new	Roland
+587	Alfredo	n/a	new	Variant of Alfred
+587	Cannon	n/a	new	Variant of Canon
+587	Jalen	189	-398	Jalen
+590	Tatum	n/a	new	Tatum
+591	Kobe	n/a	new	Kobe
+591	Yusuf	n/a	new	Variant of Joseph
+593	Quinton	n/a	new	Variant of Quentin
+594	Korbin	n/a	new	Variant of Corvin
+595	Brayan	n/a	new	Variant of Brian
+596	Joe	n/a	new	Variant of Joseph
+597	Byron	n/a	new	Byron
+598	Ariel	n/a	new	Ariel
+598	Quincy	n/a	new	Quincy
+600	Carl	n/a	new	Variant of Karl
+601	Kristopher	n/a	new	Variant of Christoph
+602	Alvin	n/a	new	Alvin
+602	Duke	n/a	new	Duke
+602	Lance	n/a	new	Variant of Lando
+605	London	n/a	new	London
+606	Jasiah	n/a	new	Variant of Josias
+607	Boston	n/a	new	Boston
+608	Santino	n/a	new	Variant of Santo
+609	Lennon	n/a	new	Lennon
+610	Deandre	n/a	new	Deandre
+611	Madden	n/a	new	Madden
+611	Talon	n/a	new	Talon
+613	Sylas	n/a	new	Variant of Silvan
+614	Orlando	n/a	new	Variant of Roland
+615	Hamza	n/a	new	Hamza
+616	Bo	n/a	new	Variant of Boje
+617	Aldo	n/a	new	Aldo
+617	Douglas	n/a	new	Douglas
+617	Tristen	n/a	new	Variant of Tristan
+617	Wilson	n/a	new	Wilson
+621	Maurice	n/a	new	Maurice
+622	Samson	n/a	new	Samson
+623	Cayson	n/a	new	Cayson
+624	Bryant	n/a	new	Bryant
+624	Conrad	n/a	new	Conrad
+626	Dane	n/a	new	Dane
+626	Julien	n/a	new	Variant of Julian
+626	Sincere	n/a	new	Sincere
+629	Noe	n/a	new	Variant of Noah
+630	Salvador	n/a	new	Variant of Salvatore
+631	Nelson	n/a	new	Nelson
+632	Edison	n/a	new	Edison
+632	Ramon	n/a	new	Variant of Raymond
+634	Lucian	n/a	new	Variant of Lucius
+634	Mekhi	n/a	new	Mekhi
+634	Niko	n/a	new	Variant of Nicholas
+637	Ayaan	n/a	new	Variant of Ayan
+638	Vihaan	n/a	new	Variant of Vihan
+639	Neil	n/a	new	Neil
+640	Titan	n/a	new	Titan
+641	Ernesto	n/a	new	Variant of Ernest
+642	Brentley	n/a	new	Variant of Brent
+643	Lionel	n/a	new	Variant of Leo
+643	Zayn	n/a	new	Zayn
+645	Dominik	n/a	new	Variant of Dominic
+646	Cassius	n/a	new	Cassius
+646	Rowen	n/a	new	Variant of Rowan
+648	Blaine	n/a	new	Blaine
+648	Sage	n/a	new	Sage
+650	Kelvin	n/a	new	Kelvin
+651	Jaxen	n/a	new	Variant of Jackson
+651	Memphis	n/a	new	Memphis
+653	Leonard	n/a	new	Variant of Leonhard
+654	Abdullah	n/a	new	Variant of Abdallah
+654	Jacoby	n/a	new	Jacoby
+656	Allan	n/a	new	Variant of Alan
+657	Jagger	n/a	new	Jagger
+657	Yahir	n/a	new	Variant of Jair
+659	Forrest	n/a	new	Forrest
+659	Guillermo	n/a	new	Variant of William
+659	Mack	n/a	new	Mack
+659	Zechariah	n/a	new	Variant of Zachary
+663	Harley	n/a	new	Harley
+664	Terry	n/a	new	Variant of Terence
+665	Kylan	n/a	new	Variant of Kyle
+666	Fletcher	n/a	new	Fletcher
+666	Rohan	n/a	new	Variant of Rowan
+668	Eddie	n/a	new	Variant of Edward
+669	Bronson	n/a	new	Bronson
+670	Jefferson	n/a	new	Jefferson
+671	Rayden	n/a	new	Variant of Raiden
+672	Terrance	n/a	new	Variant of Terence
+673	Marc	n/a	new	Variant of Mark
+673	Morgan	n/a	new	Morgan
+673	Valentino	n/a	new	Variant of Valentine
+676	Demetrius	n/a	new	Variant of Dimitri
+677	Kristian	n/a	new	Variant of Christian
+678	Hezekiah	n/a	new	Hezekiah
+678	Lee	n/a	new	Lee
+680	Alessandro	n/a	new	Variant of Alexander
+680	Makai	n/a	new	Variant of Michael
+680	Rex	n/a	new	Rex
+683	Callum	n/a	new	Callum
+684	Kamari	n/a	new	Kamari
+685	Casen	n/a	new	Variant of Kayson
+685	Tripp	n/a	new	Tripp
+687	Callan	n/a	new	Callan
+687	Stanley	n/a	new	Stanley
+687	Toby	n/a	new	Variant of Tobias
+690	Elian	n/a	new	Elian
+691	Langston	n/a	new	Langston
+691	Melvin	n/a	new	Variant of Melville
+691	Payton	n/a	new	Payton
+694	Flynn	n/a	new	Flynn
+694	Jamir	n/a	new	Jamir
+694	Kyree	n/a	new	Variant of Kyrie
+697	Aryan	n/a	new	Aryan
+698	Axton	n/a	new	Variant of Ashton
+698	Azariah	n/a	new	Azariah
+698	Branson	n/a	new	Branson
+701	Reese	n/a	new	Variant of Reece
+702	Adonis	n/a	new	Adonis
+703	Thaddeus	n/a	new	Thaddeus
+704	Zeke	n/a	new	Variant of Ezekiel
+705	Tommy	n/a	new	Variant of Thomas
+706	Blaze	n/a	new	Variant of Blaise
+706	Carmelo	n/a	new	Variant of Carmine
+708	Skylar	n/a	new	Skylar
+709	Arian	n/a	new	Arian
+709	Bruno	n/a	new	Bruno
+711	Kaysen	n/a	new	Variant of Kayson
+711	Layne	n/a	new	Variant of Lane
+711	Ray	n/a	new	Variant of Raymond
+714	Zain	n/a	new	Variant of Zayn
+715	Crew	n/a	new	Variant of Carew
+715	Jedidiah	n/a	new	Jedidiah
+715	Rodney	n/a	new	Rodney
+718	Clay	n/a	new	Variant of Clayton
+718	Tomas	n/a	new	Variant of Thomas
+720	Alden	n/a	new	Alden
+721	Jadiel	n/a	new	Variant of Yadiel
+722	Harper	n/a	new	Harper
+723	Ares	n/a	new	Variant of Aris
+724	Cory	n/a	new	Variant of Corey
+725	Brecken	n/a	new	Brecken
+725	Chaim	n/a	new	Variant of Chayim
+725	Nickolas	n/a	new	Variant of Nicholas
+728	Kareem	n/a	new	Variant of Karim
+728	Xzavier	n/a	new	Variant of Xavier
+730	Kaison	n/a	new	Variant of Kayson
+731	Alonso	n/a	new	Variant of Alfons
+731	Amos	n/a	new	Amos
+731	Vicente	n/a	new	Variant of Vinzenz
+734	Samir	n/a	new	Samir
+734	Yosef	n/a	new	Variant of Joseph
+736	Jamal	n/a	new	Jamal
+736	Jon	n/a	new	Variant of John
+738	Bobby	n/a	new	Variant of Robert
+739	Aron	n/a	new	Variant of Aaron
+739	Ben	n/a	new	Variant of Benjamin
+739	Ford	n/a	new	Ford
+742	Brodie	n/a	new	Variant of Brody
+742	Cain	n/a	new	Variant of Kain
+744	Finnley	n/a	new	Variant of Fionnlagh
+745	Briggs	n/a	new	Variant of Bridger
+745	Davion	n/a	new	Davion
+745	Kingsley	n/a	new	Kingsley
+748	Brett	n/a	new	Brett
+749	Wayne	n/a	new	Wayne
+749	Zackary	n/a	new	Variant of Zachary
+751	Apollo	n/a	new	Variant of Apollonius
+751	Emery	n/a	new	Variant of Emmerich
+751	Joziah	n/a	new	Variant of Josias
+751	Lucca	n/a	new	Variant of Luke
+755	Bentlee	n/a	new	Variant of Bentley
+755	Hassan	n/a	new	Variant of Hasan
+755	Westin	n/a	new	Variant of Weston
+758	Joey	n/a	new	Variant of Joseph
+758	Vance	n/a	new	Vance
+760	Marcelo	n/a	new	Variant of Marcel
+761	Axl	n/a	new	Variant of Axel
+761	Jermaine	n/a	new	Variant of German
+763	Chad	n/a	new	Chad
+764	Gerald	n/a	new	Gerald
+764	Kole	n/a	new	Variant of Cole
+766	Dash	n/a	new	Dash
+766	Dayton	n/a	new	Dayton
+768	Lachlan	n/a	new	Lachlan
+768	Shaun	n/a	new	Variant of John
+770	Kody	n/a	new	Variant of Cody
+770	Ronnie	n/a	new	Variant of Ronald
+772	Kolten	n/a	new	Variant of Colton
+772	Marcel	n/a	new	Marcel
+772	Stetson	n/a	new	Stetson
+775	Willie	n/a	new	Variant of William
+776	Jeffery	n/a	new	Variant of Geoffrey
+777	Brantlee	n/a	new	Variant of Brantley
+778	Elisha	n/a	new	Variant of Elischa
+778	Maxim	n/a	new	Maxim
+780	Kendall	n/a	new	Kendall
+781	Harry	n/a	new	Variant of Henry
+781	Leandro	n/a	new	Variant of Leander
+783	Aaden	n/a	new	Variant of Aodh
+783	Channing	n/a	new	Channing
+783	Kohen	n/a	new	Variant of Cohen
+783	Yousef	n/a	new	Variant of Joseph
+787	Darian	n/a	new	Variant of Darius
+788	Enoch	n/a	new	Enoch
+788	Mayson	n/a	new	Variant of Mason
+788	Neymar	n/a	new	Neymar
+791	Giovani	n/a	new	Variant of John
+792	Alfonso	n/a	new	Variant of Alfons
+792	Duncan	n/a	new	Duncan
+794	Anders	n/a	new	Variant of Andrew
+794	Braeden	n/a	new	Variant of Braden
+794	Dwayne	n/a	new	Variant of Duane
+794	Keagan	n/a	new	Variant of Keegan
+798	Felipe	n/a	new	Variant of Philip
+799	Fisher	n/a	new	Fisher
+799	Stefan	n/a	new	Variant of Steven
+801	Trace	n/a	new	Variant of Tracy
+802	Aydin	n/a	new	Variant of Aodh
+803	Anson	n/a	new	Anson
+804	Clyde	n/a	new	Clyde
+805	Blaise	n/a	new	Blaise
+805	Canaan	n/a	new	Canaan
+805	Maxton	n/a	new	Maxton
+808	Alexzander	n/a	new	Variant of Alexander
+808	Billy	n/a	new	Variant of William
+808	Harold	n/a	new	Variant of Harald
+811	Baylor	n/a	new	Baylor
+812	Gordon	n/a	new	Gordon
+813	Rene	n/a	new	Variant of Renato
+813	Terrence	n/a	new	Variant of Terence
+813	Vincenzo	n/a	new	Variant of Vinzenz
+816	Kamdyn	n/a	new	Variant of Camden
+816	Marlon	n/a	new	Variant of Mark
+818	Castiel	n/a	new	Castiel
+818	Lamar	n/a	new	Lamar
+820	Augustine	n/a	new	Variant of August
+820	Jamie	n/a	new	Variant of Jacob
+822	Eugene	n/a	new	Variant of Eugen
+823	Harlan	n/a	new	Harlan
+823	Kase	n/a	new	Variant of Case
+823	Miller	n/a	new	Miller
+823	Van	n/a	new	Variant of Vance
+827	Kolby	n/a	new	Variant of Colby
+827	Sonny	n/a	new	Sonny
+829	Emory	n/a	new	Variant of Emmerich
+829	Junior	n/a	new	Junior
+831	Graysen	n/a	new	Variant of Grayson
+831	Heath	n/a	new	Heath
+831	Rogelio	n/a	new	Rogelio
+831	Will	n/a	new	Variant of William
+835	Amare	n/a	new	Variant of Amar
+835	Ameer	n/a	new	Variant of Amir
+835	Camdyn	n/a	new	Variant of Camden
+835	Jerome	n/a	new	Variant of Hieronymus
+835	Maison	n/a	new	Variant of Mason
+840	Micheal	n/a	new	Variant of Michael
+841	Cristiano	n/a	new	Variant of Christian
+841	Giancarlo	n/a	new	Giancarlo
+841	Henrik	n/a	new	Variant of Henry
+841	Lochlan	n/a	new	Variant of Lachlan
+845	Bode	n/a	new	Variant of Bodo
+845	Camron	n/a	new	Variant of Cameron
+845	Houston	n/a	new	Houston
+845	Otis	n/a	new	Otis
+849	Hugh	n/a	new	Variant of Hugo
+849	Kannon	n/a	new	Variant of Canon
+849	Konnor	n/a	new	Variant of Connor
+852	Emmet	n/a	new	Emmet
+852	Kamryn	n/a	new	Variant of Cameron
+852	Maximo	n/a	new	Variant of Maxim
+855	Adrien	n/a	new	Variant of Adrian
+855	Cedric	n/a	new	Cedric
+855	Dariel	n/a	new	Variant of Daryl
+855	Landry	n/a	new	Variant of Landrich
+855	Leighton	n/a	new	Variant of Layton
+855	Magnus	n/a	new	Magnus
+861	Draven	n/a	new	Draven
+861	Javon	n/a	new	Variant of Javan
+861	Marley	n/a	new	Marley
+861	Zavier	n/a	new	Variant of Xavier
+865	Markus	n/a	new	Variant of Mark
+866	Justus	n/a	new	Justus
+867	Reyansh	n/a	new	Reyansh
+867	Rudy	n/a	new	Variant of Rudolf
+867	Santana	n/a	new	Santana
+870	Misael	n/a	new	Misael
+871	Abdiel	n/a	new	Abdiel
+871	Davian	n/a	new	Davian
+871	Zaire	n/a	new	Zaire
+874	Jordy	n/a	new	Variant of Georg
+874	Reginald	n/a	new	Variant of Reinhold
+876	Benton	n/a	new	Benton
+876	Darwin	n/a	new	Darwin
+876	Franco	n/a	new	Variant of Frank
+876	Jairo	n/a	new	Variant of Jair
+876	Jonathon	n/a	new	Variant of John
+876	Reuben	n/a	new	Variant of Ruben
+876	Urijah	n/a	new	Variant of Uriah
+876	Vivaan	n/a	new	Vivaan
+884	Brent	n/a	new	Brent
+884	Gauge	n/a	new	Variant of Gage
+886	Vaughn	n/a	new	Variant of Vaughan
+887	Coleman	n/a	new	Variant of Columbano
+887	Zaid	n/a	new	Variant of Zayd
+889	Terrell	n/a	new	Variant of Tyrrell
+890	Kenny	n/a	new	Variant of Ken
+891	Brice	n/a	new	Variant of Bryce
+892	Lyric	n/a	new	Lyric
+893	Judson	n/a	new	Judson
+893	Shiloh	n/a	new	Shiloh
+895	Damari	n/a	new	Variant of Damarion
+895	Kalel	n/a	new	Kalel
+897	Braiden	n/a	new	Variant of Braden
+897	Brenden	n/a	new	Variant of Brendan
+897	Coen	n/a	new	Variant of Conrad
+897	Denver	n/a	new	Denver
+897	Javion	n/a	new	Javion
+897	Thatcher	n/a	new	Thatcher
+903	Rey	n/a	new	Rey
+904	Dilan	n/a	new	Dilan
+905	Dimitri	n/a	new	Dimitri
+905	Immanuel	n/a	new	Variant of Manuel
+905	Mustafa	n/a	new	Mustafa
+905	Ulises	n/a	new	Variant of Ulysses
+909	Alvaro	n/a	new	Variant of Álvaro
+909	Dominique	n/a	new	Variant of Dominic
+909	Eliseo	n/a	new	Variant of Elischa
+912	Anakin	n/a	new	Anakin
+912	Craig	n/a	new	Craig
+914	Dario	n/a	new	Variant of Darius
+914	Santos	n/a	new	Santos
+916	Grey	n/a	new	Variant of Gray
+916	Ishaan	n/a	new	Ishaan
+918	Jessie	n/a	new	Variant of Jesse
+918	Jonael	n/a	new	Jonael
+920	Alfred	n/a	new	Alfred
+920	Tyrone	n/a	new	Tyrone
+920	Valentin	n/a	new	Variant of Valentine
+923	Jadon	n/a	new	Jadon
+923	Turner	n/a	new	Turner
+925	Ignacio	n/a	new	Variant of Ignaz
+925	Riaan	n/a	new	Variant of Ryan
+925	Rocky	n/a	new	Variant of Rocco
+928	Ephraim	n/a	new	Ephraim
+928	Marquis	n/a	new	Marquis
+930	Musa	n/a	new	Variant of Moses
+931	Keenan	n/a	new	Variant of Cian
+931	Ridge	n/a	new	Ridge
+933	Chace	n/a	new	Variant of Chase
+933	Kymani	n/a	new	Variant of Kimani
+933	Rodolfo	n/a	new	Variant of Rudolf
+936	Darrell	n/a	new	Variant of Daryl
+936	Steve	n/a	new	Variant of Steven
+938	Agustin	n/a	new	Variant of August
+938	Jaziel	n/a	new	Jaziel
+940	Boone	n/a	new	Boone
+940	Cairo	n/a	new	Cairo
+940	Kashton	n/a	new	Kashton
+940	Rashad	n/a	new	Rashad
+944	Gibson	n/a	new	Gibson
+944	Jabari	n/a	new	Jabari
+946	Avi	n/a	new	Variant of Abraham
+946	Quintin	n/a	new	Variant of Quentin
+946	Seamus	n/a	new	Variant of Jacob
+949	Rolando	n/a	new	Variant of Roland
+949	Sutton	n/a	new	Sutton
+951	Camilo	n/a	new	Variant of Camillo
+951	Triston	n/a	new	Variant of Tristan
+951	Yehuda	n/a	new	Variant of Judah
+954	Cristopher	n/a	new	Variant of Christoph
+954	Davin	n/a	new	Variant of Devin
+954	Ernest	n/a	new	Ernest
+954	Jamarion	n/a	new	Jamarion
+954	Kamren	n/a	new	Variant of Cameron
+954	Salvatore	n/a	new	Salvatore
+960	Anton	n/a	new	Variant of Anthony
+960	Aydan	n/a	new	Variant of Aodh
+960	Huxley	n/a	new	Huxley
+960	Jovani	n/a	new	Variant of John
+960	Wilder	n/a	new	Wilder
+965	Bodie	n/a	new	Variant of Boden
+965	Jordyn	n/a	new	Variant of Jordan
+965	Louie	n/a	new	Variant of Ludwig
+968	Achilles	n/a	new	Variant of Achill
+968	Kaeden	n/a	new	Variant of Caden
+968	Kamron	n/a	new	Variant of Cameron
+971	Aarush	n/a	new	Aarush
+971	Deangelo	n/a	new	Deangelo
+971	Robin	n/a	new	Variant of Robert
+971	Yadiel	n/a	new	Yadiel
+971	Yahya	n/a	new	Variant of John
+976	Boden	n/a	new	Boden
+976	Ean	n/a	new	Variant of John
+976	Kye	n/a	new	Kye
+976	Kylen	n/a	new	Variant of Kyle
+976	Todd	n/a	new	Todd
+976	Truman	n/a	new	Truman
+982	Chevy	n/a	new	Chevy
+982	Gilbert	n/a	new	Gilbert
+982	Haiden	n/a	new	Variant of Hayden
+985	Brixton	n/a	new	Brixton
+985	Dangelo	n/a	new	Dangelo
+985	Juelz	n/a	new	Juelz
+985	Osvaldo	n/a	new	Variant of Oswald
+989	Bishop	n/a	new	Bishop
+989	Freddy	n/a	new	Variant of Frederick
+989	Reagan	n/a	new	Reagan
+992	Frankie	n/a	new	Variant of Frank
+992	Malaki	n/a	new	Variant of Malachi
+994	Camren	n/a	new	Variant of Cameron
+994	Deshawn	n/a	new	Deshawn
+994	Jayvion	n/a	new	Variant of Javion
+994	Leroy	n/a	new	Leroy
+998	Briar	n/a	new	Briar
+998	Jaydon	n/a	new	Variant of Jadon
+1000	Antoine	n/a	new	Variant of Anthony
+1	Emma	3	+2	Emma
+2	Olivia	4	+2	Olivia
+3	Sophia	13	+10	Sophia
+4	Ava	16	+12	Variant of Eve
+5	Isabella	7	+2	Isabella
+6	Mia	26	+20	Variant of Mary
+7	Abigail	6	-1	Abigail
+8	Emily	1	-7	Emily
+9	Charlotte	136	+127	Charlotte
+10	Harper	n/a	new	Harper
+11	Madison	2	-9	Madison
+12	Amelia	100	+88	Amelia
+13	Elizabeth	9	-4	Elizabeth
+14	Sofia	73	+59	Variant of Sophia
+15	Evelyn	80	+65	Evelyn
+16	Avery	78	+62	Avery
+17	Chloe	20	+3	Chloe
+18	Ella	34	+16	Ella
+19	Grace	15	-4	Grace
+20	Victoria	25	+5	Victoria
+21	Aubrey	113	+92	Aubrey
+22	Scarlett	n/a	new	Scarlett
+23	Zoey	160	+137	Variant of Zoe
+24	Addison	50	+26	Addison
+25	Lily	45	+20	Lily
+26	Lillian	52	+26	Variant of Lilian
+27	Natalie	21	-6	Natalie
+28	Hannah	5	-23	Variant of Anna
+29	Aria	n/a	new	Aria
+30	Layla	131	+101	Layla
+31	Brooklyn	90	+59	Brooklyn
+32	Alexa	58	+26	Variant of Alexandra
+33	Zoe	54	+21	Zoe
+34	Penelope	n/a	new	Penelope
+35	Riley	67	+32	Riley
+36	Leah	68	+32	Leah
+37	Audrey	79	+42	Variant of Edeltraud
+38	Savannah	38	0	Savannah
+39	Allison	41	+2	Variant of Alison
+40	Samantha	8	-32	Samantha
+41	Nora	n/a	new	Variant of Eleonora
+42	Skylar	156	+114	Skylar
+43	Camila	189	+146	Variant of Camilla
+44	Anna	24	-20	Anna
+45	Paisley	n/a	new	Paisley
+46	Ariana	85	+39	Variant of Adriana
+47	Ellie	199	+152	Ellie
+48	Aaliyah	91	+43	Variant of Aliyah
+49	Claire	82	+33	Variant of Clare
+50	Violet	n/a	new	Variant of Viola
+51	Stella	n/a	new	Stella
+52	Sadie	162	+110	Variant of Sarah
+53	Mila	n/a	new	Variant of Ludmilla
+54	Gabriella	60	+6	Variant of Gabriele
+55	Lucy	179	+124	Variant of Lucia
+56	Arianna	87	+31	Variant of Adriana
+57	Kennedy	121	+64	Kennedy
+58	Sarah	12	-46	Sarah
+59	Madelyn	102	+43	Variant of Magdalena
+60	Eleanor	n/a	new	Variant of Eleonora
+61	Kaylee	44	-17	Variant of Kayley
+62	Caroline	77	+15	Variant of Carla
+63	Hazel	n/a	new	Hazel
+64	Hailey	27	-37	Variant of Hayley
+65	Genesis	159	+94	Genesis
+66	Kylie	64	-2	Kylie
+67	Autumn	83	+16	Autumn
+68	Piper	n/a	new	Piper
+69	Maya	81	+12	Variant of Maja
+70	Nevaeh	86	+16	Nevaeh
+71	Serenity	177	+106	Serenity
+72	Peyton	122	+50	Variant of Payton
+73	Mackenzie	48	-25	Mackenzie
+74	Bella	n/a	new	Variant of Isabella
+75	Eva	161	+86	Variant of Eve
+76	Taylor	17	-59	Taylor
+77	Naomi	141	+64	Naomi
+78	Aubree	n/a	new	Variant of Aubrey
+79	Aurora	n/a	new	Aurora
+80	Melanie	96	+16	Melanie
+81	Lydia	128	+47	Lydia
+82	Brianna	18	-64	Brianna
+83	Ruby	153	+70	Ruby
+84	Katherine	37	-47	Katherine
+85	Ashley	10	-75	Ashley
+86	Alexis	11	-75	Alexis
+86	Alice	n/a	new	Variant of Adelheid
+88	Cora	n/a	new	Cora
+89	Julia	30	-59	Julia
+90	Madeline	57	-33	Variant of Magdalena
+91	Faith	55	-36	Faith
+92	Annabelle	n/a	new	Variant of Annabella
+93	Alyssa	14	-79	Variant of Adelheid
+94	Isabelle	101	+7	Variant of Isabella
+95	Vivian	n/a	new	Variant of Viviane
+96	Gianna	120	+24	Variant of Johanna
+97	Quinn	n/a	new	Quinn
+98	Clara	n/a	new	Variant of Clare
+99	Reagan	174	+75	Variant of Regan
+100	Khloe	n/a	new	Variant of Chloe
+101	Alexandra	40	-61	Alexandra
+102	Hadley	n/a	new	Hadley
+103	Eliana	n/a	new	Variant of Eliane
+104	Sophie	117	+13	Variant of Sophia
+105	London	n/a	new	London
+106	Elena	n/a	new	Variant of Helen
+107	Kimberly	56	-51	Variant of Kimberley
+108	Bailey	89	-19	Bailey
+109	Maria	43	-66	Variant of Mary
+110	Luna	n/a	new	Luna
+111	Willow	n/a	new	Willow
+112	Jasmine	29	-83	Jasmine
+113	Kinsley	n/a	new	Kinsley
+114	Valentina	n/a	new	Valentina
+115	Kayla	22	-93	Variant of Kayley
+116	Delilah	n/a	new	Delilah
+117	Andrea	53	-64	Andrea
+118	Natalia	133	+15	Variant of Natalie
+119	Lauren	19	-100	Variant of Laura
+120	Morgan	31	-89	Variant of Morgana
+121	Rylee	154	+33	Variant of Riley
+122	Sydney	28	-94	Variant of Sidney
+123	Adalynn	n/a	new	Variant of Adela
+124	Mary	65	-59	Mary
+125	Ximena	n/a	new	Ximena
+126	Jade	110	-16	Jade
+127	Liliana	188	+61	Variant of Lilian
+128	Brielle	n/a	new	Variant of Gabriele
+129	Ivy	n/a	new	Ivy
+130	Trinity	62	-68	Trinity
+131	Josephine	n/a	new	Variant of Josepha
+132	Adalyn	n/a	new	Variant of Adela
+133	Jocelyn	84	-49	Jocelyn
+134	Emery	n/a	new	Emery
+135	Adeline	n/a	new	Variant of Adela
+136	Jordyn	167	+31	Variant of Jordan
+137	Ariel	n/a	new	Variant of Ariela
+138	Everly	n/a	new	Everly
+139	Lilly	193	+54	Variant of Elizabeth
+140	Paige	66	-74	Paige
+141	Isla	n/a	new	Isla
+142	Lyla	n/a	new	Lyla
+143	Makayla	46	-97	Variant of Michaela
+144	Molly	99	-45	Variant of Mary
+145	Emilia	n/a	new	Variant of Emily
+146	Mya	114	-32	Variant of Maja
+147	Kendall	166	+19	Kendall
+148	Melody	n/a	new	Melody
+149	Isabel	93	-56	Variant of Isabella
+150	Brooke	47	-103	Brooke
+151	Mckenzie	148	-3	Variant of Mackenzie
+152	Nicole	49	-103	Nicole
+153	Payton	143	-10	Payton
+154	Margaret	137	-17	Variant of Margarete
+155	Mariah	94	-61	Variant of Mary
+156	Eden	n/a	new	Eden
+157	Athena	n/a	new	Athena
+158	Amy	115	-43	Variant of Amata
+159	Norah	n/a	new	Variant of Eleonora
+160	Londyn	n/a	new	Londyn
+161	Valeria	130	-31	Variant of Valerie
+162	Sara	70	-92	Variant of Sarah
+163	Aliyah	n/a	new	Aliyah
+164	Angelina	76	-88	Variant of Angela
+165	Gracie	122	-43	Variant of Grace
+166	Rose	n/a	new	Rose
+167	Rachel	33	-134	Rachel
+168	Juliana	173	+5	Juliana
+169	Laila	n/a	new	Variant of Layla
+170	Brooklynn	n/a	new	Variant of Brooklyn
+171	Valerie	155	-16	Valerie
+172	Alina	n/a	new	Variant of Adela
+173	Reese	n/a	new	Reese
+174	Elise	n/a	new	Variant of Elizabeth
+175	Eliza	n/a	new	Variant of Elizabeth
+176	Alaina	n/a	new	Variant of Alana
+177	Raelynn	n/a	new	Variant of Raelyn
+178	Leilani	n/a	new	Leilani
+179	Catherine	111	-68	Variant of Katherine
+180	Emerson	n/a	new	Emerson
+181	Cecilia	n/a	new	Cecilia
+182	Genevieve	n/a	new	Variant of Genoveva
+183	Daisy	147	-36	Daisy
+184	Harmony	n/a	new	Harmony
+185	Vanessa	74	-111	Vanessa
+186	Adriana	124	-62	Adriana
+187	Presley	n/a	new	Presley
+188	Rebecca	71	-117	Rebecca
+189	Destiny	32	-157	Destiny
+190	Hayden	n/a	new	Hayden
+191	Julianna	n/a	new	Variant of Juliana
+192	Michelle	72	-120	Variant of Michaela
+193	Adelyn	n/a	new	Variant of Adela
+194	Arabella	n/a	new	Arabella
+194	Summer	152	-42	Summer
+196	Callie	n/a	new	Variant of Callista
+197	Kaitlyn	35	-162	Variant of Katherine
+198	Ryleigh	n/a	new	Variant of Riley
+199	Lila	n/a	new	Variant of Layla
+200	Daniela	127	-73	Daniela
+201	Arya	n/a	new	Variant of Ariah
+202	Alana	187	-15	Alana
+203	Esther	n/a	new	Esther
+204	Finley	n/a	new	Finley
+205	Gabrielle	61	-144	Variant of Gabriele
+206	Jessica	23	-183	Jessica
+207	Charlie	n/a	new	Variant of Charlotte
+207	Stephanie	51	-156	Stephanie
+209	Tessa	n/a	new	Variant of Theresa
+210	Makenzie	191	-19	Variant of Mackenzie
+211	Ana	144	-67	Variant of Anna
+212	Amaya	n/a	new	Amaya
+213	Alexandria	132	-81	Variant of Alexandra
+214	Alivia	n/a	new	Variant of Olivia
+215	Nova	n/a	new	Nova
+216	Anastasia	n/a	new	Anastasia
+217	Iris	n/a	new	Iris
+218	Marley	n/a	new	Marley
+219	Fiona	n/a	new	Fiona
+220	Angela	107	-113	Angela
+221	Giselle	176	-45	Variant of Gisela
+222	Kate	168	-54	Variant of Katherine
+223	Alayna	n/a	new	Variant of Alana
+224	Lola	n/a	new	Variant of Dolores
+225	Lucia	n/a	new	Lucia
+226	Juliette	n/a	new	Variant of Julia
+226	Parker	n/a	new	Parker
+228	Teagan	n/a	new	Teagan
+229	Sienna	n/a	new	Variant of Siena
+230	Georgia	n/a	new	Georgia
+231	Hope	185	-46	Hope
+232	Cali	n/a	new	Variant of Kayley
+233	Vivienne	n/a	new	Variant of Viviane
+234	Izabella	n/a	new	Variant of Isabella
+234	Kinley	n/a	new	Variant of Mackinley
+236	Daleyza	n/a	new	Daleyza
+237	Kylee	165	-72	Variant of Kylie
+238	Jayla	169	-69	Jayla
+239	Katelyn	59	-180	Variant of Katherine
+240	Juliet	n/a	new	Variant of Julia
+241	Maggie	n/a	new	Variant of Margarete
+242	Dakota	n/a	new	Dakota
+243	Delaney	197	-46	Delaney
+244	Brynlee	n/a	new	Variant of Brinley
+245	Keira	n/a	new	Variant of Ciara
+246	Camille	n/a	new	Variant of Camilla
+247	Leila	n/a	new	Variant of Layla
+248	Mckenna	n/a	new	Mckenna
+249	Aniyah	n/a	new	Aniyah
+250	Noelle	n/a	new	Variant of Natalie
+251	Josie	n/a	new	Variant of Josepha
+252	Jennifer	39	-213	Jennifer
+253	Melissa	103	-150	Melissa
+254	Gabriela	118	-136	Variant of Gabriele
+255	Allie	n/a	new	Variant of Alison
+255	Eloise	n/a	new	Eloise
+257	Cassidy	164	-93	Cassidy
+258	Jacqueline	104	-154	Jacqueline
+259	Brynn	n/a	new	Brynn
+260	Sawyer	n/a	new	Sawyer
+261	Evangeline	n/a	new	Evangeline
+262	Jordan	75	-187	Jordan
+263	Paris	n/a	new	Paris
+264	Olive	n/a	new	Variant of Olivia
+265	Ayla	n/a	new	Ayla
+266	Rosalie	n/a	new	Variant of Rose
+267	Kali	n/a	new	Kali
+268	Maci	n/a	new	Variant of Macy
+269	Gemma	n/a	new	Gemma
+270	Lilliana	n/a	new	Variant of Lilian
+271	Raegan	n/a	new	Variant of Regan
+272	Lena	n/a	new	Variant of Helen
+273	Adelaide	n/a	new	Variant of Adelheid
+274	Journey	n/a	new	Journey
+275	Adelynn	n/a	new	Variant of Adela
+276	Alessandra	n/a	new	Variant of Alexandra
+276	Kenzie	n/a	new	Variant of Mackenzie
+278	Miranda	140	-138	Miranda
+279	Haley	42	-237	Variant of Hayley
+280	June	n/a	new	June
+281	Harley	n/a	new	Harley
+282	Charlee	n/a	new	Variant of Charlotte
+283	Lucille	n/a	new	Variant of Lucia
+283	Talia	n/a	new	Talia
+285	Skyler	n/a	new	Variant of Skylar
+286	Makenna	n/a	new	Variant of Mckenna
+286	Phoebe	n/a	new	Phoebe
+288	Jane	n/a	new	Variant of Johanna
+289	Lyric	n/a	new	Lyric
+290	Angel	134	-156	Variant of Angela
+291	Elaina	n/a	new	Variant of Helen
+292	Adrianna	196	-96	Variant of Adriana
+293	Ruth	n/a	new	Ruth
+294	Miriam	n/a	new	Variant of Mary
+295	Diana	112	-183	Diana
+296	Mariana	n/a	new	Variant of Mary
+297	Danielle	95	-202	Variant of Daniela
+298	Jenna	69	-229	Variant of Johanna
+299	Shelby	106	-193	Variant of Selby
+300	Nina	n/a	new	Nina
+301	Madeleine	n/a	new	Variant of Magdalena
+302	Elliana	n/a	new	Variant of Eliane
+303	Amina	n/a	new	Amina
+304	Amiyah	n/a	new	Amiyah
+305	Chelsea	186	-119	Chelsea
+305	Joanna	n/a	new	Variant of Johanna
+307	Jada	88	-219	Variant of Jade
+308	Lexi	n/a	new	Variant of Alexandra
+309	Katie	109	-200	Variant of Katherine
+310	Maddison	n/a	new	Variant of Madison
+311	Fatima	n/a	new	Fatima
+311	Vera	n/a	new	Vera
+313	Malia	n/a	new	Variant of Mary
+314	Lilah	n/a	new	Variant of Layla
+315	Madilyn	n/a	new	Variant of Magdalena
+316	Amanda	63	-253	Amanda
+316	Daniella	n/a	new	Variant of Daniela
+318	Alexia	163	-155	Variant of Alexis
+319	Kathryn	129	-190	Variant of Katherine
+320	Paislee	n/a	new	Variant of Paisley
+320	Selena	n/a	new	Variant of Selina
+322	Laura	135	-187	Laura
+323	Annie	n/a	new	Variant of Anna
+324	Nyla	n/a	new	Variant of Nila
+325	Catalina	n/a	new	Variant of Katherine
+326	Kayleigh	n/a	new	Variant of Kayley
+326	Sloane	n/a	new	Variant of Sloan
+328	Kamila	n/a	new	Variant of Camilla
+329	Lia	n/a	new	Variant of Leah
+330	Haven	n/a	new	Haven
+331	Rowan	n/a	new	Rowan
+332	Ashlyn	149	-183	Variant of Ashley
+333	Christina	125	-208	Variant of Christine
+334	Amber	92	-242	Amber
+335	Myla	n/a	new	Myla
+336	Addilyn	n/a	new	Variant of Adela
+336	Erin	98	-238	Erin
+338	Alison	n/a	new	Alison
+339	Ainsley	n/a	new	Ainsley
+340	Raelyn	n/a	new	Raelyn
+341	Cadence	n/a	new	Cadence
+341	Kendra	n/a	new	Kendra
+343	Heidi	n/a	new	Variant of Adelheid
+344	Kelsey	142	-202	Kelsey
+345	Nadia	n/a	new	Variant of Nadezhda
+346	Alondra	178	-168	Variant of Alexandra
+347	Cheyenne	138	-209	Cheyenne
+347	Kaydence	n/a	new	Variant of Cadence
+349	Mikayla	139	-210	Variant of Michaela
+349	River	n/a	new	River
+351	Heaven	n/a	new	Heaven
+352	Arielle	n/a	new	Variant of Ariela
+353	Lana	n/a	new	Variant of Alana
+354	Blakely	n/a	new	Variant of Blake
+355	Sabrina	150	-205	Sabrina
+356	Kyla	n/a	new	Kyla
+357	Ada	n/a	new	Variant of Adah
+357	Gracelyn	n/a	new	Gracelyn
+359	Allyson	n/a	new	Variant of Alison
+359	Felicity	n/a	new	Felicity
+359	Kira	n/a	new	Variant of Kyra
+362	Briella	n/a	new	Variant of Gabriele
+362	Kamryn	n/a	new	Variant of Cameron
+364	Adaline	n/a	new	Variant of Adela
+364	Alicia	145	-219	Variant of Adelheid
+366	Ember	n/a	new	Ember
+367	Aylin	n/a	new	Aylin
+368	Veronica	192	-176	Veronica
+369	Esmeralda	n/a	new	Esmeralda
+370	Sage	n/a	new	Sage
+371	Leslie	108	-263	Leslie
+372	Aspen	n/a	new	Aspen
+373	Gia	n/a	new	Variant of Johanna
+374	Camilla	n/a	new	Camilla
+375	Ashlynn	n/a	new	Variant of Ashley
+375	Scarlet	n/a	new	Variant of Scarlett
+377	Journee	n/a	new	Variant of Journey
+378	Daphne	n/a	new	Daphne
+379	Bianca	180	-199	Variant of Blanche
+379	Mckinley	n/a	new	Variant of Mackinley
+381	Amira	n/a	new	Amira
+382	Carmen	n/a	new	Carmen
+382	Kyleigh	n/a	new	Variant of Kylie
+384	Megan	36	-348	Variant of Margarete
+385	Skye	n/a	new	Variant of Sky
+386	Elsie	n/a	new	Variant of Elizabeth
+387	Kennedi	n/a	new	Variant of Kennedy
+388	Averie	n/a	new	Variant of Avery
+388	Carly	n/a	new	Variant of Carla
+388	Rylie	n/a	new	Variant of Riley
+391	Gracelynn	n/a	new	Gracelynn
+391	Mallory	n/a	new	Mallory
+393	Emersyn	n/a	new	Variant of Emerson
+393	Logan	n/a	new	Logan
+395	Camryn	n/a	new	Variant of Cameron
+396	Annabella	n/a	new	Annabella
+397	Dylan	n/a	new	Dylan
+397	Elle	n/a	new	Variant of Helen
+397	Kiara	180	-217	Variant of Ciara
+400	Yaretzi	n/a	new	Yaretzi
+401	Ariella	n/a	new	Variant of Ariela
+402	Zara	n/a	new	Variant of Zaira
+403	April	n/a	new	April
+404	Gwendolyn	n/a	new	Variant of Gwendolin
+405	Anaya	n/a	new	Anaya
+406	Baylee	n/a	new	Variant of Bailey
+406	Brinley	n/a	new	Brinley
+408	Sierra	97	-311	Sierra
+409	Annalise	n/a	new	Variant of Annaliese
+410	Tatum	n/a	new	Tatum
+411	Serena	n/a	new	Serena
+412	Dahlia	n/a	new	Dahlia
+413	Macy	n/a	new	Macy
+414	Miracle	n/a	new	Miracle
+415	Madelynn	n/a	new	Variant of Magdalena
+416	Briana	116	-300	Variant of Brianna
+417	Freya	n/a	new	Freya
+418	Macie	n/a	new	Variant of Macy
+419	Helen	n/a	new	Helen
+420	Bethany	n/a	new	Bethany
+421	Leia	n/a	new	Leia
+422	Harlow	n/a	new	Harlow
+423	Blake	n/a	new	Blake
+423	Jayleen	n/a	new	Variant of Jalen
+425	Angelica	184	-241	Angelica
+426	Marilyn	n/a	new	Variant of Mary
+427	Viviana	n/a	new	Variant of Viviane
+428	Francesca	n/a	new	Variant of Franziska
+429	Juniper	n/a	new	Juniper
+430	Carolina	n/a	new	Variant of Carla
+431	Jazmin	195	-236	Variant of Jasmine
+432	Emely	n/a	new	Variant of Emily
+433	Maliyah	n/a	new	Maliyah
+434	Cataleya	n/a	new	Cataleya
+435	Jillian	146	-289	Variant of Juliana
+435	Joy	n/a	new	Joy
+437	Abby	194	-243	Variant of Abigail
+437	Malaysia	n/a	new	Malaysia
+437	Nylah	n/a	new	Variant of Nila
+440	Sarai	n/a	new	Sarai
+441	Evelynn	n/a	new	Variant of Evelyn
+442	Nia	n/a	new	Nia
+443	Zuri	n/a	new	Zuri
+444	Addyson	n/a	new	Variant of Addison
+445	Aleah	n/a	new	Variant of Aliyah
+446	Kaia	n/a	new	Variant of Karin
+447	Bristol	n/a	new	Bristol
+448	Lorelei	n/a	new	Variant of Loreley
+449	Jazmine	n/a	new	Variant of Jasmine
+449	Maeve	n/a	new	Maeve
+451	Alejandra	n/a	new	Variant of Alexandra
+451	Justice	n/a	new	Justice
+453	Julie	n/a	new	Variant of Julia
+453	Marlee	n/a	new	Variant of Marley
+453	Phoenix	n/a	new	Phoenix
+456	Jimena	n/a	new	Variant of Ximena
+457	Emmalyn	n/a	new	Emmalyn
+457	Nayeli	n/a	new	Nayeli
+459	Aleena	n/a	new	Variant of Adela
+459	Brittany	190	-269	Brittany
+461	Amara	n/a	new	Amara
+461	Karina	198	-263	Variant of Karin
+463	Giuliana	n/a	new	Variant of Juliana
+463	Thea	n/a	new	Variant of Theodora
+465	Braelynn	n/a	new	Variant of Braelyn
+465	Kassidy	n/a	new	Variant of Cassidy
+467	Braelyn	n/a	new	Braelyn
+468	Luciana	n/a	new	Variant of Lucia
+469	Aubrie	n/a	new	Variant of Aubrey
+469	Janelle	n/a	new	Variant of Johanna
+471	Madisyn	n/a	new	Variant of Madison
+472	Brylee	n/a	new	Brylee
+472	Leighton	n/a	new	Variant of Layton
+472	Ryan	n/a	new	Ryan
+475	Amari	n/a	new	Amari
+475	Eve	n/a	new	Eve
+477	Millie	n/a	new	Variant of Camilla
+478	Kelly	158	-320	Kelly
+478	Selah	n/a	new	Selah
+480	Lacey	n/a	new	Lacey
+480	Willa	n/a	new	Variant of Wilhelma
+482	Haylee	n/a	new	Variant of Hayley
+483	Jaylah	n/a	new	Variant of Jayla
+484	Sylvia	n/a	new	Variant of Silvia
+485	Melany	n/a	new	Variant of Melanie
+486	Elisa	n/a	new	Variant of Elizabeth
+486	Elsa	n/a	new	Variant of Elizabeth
+488	Hattie	n/a	new	Variant of Henrietta
+489	Raven	n/a	new	Raven
+490	Holly	n/a	new	Holly
+491	Aisha	n/a	new	Aisha
+492	Itzel	n/a	new	Itzel
+493	Kyra	n/a	new	Kyra
+493	Tiffany	171	-322	Tiffany
+495	Jayda	n/a	new	Variant of Jade
+496	Michaela	n/a	new	Michaela
+497	Madilynn	n/a	new	Variant of Magdalena
+498	Jamie	n/a	new	Variant of Jacqueline
+499	Celeste	n/a	new	Variant of Cölestina
+500	Lilian	n/a	new	Lilian
+500	Remi	n/a	new	Remi
+502	Priscilla	n/a	new	Variant of Priska
+503	Jazlyn	n/a	new	Variant of Jacqueline
+504	Karen	170	-334	Variant of Karin
+504	Savanna	n/a	new	Variant of Savannah
+506	Zariah	n/a	new	Zariah
+507	Lauryn	n/a	new	Variant of Laura
+508	Alanna	n/a	new	Variant of Alana
+508	Kara	n/a	new	Variant of Cara
+510	Karla	n/a	new	Variant of Carla
+511	Cassandra	172	-339	Cassandra
+512	Ariah	n/a	new	Ariah
+512	Evie	n/a	new	Variant of Eve
+512	Frances	n/a	new	Variant of Franziska
+515	Aileen	n/a	new	Variant of Eileen
+515	Lennon	n/a	new	Lennon
+517	Charley	n/a	new	Variant of Charlotte
+518	Rosemary	n/a	new	Rosemary
+519	Danna	n/a	new	Variant of Daniela
+519	Regina	n/a	new	Regina
+521	Kaelyn	n/a	new	Variant of Kayley
+522	Virginia	n/a	new	Virginia
+523	Hanna	n/a	new	Variant of Johanna
+524	Rebekah	n/a	new	Variant of Rebecca
+525	Alani	n/a	new	Alani
+525	Edith	n/a	new	Edith
+527	Liana	n/a	new	Variant of Juliana
+528	Charleigh	n/a	new	Variant of Carla
+528	Gloria	n/a	new	Gloria
+530	Cameron	n/a	new	Cameron
+531	Colette	n/a	new	Variant of Nicole
+531	Kailey	n/a	new	Variant of Kayley
+533	Carter	n/a	new	Carter
+533	Helena	n/a	new	Variant of Helen
+533	Matilda	n/a	new	Variant of Mathilde
+536	Imani	n/a	new	Imani
+537	Bridget	n/a	new	Bridget
+537	Cynthia	n/a	new	Cynthia
+537	Janiyah	n/a	new	Variant of Janiya
+540	Marissa	105	-435	Variant of Mary
+541	Johanna	n/a	new	Johanna
+542	Sasha	n/a	new	Sasha
+543	Kaliyah	n/a	new	Kaliyah
+544	Cecelia	n/a	new	Variant of Cecilia
+545	Adelina	n/a	new	Variant of Adela
+546	Jessa	n/a	new	Variant of Jessica
+547	Hayley	n/a	new	Hayley
+548	Julissa	n/a	new	Julissa
+548	Winter	n/a	new	Winter
+550	Crystal	182	-368	Crystal
+550	Kaylie	n/a	new	Variant of Kayley
+552	Bailee	n/a	new	Variant of Bailey
+553	Charli	n/a	new	Variant of Charlotte
+553	Henley	n/a	new	Henley
+555	Anya	n/a	new	Variant of Anna
+555	Maia	n/a	new	Variant of Maja
+555	Skyla	n/a	new	Variant of Skylar
+558	Liberty	n/a	new	Liberty
+559	Fernanda	n/a	new	Fernanda
+560	Monica	n/a	new	Monica
+561	Braylee	n/a	new	Braylee
+562	Dallas	n/a	new	Dallas
+563	Mariam	n/a	new	Variant of Mary
+564	Marie	n/a	new	Variant of Mary
+565	Beatrice	n/a	new	Variant of Beatrix
+565	Hallie	n/a	new	Variant of Hayley
+567	Maryam	n/a	new	Variant of Mary
+568	Angelique	n/a	new	Variant of Angela
+568	Anne	n/a	new	Variant of Anna
+570	Madalyn	n/a	new	Variant of Magdalena
+571	Alayah	n/a	new	Variant of Aliyah
+571	Annika	n/a	new	Variant of Anna
+573	Greta	n/a	new	Variant of Margarete
+574	Lilyana	n/a	new	Variant of Lilian
+575	Kadence	n/a	new	Variant of Cadence
+576	Coraline	n/a	new	Variant of Coral
+576	Lainey	n/a	new	Variant of Helen
+576	Mabel	n/a	new	Mabel
+579	Lillie	n/a	new	Variant of Lily
+580	Anika	n/a	new	Variant of Anna
+581	Azalea	n/a	new	Azalea
+582	Dayana	n/a	new	Variant of Diana
+583	Jaliyah	n/a	new	Jaliyah
+584	Addisyn	n/a	new	Variant of Addison
+585	Emilee	n/a	new	Variant of Emily
+585	Mira	n/a	new	Mira
+587	Angie	n/a	new	Variant of Angela
+588	Lilith	n/a	new	Lilith
+588	Mae	n/a	new	Variant of May
+590	Meredith	n/a	new	Meredith
+591	Guadalupe	n/a	new	Guadalupe
+592	Emelia	n/a	new	Variant of Emily
+592	Margot	n/a	new	Variant of Margarete
+594	Melina	n/a	new	Melina
+595	Aniya	n/a	new	Variant of Aniyah
+596	Alena	n/a	new	Variant of Magdalena
+597	Myra	n/a	new	Myra
+598	Elianna	n/a	new	Variant of Eliane
+599	Caitlyn	175	-424	Variant of Katherine
+600	Jaelynn	n/a	new	Variant of Jaelyn
+601	Jaelyn	n/a	new	Jaelyn
+602	Demi	n/a	new	Variant of Demetria
+603	Mikaela	n/a	new	Variant of Michaela
+603	Tiana	n/a	new	Variant of Christine
+605	Blair	n/a	new	Blair
+606	Shiloh	n/a	new	Shiloh
+607	Ariyah	n/a	new	Variant of Aria
+607	Saylor	n/a	new	Saylor
+609	Caitlin	151	-458	Variant of Katherine
+610	Lindsey	157	-453	Variant of Lindsay
+610	Oakley	n/a	new	Oakley
+612	Alia	n/a	new	Variant of Alya
+613	Everleigh	n/a	new	Everleigh
+614	Ivanna	n/a	new	Variant of Johanna
+614	Miah	n/a	new	Variant of Mary
+616	Emmy	n/a	new	Variant of Emma
+616	Jessie	n/a	new	Variant of Jessica
+618	Anahi	n/a	new	Variant of Anah
+618	Kaylin	n/a	new	Variant of Kayley
+620	Ansley	n/a	new	Variant of Ainsley
+621	Annabel	n/a	new	Variant of Annabella
+621	Remington	n/a	new	Remington
+623	Kora	n/a	new	Variant of Cora
+624	Maisie	n/a	new	Variant of Margarete
+625	Nathalie	n/a	new	Variant of Natalie
+626	Emory	n/a	new	Variant of Emery
+627	Karsyn	n/a	new	Variant of Carson
+627	Pearl	n/a	new	Pearl
+629	Irene	n/a	new	Irene
+630	Kimber	n/a	new	Variant of Kimberley
+631	Rosa	n/a	new	Variant of Rose
+632	Lylah	n/a	new	Variant of Layla
+632	Magnolia	n/a	new	Magnolia
+634	Samara	n/a	new	Samara
+635	Elliot	n/a	new	Elliot
+635	Renata	n/a	new	Variant of Renate
+637	Galilea	n/a	new	Galilea
+637	Kensley	n/a	new	Kensley
+637	Kiera	n/a	new	Variant of Ciara
+637	Whitney	n/a	new	Whitney
+641	Amelie	n/a	new	Variant of Amelia
+641	Siena	n/a	new	Siena
+643	Bria	n/a	new	Variant of Brianna
+643	Laney	n/a	new	Variant of Helen
+643	Perla	n/a	new	Variant of Pearl
+646	Tatiana	n/a	new	Variant of Tatjana
+646	Zelda	n/a	new	Variant of Griselda
+648	Jaycee	n/a	new	Variant of Jacey
+648	Kori	n/a	new	Variant of Corey
+648	Montserrat	n/a	new	Montserrat
+651	Lorelai	n/a	new	Variant of Loreley
+652	Adele	n/a	new	Variant of Adela
+652	Elyse	n/a	new	Variant of Elysia
+652	Katelynn	n/a	new	Variant of Katherine
+652	Kynlee	n/a	new	Variant of Mackinley
+656	Marina	n/a	new	Marina
+657	Jayden	n/a	new	Variant of Jadon
+657	Kailyn	n/a	new	Variant of Kayley
+659	Avah	n/a	new	Variant of Eve
+659	Kenley	n/a	new	Variant of Mackinley
+661	Aviana	n/a	new	Variant of Avianna
+662	Armani	n/a	new	Armani
+662	Dulce	n/a	new	Variant of Dulcie
+664	Alaia	n/a	new	Variant of Aliyah
+665	Teresa	n/a	new	Variant of Theresa
+666	Natasha	n/a	new	Variant of Natalie
+667	Milani	n/a	new	Variant of Melanie
+668	Amirah	n/a	new	Variant of Amira
+668	Breanna	119	-549	Variant of Brianna
+668	Linda	n/a	new	Linda
+668	Tenley	n/a	new	Tenley
+672	Sutton	n/a	new	Sutton
+673	Elaine	n/a	new	Variant of Helen
+673	Elliott	n/a	new	Elliott
+675	Aliza	n/a	new	Aliza
+676	Kenna	n/a	new	Kenna
+676	Meadow	n/a	new	Meadow
+678	Alyson	n/a	new	Variant of Alison
+679	Rory	n/a	new	Rory
+680	Milana	n/a	new	Variant of Milena
+681	Erica	183	-498	Erica
+682	Esme	n/a	new	Variant of Esmée
+682	Leona	n/a	new	Variant of Leonie
+684	Joselyn	n/a	new	Variant of Jocelyn
+685	Madalynn	n/a	new	Variant of Magdalena
+686	Alma	n/a	new	Alma
+686	Chanel	n/a	new	Chanel
+686	Myah	n/a	new	Variant of Mary
+689	Karter	n/a	new	Variant of Carter
+689	Zahra	n/a	new	Variant of Zaira
+691	Audrina	n/a	new	Variant of Edeltraud
+692	Ariya	n/a	new	Variant of Aria
+692	Jemma	n/a	new	Variant of Gemma
+694	Eileen	n/a	new	Eileen
+695	Kallie	n/a	new	Variant of Kayley
+695	Milan	n/a	new	Variant of Milena
+697	Emmalynn	n/a	new	Variant of Emmalyn
+698	Lailah	n/a	new	Variant of Layla
+698	Sloan	n/a	new	Sloan
+700	Clarissa	n/a	new	Variant of Clare
+700	Karlee	n/a	new	Variant of Carla
+700	Laylah	n/a	new	Variant of Layla
+703	Amiya	n/a	new	Variant of Amiyah
+703	Collins	n/a	new	Variant of Colleen
+705	Ellen	n/a	new	Variant of Helen
+706	Hadassah	n/a	new	Hadassah
+707	Danica	n/a	new	Danica
+707	Jaylene	n/a	new	Variant of Jalen
+709	Averi	n/a	new	Variant of Avery
+709	Reyna	n/a	new	Variant of Reina
+711	Saige	n/a	new	Variant of Sage
+711	Wren	n/a	new	Wren
+713	Lexie	n/a	new	Variant of Alexandra
+714	Dorothy	n/a	new	Variant of Dorothea
+714	Lilianna	n/a	new	Variant of Lilian
+716	Monroe	n/a	new	Monroe
+717	Aryanna	n/a	new	Variant of Adriana
+717	Elisabeth	n/a	new	Variant of Elizabeth
+717	Ivory	n/a	new	Ivory
+720	Liv	n/a	new	Liv
+721	Janessa	n/a	new	Variant of Johanna
+721	Jaylynn	n/a	new	Jaylynn
+721	Livia	n/a	new	Livia
+721	Rayna	n/a	new	Variant of Reina
+725	Alaya	n/a	new	Variant of Aliyah
+725	Malaya	n/a	new	Malaya
+727	Cara	n/a	new	Cara
+727	Erika	n/a	new	Variant of Erica
+729	Amani	n/a	new	Amani
+729	Clare	n/a	new	Clare
+731	Addilynn	n/a	new	Variant of Adela
+731	Roselyn	n/a	new	Variant of Rosalinde
+733	Corinne	n/a	new	Variant of Corinna
+733	Paola	n/a	new	Variant of Paula
+735	Jolene	n/a	new	Jolene
+736	Anabelle	n/a	new	Variant of Annabella
+737	Aliana	n/a	new	Aliana
+737	Lea	n/a	new	Variant of Leah
+737	Mara	n/a	new	Mara
+740	Lennox	n/a	new	Lennox
+741	Claudia	n/a	new	Claudia
+741	Kristina	n/a	new	Variant of Christine
+743	Jaylee	n/a	new	Jaylee
+743	Kaylynn	n/a	new	Variant of Kayley
+743	Zariyah	n/a	new	Variant of Zariah
+746	Gwen	n/a	new	Variant of Gwendolin
+746	Kinslee	n/a	new	Variant of Kinsley
+748	Avianna	n/a	new	Avianna
+748	Lisa	n/a	new	Variant of Elizabeth
+748	Raquel	n/a	new	Variant of Rachel
+751	Jolie	n/a	new	Jolie
+752	Carolyn	n/a	new	Variant of Carla
+752	Courtney	126	-626	Courtney
+752	Penny	n/a	new	Variant of Penelope
+752	Royal	n/a	new	Royal
+756	Alannah	n/a	new	Alannah
+756	Ciara	n/a	new	Ciara
+758	Chaya	n/a	new	Chaya
+758	Kassandra	n/a	new	Variant of Cassandra
+758	Milena	n/a	new	Milena
+761	Mina	n/a	new	Mina
+761	Noa	n/a	new	Variant of Noah
+763	Leanna	n/a	new	Variant of Juliana
+763	Zoie	n/a	new	Variant of Zoe
+765	Ariadne	n/a	new	Ariadne
+765	Monserrat	n/a	new	Variant of Montserrat
+765	Nola	n/a	new	Variant of Finola
+768	Carlee	n/a	new	Variant of Carla
+768	Isabela	n/a	new	Variant of Isabella
+768	Jazlynn	n/a	new	Variant of Jacqueline
+768	Kairi	n/a	new	Kairi
+768	Laurel	n/a	new	Variant of Laura
+768	Sky	n/a	new	Sky
+774	Rosie	n/a	new	Variant of Rose
+775	Arely	n/a	new	Variant of Aurelia
+775	Aubrielle	n/a	new	Variant of Gabriele
+775	Kenia	n/a	new	Variant of Kenya
+775	Noemi	n/a	new	Variant of Naomi
+775	Scarlette	n/a	new	Variant of Scarlett
+780	Farrah	n/a	new	Variant of Farah
+780	Leyla	n/a	new	Variant of Layla
+782	Amia	n/a	new	Variant of Amiyah
+782	Bryanna	n/a	new	Variant of Brianna
+784	Naya	n/a	new	Naya
+784	Wynter	n/a	new	Variant of Winter
+786	Hunter	n/a	new	Hunter
+786	Katalina	n/a	new	Variant of Katherine
+788	Taliyah	n/a	new	Variant of Thalia
+789	Amaris	n/a	new	Amaris
+789	Emerie	n/a	new	Variant of Emery
+789	Martha	n/a	new	Martha
+789	Thalia	n/a	new	Thalia
+793	Christine	n/a	new	Christine
+793	Estrella	n/a	new	Variant of Stella
+795	Brenna	n/a	new	Variant of Brianna
+795	Milania	n/a	new	Milania
+795	Salma	n/a	new	Salma
+798	Lillianna	n/a	new	Variant of Lilian
+798	Marjorie	n/a	new	Variant of Margarete
+800	Shayla	n/a	new	Variant of Cecilia
+800	Zendaya	n/a	new	Zendaya
+802	Aurelia	n/a	new	Aurelia
+802	Brenda	n/a	new	Brenda
+802	Julieta	n/a	new	Variant of Julia
+805	Adilynn	n/a	new	Variant of Adela
+805	Deborah	n/a	new	Deborah
+805	Keyla	n/a	new	Variant of Kayley
+805	Patricia	n/a	new	Variant of Patrizia
+809	Emmeline	n/a	new	Emmeline
+809	Hadlee	n/a	new	Variant of Hadley
+811	Giovanna	n/a	new	Variant of Johanna
+811	Kailee	n/a	new	Variant of Kayley
+813	Desiree	n/a	new	Desiree
+814	Casey	n/a	new	Casey
+814	Karlie	n/a	new	Variant of Carla
+814	Khaleesi	n/a	new	Khaleesi
+814	Lara	n/a	new	Variant of Laura
+814	Tori	n/a	new	Variant of Victoria
+819	Clementine	n/a	new	Clementine
+819	Nancy	n/a	new	Variant of Anna
+819	Simone	n/a	new	Simone
+822	Ayleen	n/a	new	Variant of Eileen
+822	Estelle	n/a	new	Variant of Stella
+824	Celine	n/a	new	Variant of Celina
+824	Madyson	n/a	new	Variant of Madison
+824	Zaniyah	n/a	new	Variant of Zyanya
+827	Adley	n/a	new	Adley
+827	Amalia	n/a	new	Amalia
+827	Paityn	n/a	new	Variant of Payton
+830	Kathleen	n/a	new	Variant of Katherine
+830	Sandra	n/a	new	Variant of Alexandra
+832	Lizbeth	n/a	new	Variant of Elizabeth
+833	Maleah	n/a	new	Variant of Mary
+833	Micah	n/a	new	Micah
+835	Aryana	n/a	new	Variant of Adriana
+835	Hailee	n/a	new	Variant of Hayley
+837	Aiyana	n/a	new	Variant of Ayana
+837	Joyce	n/a	new	Joyce
+837	Ryann	n/a	new	Variant of Ryan
+840	Caylee	n/a	new	Variant of Kayley
+840	Kalani	n/a	new	Variant of Lani
+840	Marisol	n/a	new	Marisol
+840	Nathaly	n/a	new	Variant of Natalie
+844	Briar	n/a	new	Briar
+845	Holland	n/a	new	Holland
+846	Lindsay	n/a	new	Lindsay
+846	Remy	n/a	new	Variant of Remington
+848	Adrienne	n/a	new	Variant of Adriana
+849	Azariah	n/a	new	Azariah
+849	Harlee	n/a	new	Variant of Harley
+851	Dana	n/a	new	Variant of Daniela
+851	Frida	n/a	new	Variant of Frieda
+851	Marianna	n/a	new	Variant of Marianne
+851	Yamileth	n/a	new	Variant of Jamila
+855	Chana	n/a	new	Variant of Anna
+855	Kaya	n/a	new	Kaya
+855	Lina	n/a	new	Lina
+858	Celia	n/a	new	Variant of Celina
+859	Analia	n/a	new	Analia
+859	Hana	n/a	new	Hana
+861	Jayde	n/a	new	Variant of Jade
+861	Joslyn	n/a	new	Variant of Jocelyn
+861	Romina	n/a	new	Variant of Roma
+864	Anabella	n/a	new	Variant of Annabella
+864	Barbara	n/a	new	Barbara
+866	Bryleigh	n/a	new	Bryleigh
+866	Emilie	n/a	new	Variant of Emily
+866	Nathalia	n/a	new	Variant of Natalie
+869	Ally	n/a	new	Variant of Alison
+869	Evalyn	n/a	new	Variant of Evelyn
+871	Bonnie	n/a	new	Bonnie
+871	Zaria	n/a	new	Variant of Sarah
+873	Carla	n/a	new	Carla
+873	Estella	n/a	new	Variant of Stella
+873	Kailani	n/a	new	Kailani
+873	Rivka	n/a	new	Variant of Rebecca
+873	Rylan	n/a	new	Rylan
+878	Paulina	n/a	new	Variant of Paula
+879	Kayden	n/a	new	Kayden
+880	Giana	n/a	new	Variant of Johanna
+880	Yareli	n/a	new	Yareli
+882	Kaiya	n/a	new	Variant of Kaya
+882	Sariah	n/a	new	Sariah
+884	Avalynn	n/a	new	Variant of Evelyn
+884	Jasmin	200	-684	Variant of Jasmine
+886	Aya	n/a	new	Aya
+886	Jewel	n/a	new	Jewel
+886	Kristen	n/a	new	Variant of Christine
+886	Paula	n/a	new	Paula
+890	Astrid	n/a	new	Astrid
+890	Jordynn	n/a	new	Variant of Jordan
+890	Kenya	n/a	new	Kenya
+893	Ann	n/a	new	Variant of Anna
+893	Annalee	n/a	new	Annalee
+893	Kai	n/a	new	Kai
+896	Kiley	n/a	new	Variant of Kylie
+896	Marleigh	n/a	new	Variant of Marley
+898	Julianne	n/a	new	Variant of Juliana
+898	Zion	n/a	new	Zion
+900	Emmaline	n/a	new	Variant of Emmalyn
+900	Nataly	n/a	new	Variant of Natalie
+902	Aminah	n/a	new	Variant of Amina
+902	Amya	n/a	new	Amya
+902	Iliana	n/a	new	Variant of Eliane
+902	Jaida	n/a	new	Variant of Jade
+902	Paloma	n/a	new	Paloma
+907	Asia	n/a	new	Asia
+907	Louisa	n/a	new	Variant of Louise
+907	Sarahi	n/a	new	Variant of Sarahí
+907	Tara	n/a	new	Tara
+911	Andi	n/a	new	Variant of Andrea
+911	Arden	n/a	new	Arden
+911	Dalary	n/a	new	Dalary
+914	Aimee	n/a	new	Variant of Amata
+914	Alisson	n/a	new	Variant of Alison
+914	Halle	n/a	new	Variant of Hayley
+917	Aitana	n/a	new	Aitana
+918	Landry	n/a	new	Variant of Landriche
+919	Alisha	n/a	new	Variant of Adelheid
+919	Elin	n/a	new	Variant of Helen
+919	Maliah	n/a	new	Variant of Mary
+922	Belen	n/a	new	Variant of Belén
+922	Briley	n/a	new	Briley
+924	Raina	n/a	new	Raina
+924	Vienna	n/a	new	Vienna
+926	Esperanza	n/a	new	Esperanza
+927	Judith	n/a	new	Judith
+928	Faye	n/a	new	Faye
+929	Susan	n/a	new	Variant of Susanne
+930	Aliya	n/a	new	Variant of Aliyah
+930	Aranza	n/a	new	Variant of Arantza
+930	Yasmin	n/a	new	Variant of Jasmine
+933	Jaylin	n/a	new	Variant of Jalen
+933	Kyndall	n/a	new	Variant of Kendall
+933	Saniyah	n/a	new	Variant of Saniyya
+933	Wendy	n/a	new	Wendy
+933	Yaritza	n/a	new	Variant of Yara
+938	Azaria	n/a	new	Variant of Azariah
+938	Kaelynn	n/a	new	Variant of Kayley
+938	Neriah	n/a	new	Neriah
+938	Zainab	n/a	new	Variant of Zaynab
+942	Alissa	n/a	new	Variant of Adelheid
+942	Cherish	n/a	new	Cherish
+942	Dixie	n/a	new	Dixie
+942	Veda	n/a	new	Veda
+946	Nala	n/a	new	Nala
+946	Tabitha	n/a	new	Tabitha
+948	Cordelia	n/a	new	Variant of Cordula
+948	Ellison	n/a	new	Variant of Alison
+948	Meilani	n/a	new	Variant of Melanie
+951	Angeline	n/a	new	Variant of Angela
+951	Reina	n/a	new	Variant of Raina
+951	Tegan	n/a	new	Tegan
+954	Hadleigh	n/a	new	Variant of Hayley
+954	Harmoni	n/a	new	Variant of Harmony
+954	Kimora	n/a	new	Kimora
+957	Ingrid	n/a	new	Ingrid
+957	Lilia	n/a	new	Variant of Lilian
+957	Luz	n/a	new	Luz
+960	Aislinn	n/a	new	Variant of Aisling
+960	America	n/a	new	America
+960	Ellis	n/a	new	Ellis
+960	Elora	n/a	new	Variant of Eleonora
+960	Heather	n/a	new	Heather
+960	Natalee	n/a	new	Variant of Natalie
+966	Miya	n/a	new	Variant of Mary
+967	Heavenly	n/a	new	Variant of Heaven
+967	Jenny	n/a	new	Variant of Jennifer
+969	Aubriella	n/a	new	Variant of Gabriele
+969	Emmalee	n/a	new	Emmalee
+969	Kensington	n/a	new	Kensington
+969	Kiana	n/a	new	Variant of Diana
+969	Lilyanna	n/a	new	Variant of Lilian
+969	Tinley	n/a	new	Variant of Tenley
+975	Ophelia	n/a	new	Ophelia
+976	Moriah	n/a	new	Moriah
+976	Sharon	n/a	new	Sharon
+978	Charlize	n/a	new	Charlize
+979	Abril	n/a	new	Variant of April
+979	Avalyn	n/a	new	Variant of Evelyn
+979	Mariyah	n/a	new	Variant of Mary
+979	Taya	n/a	new	Taya
+983	Ireland	n/a	new	Ireland
+983	Lyra	n/a	new	Variant of Lyria
+983	Noor	n/a	new	Noor
+983	Sariyah	n/a	new	Variant of Zariah
+987	Giavanna	n/a	new	Variant of Johanna
+987	Stevie	n/a	new	Variant of Stephanie
+989	Rhea	n/a	new	Variant of Rea
+989	Zaylee	n/a	new	Zaylee
+991	Denise	n/a	new	Denise
+991	Frankie	n/a	new	Variant of Franka
+991	Janiya	n/a	new	Janiya
+991	Jocelynn	n/a	new	Variant of Jocelyn
+991	Libby	n/a	new	Variant of Elizabeth
+996	Aubrianna	n/a	new	Aubrianna
+996	Kaitlynn	n/a	new	Variant of Katherine
+998	Princess	n/a	new	Princess
+998	Sidney	n/a	new	Sidney
+1000	Alianna	n/a	new	Variant of Aliana

@@ -1,0 +1,6 @@
+USE_RDS: False
+logger_config: "/../config/logging_local.conf"
+MYSQL_USER: 
+MYSQL_HOST: 
+MYSQL_PORT: 3306
+DB_NAME: 

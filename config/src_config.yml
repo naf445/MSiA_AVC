@@ -1,16 +1,41 @@
+src:
+    s3:
+        use: False
+        bucket_name: nw-nathanfranklin-423-s3
+        booksummaries.txt: 'booksummaries/booksummaries.txt'
+        booksummaries: 'booksummaries/'
+        clean_book_genres: 'booksummaries/booksummaries_genres_cleaned.csv'
+
+
 helpers:
     scoring:
         score_user_input: 
             logger_config: "/../../../config/logging_local.conf"
             infile_genres: "/../../../models/genre_names.csv"
+            filter_names: True
+            prune_type: Porter
 
 data:
     logger_config: "/../../../config/logging_local.conf"
+    column_names: 
+        - wikiArticleID
+        - freebaseID
+        - bookTitle
+        - author
+        - pubDate
+        - bookGenre
+        - plotSum
+    
     
 
 get_data: 
-    infile: None
-    outfile: None
+    logger_config: "/../config/logging_local.conf"
+    download_url: 'http://www.cs.cmu.edu/~dbamman/data/booksummaries.tar.gz'
+    tar_file: "/../data/booksummaries.tar.gz"
+    extraction_point: "/../data"
+    outfile: '/../data/booksummaries/booksummaries.txt'
+    outdirectory: "/../data/booksummaries"
+
 
 clean_book_genres:
     logger_config: "/../config/logging_local.conf"
@@ -268,6 +293,16 @@ gen_LDA_model:
     infile: "/../data/booksummaries/books_Porter_True.csv"
     outfile_lda: "/../models/LDA_model.pkl"
     outfile_tf_vect: "/../models/tf_vect.pkl"
+    tf_vect:
+        max_df: 0.90
+        max_features: 7000
+    lda_model:
+        n_topics: 20
+        max_iter: 5
+        learning_method: 'online'
+        learning_offset: 50
+        random_state: 123
+
 
 gen_LDA_vecs:
     logger_config: "/../config/logging_local.conf"
@@ -281,6 +316,11 @@ train_model:
     infile_data: "/../data/booksummaries/booksummaries_ready2train.csv"
     outfile_model: "/../models/RFC_deployment_model.pkl"
     outfile_genres: "/../models/genre_names.csv"
+    rfc:
+        bootstrap: True
+        random_state: 541
+        n_estimators: 100
+        max_features: 'sqrt'
  
 score_model:
     logger_config: "/../config/logging_local.conf"

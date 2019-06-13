@@ -8,6 +8,8 @@
 
 {% block body %}
 	<h1>Welcome to my home page</h1>
+	<p>Enter the plot summary of a book into the large field below</p>
+	<p>You will be taken to a results page displaying the likely genres</p>
 	
 	<form action="{{ url_for('results') }}" method="POST">
 	    <fieldset>
