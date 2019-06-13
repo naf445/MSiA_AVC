@@ -1,29 +1,25 @@
 # for all classes 
-from sklearn.base import BaseEstimator, TransformerMixin
-
-# for class Tokenizer
-from nltk.tokenize import word_tokenize
-from nltk import pos_tag, word_tokenize
-import nltk.chunk
+import logging
+import logging.config
+import nltk
 nltk.download('punkt')
 nltk.download('stopwords')
-
-# for class Filter_sentence
-import pandas as pd
-import numpy as np
 from nltk.corpus import stopwords 
-
-# for class StemmingLemming
 from nltk import pos_tag
 from nltk.stem import PorterStemmer
 from nltk.stem import LancasterStemmer
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import wordnet
+from nltk.tokenize import word_tokenize
+from nltk import pos_tag, word_tokenize
+import nltk.chunk
+import numpy as np
 import os
+import pandas as pd
 import re
+from sklearn.base import BaseEstimator, TransformerMixin
 
-import logging
-import logging.config
+
 
 directory_abs_path = str(os.path.dirname(os.path.abspath(__file__)))
 

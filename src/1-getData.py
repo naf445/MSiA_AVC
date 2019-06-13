@@ -1,12 +1,13 @@
-import urllib.request 
-import tarfile
-import os
-import boto3
 import sys; sys.path.append('helpers')
+import boto3
 import logging
 import logging.config
-import yaml
+import os
 import shutil
+import tarfile
+import urllib.request 
+import yaml
+
 
 directory_abs_path = str(os.path.dirname(os.path.abspath(__file__)))
 

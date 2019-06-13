@@ -2,6 +2,12 @@ data/booksummaries/
 models/genre_names.csv
 **/.stackedit-trash
 **/.ipynb_checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints
 booksummaries/
+__pycache__/
+*/__pycache__/
+**/__pycache__/
 *.db
 *.pkl
+app/static/images/*

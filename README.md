@@ -74,8 +74,27 @@ This project structure was partially influenced by the [Cookiecutter Data Scienc
 
 ## Setup
 
-### 1.) Setting Up the Environment
-To increase the probability of this project working on your machine, please start by creating and activating a conda environment using the `environment.yml` file, or doing the same with a virtual environment using the `requirements.txt` file found in the root directory.  
+### 1.) Set Up Your Environment (conda or virtual env)
+
+#### Conda
+
+Create and activate a conda environment using the `environment.yml` file found in the root directory.  
+```bash
+conda env create environment.yml
+```
+
+#### Virtual Env
+
+Create and activate a virtual environment using the `requirements.txt` file found in the root directory.    
+```bash
+virtualenv example_env
+source example_env/bin/activate
+pip install -r requirements.txt
+```
+
+### 3.) Configure The Necessary Settings in `config/`
+#### mysql_config.yml
+
 
 ### 2.) Acquiring and Storing Data
 In the root folder is a bash script `getData.sh` which takes one argument `<s3://bucket-name>`. This script will retrieve the data folder from this [website](http://www.cs.cmu.edu/~dbamman/booksummaries.html) and place it in `data/booksummaries`. The script will then take this new directory and copy its contents to an S3 bucket provided by the user.  

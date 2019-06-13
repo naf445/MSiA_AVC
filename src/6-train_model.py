@@ -1,21 +1,21 @@
 import sys; sys.path.append('helpers')
 import sys; sys.path.append('src/helpers')
-import pandas as pd
+import ast
+import boto3
+import csv
 import logging
 import logging.config
 import os
-import yaml
-import numpy as np
 import pandas as pd
 import pickle
+import numpy as np
 from sklearn.preprocessing import MultiLabelBinarizer as MLB
-import ast
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.multiclass import OneVsRestClassifier
 from sklearn.metrics import accuracy_score, f1_score, recall_score
-import csv
-import boto3
+import yaml
+
 
 directory_abs_path = str(os.path.dirname(os.path.abspath(__file__)))
 

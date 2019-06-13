@@ -1,18 +1,20 @@
 import sys; sys.path.append('helpers')
 import sys; sys.path.append('src/helpers')
+import boto3
+import argparse
 from data_manipulation import data
 from data_manipulation import custom_transformers as ct
-import pandas as pd
-import argparse
+import gensim.downloader as api
 import logging
 import logging.config
-from sklearn.pipeline import Pipeline 
-import os
-import yaml
-import gensim.downloader as api
 import numpy as np
+import os
 import pandas as pd
-import boto3
+from sklearn.pipeline import Pipeline 
+import yaml
+
+
+
 
 directory_abs_path = str(os.path.dirname(os.path.abspath(__file__)))
 
