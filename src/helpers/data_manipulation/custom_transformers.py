@@ -200,13 +200,13 @@ class StemmingLemming(BaseEstimator, TransformerMixin):
     
 #Custom Transformer that joins
 class Joiner( BaseEstimator, TransformerMixin ):
-     '''Simple transformer which joins tokenized plot summaries and returns data frame'''
-         
-    #Return self nothing else to do here    
+    '''Simple transformer which joins tokenized plot summaries and returns data frame'''
+
+    # Return self nothing else to do here    
     def fit( self, X, y = None ):
         return self 
     
-    #Method that describes what we need this transformer to do
+    # Method that describes what we need this transformer to do
     def transform(self, DF, y = None):
         logger.info("Calling the Joiner transformer")
         DF_2 = DF.copy(deep=True)

@@ -10,7 +10,6 @@ import re
 import yaml
 
 
-
 directory_abs_path = str(os.path.dirname(os.path.abspath(__file__)))
 
 # import config yaml file
@@ -25,10 +24,6 @@ config = config['clean_book_genres']
 
 logging.config.fileConfig(directory_abs_path+config["logger_config"], disable_existing_loggers=False)
 logger = logging.getLogger(__name__)
-
-logger.info("Load in raw data")
-books = data.loadAndClean(directory_abs_path+config['infile'])
-logger.info("Loaded in raw data")
 
 def ruleSwapper(tokenized_genres, rules_dict):
     '''Function which takes a set of rules defined in the rules_dictionary,
@@ -56,43 +51,49 @@ def ruleSwapper(tokenized_genres, rules_dict):
                     else word for word in tokenized_genres]
     return tokenized_genres
 
-logger.info("applying rule swapping rules to data set")
-#consolidate genres
-books['bookGenre'] = books['bookGenre'].apply(lambda row: ruleSwapper(row, config['rules']))
-
 def removeDuplicates(tokenized_genres):
     ''' Removes any duplicate genres within a single row/book entry after genre cleaning/consolidation '''
     return list(dict.fromkeys(tokenized_genres))
 
-logger.info("removing duplicates")
-#remove duplicates
-books['bookGenre'] = books['bookGenre'].apply(lambda row: removeDuplicates(row))
+if __name__ == '__main__':
+    
+    logger.info("Load in raw data")
+    books = data.loadAndClean(directory_abs_path+config['infile'])
+    logger.info("Loaded in raw data")
 
-logger.info("removing books with only bogus genres remaining")
-#remove books that have only bogus genres remaining
-N_total = books.shape[0]
-books['Drop'] = books.bookGenre.apply(lambda row: True if row==['bogus'] else False)
-books = books[books.Drop==False]
-N_after_dropping = books.shape[0]
-logger.info("Dropped {} books because they did not have usable genre(s)".format(N_total-N_after_dropping))
+    logger.info("applying rule swapping rules to data set")
+    #consolidate genres
+    books['bookGenre'] = books['bookGenre'].apply(lambda row: ruleSwapper(row, config['rules']))
 
-logger.info("removing any bogus genres")
-# remove any 'bogus' genres left
-books['bookGenre'] = books['bookGenre'].apply(lambda row: [word for word in row if word!='bogus'])
+    logger.info("removing duplicates")
+    #remove duplicates
+    books['bookGenre'] = books['bookGenre'].apply(lambda row: removeDuplicates(row))
 
-# save data
-logger.info("Saving cleaned books with clean genres to data folder on local")
-books.to_csv(directory_abs_path+config['outfile'], index=False)
-logger.info("Saved cleaned books with clean genres to data folder on local")
+    logger.info("removing books with only bogus genres remaining")
+    #remove books that have only bogus genres remaining
+    N_total = books.shape[0]
+    books['Drop'] = books.bookGenre.apply(lambda row: True if row==['bogus'] else False)
+    books = books[books.Drop==False]
+    N_after_dropping = books.shape[0]
+    logger.info("Dropped {} books because they did not have usable genre(s)".format(N_total-N_after_dropping))
 
-# if specified, save data to S3
-if src_config['s3']['use']:
-	logger.info("s3 option initiated")
-	s3 = boto3.client('s3')
-	logger.info("connect to S3 & upload file to bucket")
-	s3.upload_file(Bucket=src_config['s3']['bucket_name'],
-	               Filename=directory_abs_path + config['outfile'], 
-	               Key=src_config['s3']['clean_book_genres'])
+    logger.info("removing any bogus genres")
+    # remove any 'bogus' genres left
+    books['bookGenre'] = books['bookGenre'].apply(lambda row: [word for word in row if word!='bogus'])
+
+    # save data
+    logger.info("Saving cleaned books with clean genres to data folder on local")
+    books.to_csv(directory_abs_path+config['outfile'], index=False)
+    logger.info("Saved cleaned books with clean genres to data folder on local")
+
+    # if specified, save data to S3
+    if src_config['s3']['use']:
+    	logger.info("s3 option initiated")
+    	s3 = boto3.client('s3')
+    	logger.info("connect to S3 & upload file to bucket")
+    	s3.upload_file(Bucket=src_config['s3']['bucket_name'],
+    	               Filename=directory_abs_path + config['outfile'], 
+    	               Key=src_config['s3']['clean_book_genres'])
 
 
 
